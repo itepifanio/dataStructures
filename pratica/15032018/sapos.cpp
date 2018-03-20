@@ -42,7 +42,7 @@ void Sapo::setIdentificador(string i){
 // Métodos
 int Sapo::pular(){
 	// Usa a hora para gerar um numero aleatorio
-	std::srand (std::time(nullptr));
+	std::srand (std::time(NULL));
 	// Gera numero aleatorio entre 1 e a distancia do pulo
 	// que um sapo pode dar
 	int distanciaPercorrida = std::rand() % getDistancia() + 1;

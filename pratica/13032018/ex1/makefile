@@ -1,6 +1,6 @@
 PROG = exec
 CC = g++
-CPPFLAGS = -0O -g -W -Wall -pedantic
+CPPFLAGS = -O0 -g -W -Wall -pedantic
 OBJS = main.o dado.o
 
 $(PROG) : $(OBJS)
