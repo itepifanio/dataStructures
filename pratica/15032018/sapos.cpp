@@ -7,11 +7,11 @@ using namespace std;
 
 int Sapo::distanciaAPercorrer;
 
-Sapo::Sapo(string id, int dist){
+Sapo::Sapo(string id, int forca){
 	identificador = id;
-	// Distancia máxima que o sapo pode pular
-	distancia = dist;
+	distancia = 0;
 	quantPulo = 0;
+	forcaPulo = forca;
 }
 
 // Gets e sets
@@ -39,15 +39,21 @@ void Sapo::setIdentificador(string i){
 	identificador = i;
 }
 
+int Sapo::getForcaPulo(){
+	return forcaPulo;
+}
+
+void Sapo::setForcaPulo(int forca){
+	forcaPulo = forca;
+}
+
 // Métodos
-int Sapo::pular(){
+void Sapo::pular(){
 	// Usa a hora para gerar um numero aleatorio
 	std::srand (std::time(NULL));
 	// Gera numero aleatorio entre 1 e a distancia do pulo
 	// que um sapo pode dar
-	int distanciaPercorrida = std::rand() % getDistancia() + 1;
+	distancia += std::rand() % getForcaPulo() + 1;
 
-  quantPulo++;
-
-  return distanciaPercorrida;
+	quantPulo++;
 }
