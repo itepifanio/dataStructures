@@ -22,7 +22,7 @@ int main(){
           float saldo;
           int numero, agencia;
 
-          ContaCorrente conta(123,13,1000);
+          ContaCorrente conta(1,1,0);
           std::cout << "Digite o saldo inicial:" << std::endl;
           std::cin >> saldo;
           std::cout << "Digite o numero da conta:" << std::endl;
@@ -35,6 +35,32 @@ int main(){
           conta.setAgencia(agencia);
 
           v.push_back(&conta);
+      }else if(opcao == 2){
+        int numero, agencia;
+        std::cout << "Digite a agência da conta desejada" << std::endl;
+        std::cin >> agencia;
+        std::cout << "Digite o número da conta desejada" << std::endl;
+        std::cin >> numero;
+
+        for (size_t i = 0; i < (int) v.size(); i++) {
+          if(v[i]->getNumero() == numero && v[i]->getAgencia() == agencia){
+            //Bug
+            delete v[i];
+          }
+        }
+      }else if(opcao == 3){
+        int numero, agencia;
+        std::cout << "Digite a agência da conta desejada" << std::endl;
+        std::cin >> agencia;
+        std::cout << "Digite o número da conta desejada" << std::endl;
+        std::cin >> numero;
+
+        for (size_t i = 0; i < (int) v.size(); i++) {
+          if(v[i]->getNumero() == numero && v[i]->getAgencia() == agencia){
+            // A implementar
+            v[i]->getSaldo();
+          }
+        }
       }else if(opcao == 6){
           int numero, agencia;
           std::cout << "Digite a agência da conta desejada" << std::endl;
@@ -44,9 +70,13 @@ int main(){
 
           for (size_t i = 0; i < (int) v.size(); i++) {
             if(v[i]->getNumero() == numero && v[i]->getAgencia() == agencia){
-              std::cout << v[i]->getSaldo() << '\n';
+              std::cout << v[i]->getSaldo() << std::endl;
             }
           }
+      }else if (opcao == 7){
+
+      }else{
+        std::cout << "Opção inválida" << std::endl;
       }
     }
 }
