@@ -1,41 +1,35 @@
 #include <string>
 #include "contaCorrente.h"
+#include "movimentacao.h"
 using namespace std;
 
-ContaCorrente::ContaCorrente(int a, int n, float sal){
-    this->agencia = a;
-    this->numero  = n;
-    this->saldo   = sal;
-//    this->status  = s;
-//    this-> limite = l;
+std::vector<Movimentacao*> movimentacoes;
+
+ContaCorrente::ContaCorrente(int agencia, int numero, float saldo){
+    this->agencia = agencia;
+    this->numero  = numero;
+    this->saldo   = saldo;
 }
 
 ContaCorrente::~ContaCorrente(){
 
 };
-
-void ContaCorrente::setAgencia(int a){
-    agencia = a;
+// Métodos
+void ContaCorrente::adicionaMovimentacao(Movimentacao m){
+    movimentacoes.push_back(&m);
 }
 
-void ContaCorrente::setNumero(int n){
-    numero = n;
+// Gets e sets
+void ContaCorrente::setAgencia(int agencia){
+    this->agencia = agencia;
 }
 
-void ContaCorrente::setSaldo(float s){
-    saldo = s;
+void ContaCorrente::setNumero(int numero){
+    this->numero = numero;
 }
 
-void ContaCorrente::setStatus(bool s){
-    status = s;
-}
-
-void ContaCorrente::setLimite(float l){
-    limite = l;
-}
-
-void addMovimentacoes(ContaCorrente c, Movimentacao m){
-    c.movimentacoes.push_back(&m);
+void ContaCorrente::setSaldo(float saldo){
+    this->saldo = saldo;
 }
 
 int ContaCorrente::getAgencia(){
@@ -48,12 +42,4 @@ int ContaCorrente::getNumero(){
 
 float ContaCorrente::getSaldo(){
     return saldo;
-}
-
-bool ContaCorrente::getStatus(){
-    return status;
-}
-
-float ContaCorrente::getLimite(){
-    return limite;
 }

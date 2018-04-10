@@ -19,14 +19,13 @@ class ContaCorrente{
         void setAgencia(int a);
         void setNumero(int n);
         void setSaldo(float s);
-        void setStatus(bool b);
-        void setLimite(float l);
+
         int getAgencia();
         int getNumero();
         float getSaldo();
-        bool getStatus();
-        float getLimite();
+
         std::vector<Movimentacao*> movimentacoes;
+        void adicionaMovimentacao(Movimentacao m);
 };
 
 #endif

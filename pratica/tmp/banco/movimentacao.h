@@ -1,6 +1,7 @@
 #ifndef _MOVIMENTACAO_H_
 #define _MOVIMENTACAO_H_
 #include <string>
+#include <ostream>
 using namespace std;
 
 class Movimentacao{
@@ -8,15 +9,14 @@ class Movimentacao{
         string descricao;
         float valor;
         string movimentacao;
-    public:    
+    public:
         Movimentacao(string descricao, float valor, string movimentacao);
         ~Movimentacao();
+
         void setDescricao(string d);
         void setValor(float v);
         void setMovimentacao(string m);
 
-        string getDescricao();
-        string getMovimentacao();
-        float getValor();
+        friend std::ostream& operator<<(std::ostream &o, const Movimentacao &m);
 };
 #endif
