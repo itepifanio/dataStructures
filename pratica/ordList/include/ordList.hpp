@@ -14,7 +14,7 @@ class OrdList{
 		void find(T item);
 		void remove(T item);
 		void show();
-	
+
 };
 
 template <class T>
@@ -23,7 +23,7 @@ OrdList<T>::OrdList(){
 	this->ordList = (T*)malloc(sizeof(T)*10);
 	this->index = 0;
 }
-		
+
 template <class T>
 OrdList<T>::~OrdList(){
 
@@ -38,9 +38,15 @@ void OrdList<T>::add(T item){
 template <class T>
 void OrdList<T>::show(){
 	for(int i = 0; i < this->index; i++){
-		std::cout << this->ordList[i] << std::endl;	
+		std::cout << this->ordList[i] << std::endl;
 	}
 }
 
+template <class T>
+void OrdList<T>::find(){
+	for(int i = 0; i < this->index; i++){
+		std::cout << this->ordList[i] << std::endl;
+	}
+}
 
 #endif

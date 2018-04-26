@@ -1,19 +1,18 @@
-#include <iostream>
-#include "../helpers/helpers.hpp"
+#ifndef _MERGESORT_HPP_
+#define _MERGESORT_HPP_
 
+#include <iostream>
 /**
 * Realiza o merge dos subarrays de v
 */
 template <typename T>
 void merge(T *v, int l, int half, int r){
     int i, j, k, *w;
-    // Cria array para mergear as duas partes do original
     w = new int [r-l];
-    // Indexa o pŕoximo elemento do vetor a esquerda
+    // Iterator i left
     i = l;
-    // Indexa o próximo elemento a direita
+    // Iterator j half
     j = half;
-    // Indexa a pŕoxima posição de array w
     k = 0;
 
     while(i < half && j < r){
@@ -23,11 +22,7 @@ void merge(T *v, int l, int half, int r){
             w[k++] = v[j++];
         }
     }
-    /* Algumas vezes o lado direito ou o lado esquedo
-    * não são comparados. Ou seja, é necessário adicionar
-    * ao vetor clone os valores restantes do vetor esquerdo
-    * ou direito. Isso é feito através desses whiles
-    */
+
     while(i < half){
         w[k++] = v[i++];
     }
@@ -36,7 +31,6 @@ void merge(T *v, int l, int half, int r){
         w[k++] = v[j++];
     }
 
-    // Adiciona os valores do vetor clone ao original
     for(i = l; i < r; ++i){
         v[i] = w[i-l];
     }
@@ -62,13 +56,4 @@ int mergeSort(T *v, int l, int r){
     }
 }
 
-int main(){
-    int n = 10;
-    int v[n] = {1,55,33,75,1,0,33,56,12,9};
-
-    mergeSort(v, 0, n);
-
-    for(int i = 0; i < n; i++){
-        std::cout << v[i] << '\n';
-    }
-}
+#endif
