@@ -1,13 +1,16 @@
 #include <iostream>
-#include "../helpers/helpers.hpp"
 
-void bubbleSort(int *v, int n){
+void insertSort(int *v, int n){
     for(int i = 0; i < n; i++){
-        for (int j = 0; j < (n - 1 - i); j++){
-            if(v[j] > v[j+1]){
-                swap(v[j], v[j+1]);
-            }
+        int elem = v[i];
+        int j = i;
+
+        while(j > 0 && v[j-1] < elem){
+            v[j] = v[j-1];
+            j--;
         }
+
+        v[j] = elem;
     }
 }
 
@@ -15,7 +18,7 @@ int main(){
     int n = 10;
     int v[n] = {1,55,33,75,1,0,33,56,12,9};
 
-    bubbleSort(v, n);
+    insertSort(v, n);
 
     for(int i = 0; i < n; i++){
         std::cout << v[i] << std::endl;

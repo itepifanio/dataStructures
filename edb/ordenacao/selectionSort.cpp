@@ -3,11 +3,13 @@
 
 void selectionSort(int *v, int n){
     for (int j = 0; j < n; j++){
+        int imin = j;
         for(int i = j + 1; i < n; i++){
-            if(v[i] > v[j]){
-                swap(v[i], v[j]);
+            if(v[i] < v[imin]){
+                imin = i;
             }
         }
+        swap(v[imin], v[j]);
     }
 }
 

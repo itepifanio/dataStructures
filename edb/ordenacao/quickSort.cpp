@@ -32,7 +32,7 @@ int main(){
     int n = 10;
     int v[n] = {1,55,33,75,1,0,33,56,12,9};
 
-    quickSort(v, 0, n);
+    quickSort(v, 0, n-1);
 
     for(int i = 0; i < n; i++){
         std::cout << v[i] << std::endl;
