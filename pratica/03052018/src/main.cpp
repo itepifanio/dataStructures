@@ -1,6 +1,6 @@
-#include "produto.hpp"
-#include "produtoNaoDuravel.hpp"
-#include "produtoDuravel.hpp"
+#include "../include/produto.hpp"
+#include "../include/produtoNaoDuravel.hpp"
+#include "../include/produtoDuravel.hpp"
 #include <iostream>
 #include <vector>
 

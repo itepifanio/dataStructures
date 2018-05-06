@@ -9,16 +9,13 @@ class ProdutoDuravel : public Produto {
 	public:
 		ProdutoDuravel();
 
-		ProdutoDuravel(
-			std::string nome, float preco, std::string marca,
-			std::string descricao, std::string dataFabricacao
-		);
-
+		/*
 		ProdutoDuravel(
 			std::string nome, float preco, std::string marca,
 			std::string descricao, std::string dataFabricacao,
 			std::string materialPredominante, std::string durabilidade
 		);
+		*/
 
 		void setMaterialPredominante(std::string materialPredominante);
 

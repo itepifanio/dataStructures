@@ -8,18 +8,13 @@ class ProdutoNaoDuravel : public Produto {
 		std::string genero;
 	public:
 		ProdutoNaoDuravel();
-
-		ProdutoNaoDuravel(
-			std::string nome, float preco, std::string marca,
-			std::string descricao, std::string dataFabricacao
-		);
-
+		/*
 		ProdutoNaoDuravel(
 			std::string nome, float preco, std::string marca,
 		    std::string descricao, std::string dataFabricacao,
 			std::string dataValidade, std::string genero
 		);
-
+		*/
 		void setDataValidade(std::string dataValidade);
 		void setGenero(std::string genero);
 };
