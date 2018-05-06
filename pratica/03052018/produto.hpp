@@ -4,10 +4,17 @@
 
 class Produto{
 	protected:
-		string nome;
+		std::string nome;
 		float preco;
-		string marca;
-		string descricao;
-		string dataFabricacao;
-		
-}
+		std::string marca;
+		std::string descricao;
+		std::string dataFabricacao;
+	public:
+		void setNome(std::string nome);
+		void setPreco(float preco);
+		void setMarca(std::string marca);
+		void setDescricao(std::string descricao);
+		void setDataFabricacao(std::string dataFabricacao);
+};
+
+#endif

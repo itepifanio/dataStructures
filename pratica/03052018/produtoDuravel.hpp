@@ -1,11 +1,29 @@
 #ifndef _PRODUTODURAVEL_HPP
 #define _PRODUTODURAVEL_HPP
-#include <string>
 #include "produto.hpp"
-
 
 class ProdutoDuravel : public Produto {
 	private:
-		string materialPredominante;
-		float durabilidade;	
-}
+		std::string materialPredominante;
+		std::string durabilidade;
+	public:
+		ProdutoDuravel();
+
+		ProdutoDuravel(
+			std::string nome, float preco, std::string marca,
+			std::string descricao, std::string dataFabricacao
+		);
+
+		ProdutoDuravel(
+			std::string nome, float preco, std::string marca,
+			std::string descricao, std::string dataFabricacao,
+			std::string materialPredominante, std::string durabilidade
+		);
+
+		void setMaterialPredominante(std::string materialPredominante);
+
+		void setDurabilidade(std::string materialPredominante);
+
+};
+
+#endif

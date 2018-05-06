@@ -1,11 +1,27 @@
-#ifndef _PRODUTODURAVEL_HPP
-#define _PRODUTODURAVEL_HPP
-#include <string>
+#ifndef _PRODUTONAODURAVEL_HPP
+#define _PRODUTONAODURAVEL_HPP
 #include "produto.hpp"
 
-
-class ProdutoDuravel : public Produto {
+class ProdutoNaoDuravel : public Produto {
 	private:
-		string dataValidade;
-		string genero;	
-}
+		std::string dataValidade;
+		std::string genero;
+	public:
+		ProdutoNaoDuravel();
+
+		ProdutoNaoDuravel(
+			std::string nome, float preco, std::string marca,
+			std::string descricao, std::string dataFabricacao
+		);
+
+		ProdutoNaoDuravel(
+			std::string nome, float preco, std::string marca,
+		    std::string descricao, std::string dataFabricacao,
+			std::string dataValidade, std::string genero
+		);
+
+		void setDataValidade(std::string dataValidade);
+		void setGenero(std::string genero);
+};
+
+#endif
