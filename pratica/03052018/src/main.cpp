@@ -41,20 +41,51 @@ int main(){
         << "Digite 6 para informar produto de maior valor" << std::endl;
         std::cin >> opcao;
 
-        if(opcao == 1){
-                std::string materialPredominante, durabilidade;
+        switch(opcao){
+            case 0:
+                break;
+            case 1:
+                {
+                    std::string materialPredominante, durabilidade;
 
-                ProdutoDuravel produto;
+                    ProdutoDuravel produto;
 
-                preencherProduto<ProdutoDuravel>(produto);
+                    preencherProduto<ProdutoDuravel>(produto);
 
-                std::cout << "Digite o material predominante" << std::endl;
-                std::cin >> materialPredominante;
-                std::cout << "Digite a durabilidade do produto" << std::endl;
-                std::cin >> durabilidade;
+                    std::cout << "Digite o material predominante" << std::endl;
+                    std::cin >> materialPredominante;
+                    std::cout << "Digite a durabilidade do produto" << std::endl;
+                    std::cin >> durabilidade;
 
-                produto.setDurabilidade(durabilidade);
-                produto.setMaterialPredominante(materialPredominante);
+                    produto.setDurabilidade(durabilidade);
+                    produto.setMaterialPredominante(materialPredominante);
+                    produtos.push_back(produto);
+                }
+                break;
+            case 2:
+                {
+                    std::string genero, dataValidade;
+
+                    ProdutoNaoDuravel produtoNaoDuravel;
+
+                    preencherProduto<ProdutoNaoDuravel>(produtoNaoDuravel);
+
+                    std::cout << "Digite o genero do produto" << std::endl;
+                    std::cin >> genero;
+                    std::cout << "Digite a validade do produto" << std::endl;
+                    std::cin >> dataValidade;
+
+                    produtoNaoDuravel.setGenero(genero);
+                    produtoNaoDuravel.setDataValidade(dataValidade);
+                    produtos.push_back(produtoNaoDuravel);
+                }
+                break;
+            case 5:
+                {
+                    std::cout << "Existem " << produtos.size() <<
+                    " itens em estoque" << std::endl;
+                }
+                break;
         }
 
     }
