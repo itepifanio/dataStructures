@@ -5,7 +5,7 @@
 
 class Deposito {
 	public:
-        std::vector<Produto> produtos;
+        std::vector<Produto*> produtos;
 
 		void adicionaProduto(Produto produto);
 

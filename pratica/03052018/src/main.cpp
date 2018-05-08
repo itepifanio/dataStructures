@@ -37,10 +37,9 @@ int main(){
         std::cout << "Digite 0 para sair" << std::endl
         << "Digite 1 para adicionar produto duravel" << std::endl
         << "Digite 2 para adicionar produto não duravel" << std::endl
-        << "Digite 3 para remover produto duravel" << std::endl
-        << "Digite 4 para remover produto não duravel" << std::endl
-        << "Digite 5 para informar número de produtos no depósito" << std::endl
-        << "Digite 6 para informar produto de maior valor" << std::endl;
+        << "Digite 3 para remover produto" << std::endl
+        << "Digite 4 para informar número de produtos no depósito" << std::endl
+        << "Digite 5 para informar produto de maior valor" << std::endl;
         std::cin >> opcao;
 
         switch(opcao){
@@ -63,7 +62,7 @@ int main(){
                     produtoDuravel->setDurabilidade(durabilidade);
                     produtoDuravel->setMaterialPredominante(materialPredominante);
 
-                    // Só adiciona enviando endereço? Mas dá segementation fault
+                    // Bug do segmentation aqui
                     deposito->adicionaProduto(*produto);
                 }
                 break;
@@ -71,22 +70,30 @@ int main(){
                 {
                     std::string genero, dataValidade;
 
-                    ProdutoNaoDuravel produtoNaoDuravel;
+                    Produto *produto = new Produto;
+                    preencherProduto(produto);
+
+                    ProdutoNaoDuravel *produtoNaoDuravel = (ProdutoNaoDuravel*)(produto);
 
                     std::cout << "Digite o genero do produto" << std::endl;
                     std::cin >> genero;
                     std::cout << "Digite a validade do produto" << std::endl;
                     std::cin >> dataValidade;
 
-                    produtoNaoDuravel.setGenero(genero);
-                    produtoNaoDuravel.setDataValidade(dataValidade);
+                    produtoNaoDuravel->setGenero(genero);
+                    produtoNaoDuravel->setDataValidade(dataValidade);
 
-                    deposito->adicionaProduto(produtoNaoDuravel);
+                    deposito->adicionaProduto(*produto);
+                }
+                break;
+            case 4:
+                {
+                    deposito->quantidadeProduto();
                 }
                 break;
             case 5:
                 {
-                    deposito->quantidadeProduto();
+                    deposito->maiorValor();
                 }
                 break;
         }
