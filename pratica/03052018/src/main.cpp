@@ -1,11 +1,12 @@
-#include "../include/produto.hpp"
-#include "../include/produtoNaoDuravel.hpp"
-#include "../include/produtoDuravel.hpp"
 #include <iostream>
 #include <vector>
 
-template <typename T>
-void preencherProduto(T& produto){
+#include "../include/produto.hpp"
+#include "../include/produtoNaoDuravel.hpp"
+#include "../include/produtoDuravel.hpp"
+#include "../include/deposito.hpp"
+
+void preencherProduto(Produto *produto){
     std::string nome, marca, descricao, dataFabricacao;
     float preco;
 
@@ -20,15 +21,16 @@ void preencherProduto(T& produto){
     std::cout << "Digite a data de fabricação do produto" << std::endl;
     std::cin >> dataFabricacao;
 
-    produto.setNome(nome);
-    produto.setPreco(preco);
-    produto.setMarca(marca);
-    produto.setDescricao(descricao);
-    produto.setDataFabricacao(dataFabricacao);
+    produto->setNome(nome);
+    produto->setPreco(preco);
+    produto->setMarca(marca);
+    produto->setDescricao(descricao);
+    produto->setDataFabricacao(dataFabricacao);
 }
 
 int main(){
-    std::vector<Produto> produtos;
+
+    Deposito *deposito = new Deposito;
 
     int opcao = 1;
     while(opcao != 0){
@@ -48,18 +50,21 @@ int main(){
                 {
                     std::string materialPredominante, durabilidade;
 
-                    ProdutoDuravel produto;
+                    Produto *produto = new Produto;
+                    preencherProduto(produto);
 
-                    preencherProduto<ProdutoDuravel>(produto);
+                    ProdutoDuravel *produtoDuravel = (ProdutoDuravel*)(produto);
 
                     std::cout << "Digite o material predominante" << std::endl;
                     std::cin >> materialPredominante;
                     std::cout << "Digite a durabilidade do produto" << std::endl;
                     std::cin >> durabilidade;
 
-                    produto.setDurabilidade(durabilidade);
-                    produto.setMaterialPredominante(materialPredominante);
-                    produtos.push_back(produto);
+                    produtoDuravel->setDurabilidade(durabilidade);
+                    produtoDuravel->setMaterialPredominante(materialPredominante);
+
+                    // Só adiciona enviando endereço? Mas dá segementation fault
+                    deposito->adicionaProduto(*produto);
                 }
                 break;
             case 2:
@@ -68,8 +73,6 @@ int main(){
 
                     ProdutoNaoDuravel produtoNaoDuravel;
 
-                    preencherProduto<ProdutoNaoDuravel>(produtoNaoDuravel);
-
                     std::cout << "Digite o genero do produto" << std::endl;
                     std::cin >> genero;
                     std::cout << "Digite a validade do produto" << std::endl;
@@ -77,13 +80,13 @@ int main(){
 
                     produtoNaoDuravel.setGenero(genero);
                     produtoNaoDuravel.setDataValidade(dataValidade);
-                    produtos.push_back(produtoNaoDuravel);
+
+                    deposito->adicionaProduto(produtoNaoDuravel);
                 }
                 break;
             case 5:
                 {
-                    std::cout << "Existem " << produtos.size() <<
-                    " itens em estoque" << std::endl;
+                    deposito->quantidadeProduto();
                 }
                 break;
         }

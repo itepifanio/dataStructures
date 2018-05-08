@@ -3,13 +3,13 @@
 #include <string>
 
 class Produto{
-	protected:
+	public:
 		std::string nome;
 		float preco;
 		std::string marca;
 		std::string descricao;
 		std::string dataFabricacao;
-	public:
+	
 		void setNome(std::string nome);
 		void setPreco(float preco);
 		void setMarca(std::string marca);
