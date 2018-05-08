@@ -86,6 +86,15 @@ int main(){
                     deposito->adicionaProduto(*produto);
                 }
                 break;
+            case 3:
+                {
+                    std::string nomeProduto;
+                    std::cout << "Digite o nome do produto " << std::endl;
+                    std::cin >> nomeProduto;
+
+                    deposito->removeProduto(nomeProduto);
+                }
+                break;
             case 4:
                 {
                     deposito->quantidadeProduto();
@@ -96,6 +105,8 @@ int main(){
                     deposito->maiorValor();
                 }
                 break;
+            default:
+                std::cout << "Opção inválida" << std::endl;
         }
 
     }

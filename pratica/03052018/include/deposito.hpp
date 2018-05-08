@@ -9,7 +9,7 @@ class Deposito {
 
 		void adicionaProduto(Produto produto);
 
-        void removeProduto(Produto produto);
+        void removeProduto(std::string nomeProduto);
 
 		void quantidadeProduto();
 

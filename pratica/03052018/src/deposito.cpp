@@ -5,11 +5,11 @@ void Deposito::adicionaProduto(Produto produto){
     this->produtos.push_back(&produto);
 }
 
-void Deposito::removeProduto(Produto produto){
+void Deposito::removeProduto(std::string nomeProduto){
     int cont;
 
     for(std::size_t i = 0, max = produtos.size(); i != max; ++i){
-        if(this->produtos[i]->nome == produto.nome){
+        if(this->produtos[i]->nome == nomeProduto){
              cont += 1;
         }
     }
