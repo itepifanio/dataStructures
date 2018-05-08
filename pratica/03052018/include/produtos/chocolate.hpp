@@ -10,7 +10,7 @@ class Chocolate : public ProdutoNaoDuravel {
 
 	public:
 		// Criando construtor, pois é obrigado para heranças
-		Chocolate();
+		Chocolate(std::string tipo, float quantidadeCacau);
 };
 
 #endif

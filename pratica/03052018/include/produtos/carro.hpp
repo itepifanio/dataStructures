@@ -8,7 +8,8 @@ class Carro : public ProdutoDuravel {
 		int assentos;
 	public:
 		// Criando construtor, pois é obrigado para heranças
-		Carro();
+        Carro();
+	
 };
 
 #endif

@@ -10,7 +10,7 @@ class Pizza : public ProdutoNaoDuravel {
 
 	public:
 		// Criando construtor, pois é obrigado para heranças
-		Pizza();
+        Pizza();
 };
 
 #endif

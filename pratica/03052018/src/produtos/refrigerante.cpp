@@ -1,3 +1,5 @@
 #include "../../include/produtos/refrigerante.hpp"
 
-Refrigerante::Refrigerante(){}
+Refrigerante::Refrigerante(std::string sabor){
+    this->sabor = sabor;
+}

@@ -8,7 +8,7 @@ class Livro : public ProdutoDuravel {
 
 	public:
 		// Criando construtor, pois é obrigado para heranças
-		Livro();
+		Livro(int paginas);
 };
 
 #endif

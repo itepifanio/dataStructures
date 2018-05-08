@@ -9,7 +9,7 @@ class Refrigerante : public ProdutoNaoDuravel {
 
 	public:
 		// Criando construtor, pois é obrigado para heranças
-		Refrigerante();
+		Refrigerante(std::string sabor);
 };
 
 #endif

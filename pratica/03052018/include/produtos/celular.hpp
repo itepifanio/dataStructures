@@ -11,7 +11,7 @@ class Celular : public ProdutoDuravel {
 
 	public:
 		// Criando construtor, pois é obrigado para heranças
-		Celular();
+		Celular(float polegadas, std::string processador, bool rodaClashRoyal);
 };
 
 #endif
