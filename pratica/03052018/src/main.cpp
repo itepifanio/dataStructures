@@ -11,6 +11,17 @@
 int main(){
     Deposito *deposito = new Deposito;
 
+    std::cout << "Adicionando carro ao deposito" << '\n';
+
+    Produto *carro = new Carro;
+    carro->setNome("Mustang");
+    carro->setPreco(100000);
+
+    deposito->adicionaProduto(*carro);
+    // Informa quantidade de produtos
+    deposito->quantidadeProduto();
+
+
     std::cout << "Adicionando pizza ao deposito" << '\n';
 
     Produto *pizza = new Pizza;
@@ -18,16 +29,6 @@ int main(){
     pizza->setPreco(27);
 
     deposito->adicionaProduto(*pizza);
-    deposito->quantidadeProduto();
-
-    Produto *carro = new Carro;
-    carro->setNome("Mustang");
-    carro->setPreco(100000);
-
-    std::cout << "Adicionando carro ao deposito" << '\n';
-
-    deposito->adicionaProduto(*carro);
-    // Informa quantidade de produtos
     deposito->quantidadeProduto();
 
     deposito->maiorValor();
