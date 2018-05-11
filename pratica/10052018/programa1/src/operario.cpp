@@ -4,6 +4,6 @@
 Operario::Operario(){
 	std::cout << "Se o operário tudo produz, a ele tudo pertence" << std::endl;
 	std::cout << "Um novo operário foi criado" << std::endl;
-};
+}
 
-Operario::~Operario(){};
+Operario::~Operario(){}

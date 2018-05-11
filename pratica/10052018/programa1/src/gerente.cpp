@@ -3,6 +3,6 @@
 
 Gerente::Gerente(){
 	std::cout << "Um burguês safado foi criado" << std::endl;
-};
+}
 
-Gerente::~Gerente(){};
+Gerente::~Gerente(){}

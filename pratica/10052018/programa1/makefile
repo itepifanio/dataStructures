@@ -1,7 +1,7 @@
 PROG = bin/progama1
 CC = g++
 CPPFLAGS = -O0 -g -W -Wall -pedantic
-OBJS = main.o empresa.o secretaria.o gerente.o operario.o
+OBJS = main.o funcionario.o empresa.o secretaria.o gerente.o operario.o 
 
 $(PROG) : $(OBJS)
 	$(CC) $(OBJS) -o $(PROG)
@@ -9,7 +9,6 @@ $(PROG) : $(OBJS)
 
 main.o : include/funcionario.hpp include/empresa.hpp include/secretaria.hpp include/gerente.hpp include/operario.hpp
 	$(CC) $(CPPFLAGS) -c src/main.cpp
-
 
 empresa.o : include/empresa.hpp
 	$(CC) $(CPPFLAGS) -c src/empresa.cpp
@@ -23,6 +22,8 @@ operario.o : include/funcionario.hpp include/operario.hpp
 secretaria.o : include/funcionario.hpp include/secretaria.hpp
 	$(CC) $(CPPFLAGS) -c src/secretaria.cpp
 
+funcionario.o : include/funcionario.hpp
+	$(CC) $(CPPFLAGS) -c src/funcionario.cpp
+
 clean:
 	rm -f build/*.o
-

@@ -8,7 +8,8 @@ class Operario : public Funcionario{
 		std::string fabrica;
 	public:
 		Operario();
+		~Operario();
+
 };
 
 #endif
-

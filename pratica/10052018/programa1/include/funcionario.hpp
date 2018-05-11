@@ -7,7 +7,9 @@ class Funcionario{
 		std::string nome;
 		float salario;
 		std::string admissao;
+	public:
+		Funcionario();
+		~Funcionario();
 };
 
 #endif
-

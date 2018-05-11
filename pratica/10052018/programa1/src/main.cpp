@@ -7,10 +7,8 @@
 
 
 int main(){
-	Funcionario* funcionario = new Operario;
-//	Operario* operario = (Funcionario*)(funcionario);
-
-	std::cout << "Executou" << std::endl;
-
+	Funcionario *operario = new Operario;
+	Operario *funcionario = (Operario*) operario;
+	
 	return 0;
 }
