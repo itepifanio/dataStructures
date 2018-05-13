@@ -17,8 +17,11 @@ int main(){
 	std::cout << "Insira o nome, salário e admissao do funcionário" << '\n';
 	std::cin >> *operario;
 
+	std::cout << "O gerente ficou louco, aumentou seu salário" << std::endl;
+	operario->aumentaSalario();
+
 	std::cout << *operario << std::endl;
-	
+
 	empresa.adicionarFuncionario(*funcionario);
 
 	return 0;

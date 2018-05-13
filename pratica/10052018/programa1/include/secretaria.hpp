@@ -8,7 +8,8 @@ class Secretaria : public Funcionario{
 		int senha;
 	public:
 		Secretaria();
-		~Secretaria();	
+		~Secretaria();
+		void aumentaSalario();
 };
 
 #endif

@@ -7,3 +7,7 @@ Operario::Operario(){
 }
 
 Operario::~Operario(){}
+
+void Operario::aumentaSalario(){
+	this->salario *= (1 + (5/100));
+}

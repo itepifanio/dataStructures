@@ -31,6 +31,10 @@ void Funcionario::setAdmissao(std::string admissao){
 	this->admissao = admissao;
 }
 
+void Funcionario::aumentaSalario(){
+	this->salario *= (1 + (0/100));
+}
+
 std::istream& operator>> (std::istream &i, Funcionario &f){
 	i >> f.nome;
 	i >> f.salario;

@@ -9,6 +9,7 @@ class Operario : public Funcionario{
 	public:
 		Operario();
 		~Operario();
+		void aumentaSalario();
 
 };
 

@@ -10,6 +10,7 @@ class Gerente : public Funcionario{
 	public:
 		Gerente();
 		~Gerente();
+		void aumentaSalario();
 };
 
 #endif

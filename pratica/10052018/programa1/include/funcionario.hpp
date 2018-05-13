@@ -17,9 +17,10 @@ class Funcionario{
 		void setSalario(float salario);
 		std::string getAdmissao();
 		void setAdmissao(std::string admissao);
-		
+
 		friend std::istream& operator >> (std::istream &i, Funcionario &f);
 		friend std::ostream& operator << (std::ostream &o, Funcionario &f);
+		void aumentaSalario();
 };
 
 #endif
