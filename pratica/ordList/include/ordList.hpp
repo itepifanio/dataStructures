@@ -1,5 +1,6 @@
 #ifndef _ORDLIST_HPP_
 #define _ORDLIST_HPP_
+#include "../helpers/buscaBinaria.hpp"
 #include <iostream>
 
 template <class T>
@@ -11,7 +12,7 @@ class OrdList{
 		OrdList();
 		~OrdList();
 		void add(T item);
-		void find(T item);
+		bool find(T item);
 		void remove(T item);
 		void show();
 
@@ -43,10 +44,8 @@ void OrdList<T>::show(){
 }
 
 template <class T>
-void OrdList<T>::find(){
-	for(int i = 0; i < this->index; i++){
-		std::cout << this->ordList[i] << std::endl;
-	}
+bool OrdList<T>::find(T item){
+	buscaBinaria(this->ordList, item, 10);
 }
 
 #endif

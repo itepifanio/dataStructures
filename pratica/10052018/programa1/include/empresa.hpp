@@ -6,14 +6,16 @@
 #include "funcionario.hpp"
 
 class Empresa{
-	protected:
-		Empresa();
-		Empresa(std::string nome, std::string cnpj);
+	private:
 		std::string nome;
 		std::string cnpj;
+	public:
+		Empresa();
+		~Empresa();
+		Empresa(std::string nome, std::string cnpj);
 		std::vector<Funcionario> funcionarios;
-	
+		void adicionarFuncionario(Funcionario funcionario);
+		
 };
 
 #endif
-

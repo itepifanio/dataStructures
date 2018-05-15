@@ -5,10 +5,12 @@
 
 class Gerente : public Funcionario{
 	private:
-		Gerente();
 		std::string senha;
 		int numeroDeFuncionariosGerenciados;
+	public:
+		Gerente();
+		~Gerente();
+		void aumentaSalario();
 };
 
 #endif
-

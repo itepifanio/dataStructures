@@ -4,13 +4,25 @@
 #include "../include/gerente.hpp"
 #include "../include/secretaria.hpp"
 #include "../include/operario.hpp"
+#include "../include/empresa.hpp"
 
 
 int main(){
-	Funcionario* funcionario = new Operario;
-//	Operario* operario = (Funcionario*)(funcionario);
 
-	std::cout << "Executou" << std::endl;
+	Empresa empresa("Mundo Livre S.A.", "123456");
+
+	Funcionario *operario = new Operario;
+	Operario *funcionario = (Operario*) operario;
+
+	std::cout << "Insira o nome, salário e admissao do funcionário" << '\n';
+	std::cin >> *operario;
+
+	std::cout << "O gerente ficou louco, aumentou seu salário" << std::endl;
+	operario->aumentaSalario();
+
+	std::cout << *operario << std::endl;
+
+	empresa.adicionarFuncionario(*funcionario);
 
 	return 0;
 }

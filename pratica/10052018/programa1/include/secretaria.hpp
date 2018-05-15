@@ -5,9 +5,11 @@
 
 class Secretaria : public Funcionario{
 	private:
-		Secretaria();
 		int senha;
+	public:
+		Secretaria();
+		~Secretaria();
+		void aumentaSalario();
 };
 
 #endif
-
