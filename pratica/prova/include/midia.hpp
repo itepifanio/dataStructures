@@ -10,7 +10,8 @@ class Midia{
 		std::string autor;
 	public:
 		Midia();
-		~Midia();			
+		~Midia();
+		std::string getTitulo();			
 };
 
 #endif

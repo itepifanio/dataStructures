@@ -8,6 +8,7 @@ class Estoque{
 	public: 
 		Estoque();
 		~Estoque();
+		void inserirMidia(Midia midia);
 };
 
 #endif
