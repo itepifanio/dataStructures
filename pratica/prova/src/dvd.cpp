@@ -26,11 +26,14 @@ std::istream& operator>> (std::istream &i, Dvd &dvd){
 }
 
 std::ostream& operator<< (std::ostream &o, Dvd &dvd){
-    o << "Filme: "      << dvd.titulo        << std::endl <<
+    o <<
+    "Informações sobre o DVD: "              << std::endl <<
+                                                std::endl <<
+    "Filme: "           << dvd.titulo        << std::endl <<
     "Lancamento: "      << dvd.anoLancamento << std::endl <<
     "Diretor: "         << dvd.autor         << std::endl <<
     "Classificação: "   << dvd.classificacao << std::endl <<
-    "Duração: "         << dvd.duracao       << std::endl;
-
+    "Duração: "         << dvd.duracao       << std::endl <<
+                                                std::endl;
     return o;
 }

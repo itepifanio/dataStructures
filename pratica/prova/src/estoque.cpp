@@ -24,6 +24,7 @@ void Estoque::removerMidia(std::string titulo){
 		cont++;
 		if(this->midias[i].getTitulo().compare(titulo) == 0){
 			this->midias.erase(this->midias.begin() + (cont));
+			std::cout << "Midia removida " << '\n';
 			break;
 		}
 	}

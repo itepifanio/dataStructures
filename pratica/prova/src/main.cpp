@@ -12,5 +12,11 @@ int main(){
 
     std::cin >> *dvd;
     std::cout << *dvd;
+
+    estoque->inserirMidia(*dvd);
+
+    estoque->removerMidia(dvd->getTitulo());
+
+
     return 0;
 }
