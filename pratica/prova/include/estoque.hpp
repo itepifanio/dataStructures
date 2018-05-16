@@ -5,10 +5,11 @@
 class Estoque{
 	private:
 		std::vector<Midia> midias;
-	public: 
+	public:
 		Estoque();
 		~Estoque();
 		void inserirMidia(Midia midia);
+		void removerMidia(std::string titulo);		
 };
 
 #endif

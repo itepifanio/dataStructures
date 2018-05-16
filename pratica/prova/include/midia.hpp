@@ -11,7 +11,7 @@ class Midia{
 	public:
 		Midia();
 		~Midia();
-		std::string getTitulo();			
+		std::string getTitulo();
 };
 
 #endif
