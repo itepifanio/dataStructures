@@ -14,7 +14,7 @@ int main(){
     std::cout << *dvd;
 
     estoque->inserirMidia(*dvd);
-
+    estoque->editarMidia(dvd->getTitulo());
     estoque->removerMidia(dvd->getTitulo());
 
 

@@ -12,6 +12,7 @@ class Dvd : public Midia{
 	public:
 		Dvd();
 		~Dvd();
+		void update();
 		friend std::istream& operator >> (std::istream &i, Dvd &dvd);
 		friend std::ostream& operator << (std::ostream &o, Dvd &dvd);
 };

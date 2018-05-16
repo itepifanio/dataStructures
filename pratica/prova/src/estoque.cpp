@@ -29,3 +29,13 @@ void Estoque::removerMidia(std::string titulo){
 		}
 	}
 }
+
+void Estoque::editarMidia(std::string titulo){
+	for(std::size_t i = 0; i < this->midias.size(); i++){
+		if(this->midias[i].getTitulo().compare(titulo) == 0){
+			this->midias[i].update();
+			std::cout << "Midia atualizada " << std::endl;
+			break;
+		}
+	}
+}

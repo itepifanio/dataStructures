@@ -10,6 +10,7 @@ class Cd : public Midia{
 	public:
 		Cd();
 		~Cd();
+		void update();
 };
 
 #endif

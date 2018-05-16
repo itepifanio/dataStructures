@@ -11,6 +11,7 @@ class Midia{
 	public:
 		Midia();
 		~Midia();
+		void update();
 		std::string getTitulo();
 };
 

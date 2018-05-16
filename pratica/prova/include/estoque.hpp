@@ -9,7 +9,8 @@ class Estoque{
 		Estoque();
 		~Estoque();
 		void inserirMidia(Midia midia);
-		void removerMidia(std::string titulo);		
+		void removerMidia(std::string titulo);
+		void editarMidia(std::string titulo);
 };
 
 #endif

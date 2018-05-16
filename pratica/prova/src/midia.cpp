@@ -8,3 +8,5 @@ Midia::~Midia(){}
 std::string Midia::getTitulo(){
 	return this->titulo;
 }
+
+void Midia::update(){}

@@ -10,6 +10,7 @@ class Livro : public Midia{
 	public:
 		Livro();
 		~Livro();
+		void update();
 };
 
 #endif
