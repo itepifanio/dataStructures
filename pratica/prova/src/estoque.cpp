@@ -22,9 +22,9 @@ void Estoque::removerMidia(std::string titulo){
 	int cont = 0;
 
 	for(std::size_t i = 0; i < this->midias.size(); i++){
-		cont++;
+		++cont;
 		if(this->midias[i]->getTitulo().compare(titulo) == 0){
-			this->midias.erase(this->midias.begin() + (cont));
+			this->midias.erase(this->midias.begin() + (cont-1));
 			std::cout << "Midia removida " << std::endl;
 			break;
 		}
@@ -41,10 +41,16 @@ void Estoque::editarMidia(std::string titulo){
 	}
 }
 void Estoque::listaMidia(){
-	for(std::size_t i = 0; i < this->midias.size(); i++){
-		//if(std::typeid(this->midias[i]) == std::typeid(Midia)){
-			std::cout << dynamic_cast<Dvd*>(this->midias[i]) << std::endl;
-		//}
+	if(this->midias.size() <= 0){
+		std::cout << "Nenhuma midia a ser listada" << std::endl;
+		return;
+	}
 
+	for(std::size_t i = 0; i < this->midias.size(); i++){
+		if(dynamic_cast<Dvd*>(this->midias[i])){
+			std::cout <<
+				*dynamic_cast<Dvd*>(this->midias[i])
+			<< std::endl;
+		}
 	}
 }
