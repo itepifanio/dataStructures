@@ -5,9 +5,9 @@
 #include "../include/dvd.hpp"
 
 int main(){
-    Estoque *estoque = new Estoque;
+    Estoque *estoque = new Estoque();
 
-    Midia *midiaDvd = new Dvd;
+    Midia *midiaDvd = new Dvd();
     Dvd *dvd = (Dvd*) midiaDvd;
 
     std::cin >> *dvd;
@@ -15,7 +15,9 @@ int main(){
 
     estoque->inserirMidia(*dvd);
     estoque->editarMidia(dvd->getTitulo());
-    estoque->removerMidia(dvd->getTitulo());
+    //estoque->removerMidia(dvd->getTitulo());
+
+    estoque->listaMidia();
 
 
     return 0;

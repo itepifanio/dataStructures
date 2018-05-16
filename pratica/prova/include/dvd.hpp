@@ -5,8 +5,7 @@
 
 class Dvd : public Midia{
 	private:
-		// Classificacao para maiores de 18 anos,
-		// por exemplo
+		// Classificacao por idade
 		int classificacao;
 		float duracao;
 	public:
