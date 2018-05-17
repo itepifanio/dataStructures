@@ -54,6 +54,10 @@ void Estoque::listaMidia(){
 			std::cout <<
 				*dynamic_cast<Cd*>(this->midias[i])
 			<< std::endl;
+		}else if(dynamic_cast<Livro*>(this->midias[i])){
+			std::cout <<
+				*dynamic_cast<Livro*>(this->midias[i])
+			<< std::endl;
 		}
 	}
 }

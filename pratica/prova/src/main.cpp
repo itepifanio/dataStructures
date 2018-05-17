@@ -15,10 +15,15 @@ int main(){
     Dvd dvd1("Clockwork Orange", "1971", "Stanley Kubrick", 16, 2.1);
     Dvd dvd2("The Godfather", "1972", "Francis Ford Coppola", 16, 2.8);
 
+    Livro livro1("Assombro", "2016","Chuck Palahniuk", "Leya", "9788544104835");
+    Livro livro2("1984", "1949","George Orwell", "Harvill Secker", "indisponivel");
+
     estoque->inserirMidia(cd1);
     estoque->inserirMidia(cd2);
     estoque->inserirMidia(dvd1);
     estoque->inserirMidia(dvd2);
+    estoque->inserirMidia(livro1);
+    estoque->inserirMidia(livro2);
 
     /*
     // Instanciando novo valor
