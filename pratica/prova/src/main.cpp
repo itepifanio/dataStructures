@@ -25,20 +25,22 @@ int main(){
     estoque->inserirMidia(livro1);
     estoque->inserirMidia(livro2);
 
-    /*
+
     // Instanciando novo valor
     Midia *midiaDvd = new Dvd();
     Dvd *dvd = (Dvd*)(midiaDvd);
     std::cin >> *dvd;
-    //std::cout << *dvd;
 
     estoque->inserirMidia(*dvd);
-    //estoque->editarMidia(dvd->getTitulo());
-    */
+
+    std::cout << "Editando cd: " << std::endl;
+    // TODO:: Modifique o titulo para testar outras midias
+    estoque->editarMidia(cd2.getTitulo());
+
+    // TODO:: Modifique o titulo para testar outras midias
+    estoque->removerMidia(livro2.getTitulo());
 
     estoque->listaMidia();
-
-    //estoque->removerMidia(dvd->getTitulo());
 
     return 0;
 }
