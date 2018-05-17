@@ -10,7 +10,14 @@ class Cd : public Midia{
 	public:
 		Cd();
 		~Cd();
+		Cd(
+			std::string titulo, std::string anoLancamento,
+			std::string autor, std::string gravadora,
+			int quantidadeFaixas
+		);
 		void update();
+		friend std::istream& operator >> (std::istream &i, Cd &cd);
+		friend std::ostream& operator << (std::ostream &o, Cd &cd);
 };
 
 #endif

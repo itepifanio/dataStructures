@@ -2,6 +2,8 @@
 #define _ESTOQUE_H_
 #include "midia.hpp"
 #include "../include/dvd.hpp"
+#include "../include/cd.hpp"
+#include "../include/livro.hpp"
 
 class Estoque{
 	private:
