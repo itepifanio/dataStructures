@@ -42,5 +42,7 @@ int main(){
 
     estoque->listaMidia();
 
+    estoque->estatisticas();
+
     return 0;
 }

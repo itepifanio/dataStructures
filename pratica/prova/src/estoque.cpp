@@ -61,3 +61,21 @@ void Estoque::listaMidia(){
 		}
 	}
 }
+
+void Estoque::estatisticas(){
+	int numDvd = 0, numCd = 0, numLivro = 0;
+
+	for(std::size_t i = 0; i < this->midias.size(); i++){
+		if(dynamic_cast<Dvd*>(this->midias[i])){
+			++numDvd;
+		}else if(dynamic_cast<Cd*>(this->midias[i])){
+			++numCd;
+		}else if(dynamic_cast<Livro*>(this->midias[i])){
+			++numLivro;
+		}
+	}
+
+	std::cout << "Existem " << numDvd   << " dvds" 	  << std::endl
+			  << "Existem " << numCd    << " cds"     << std::endl
+			  << "Existem " << numLivro << " livros " << std::endl;
+}

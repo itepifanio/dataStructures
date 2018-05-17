@@ -15,6 +15,7 @@ class Estoque{
 		void removerMidia(std::string titulo);
 		void editarMidia(std::string titulo);
 		void listaMidia();
+		void estatisticas();
 };
 
 #endif
