@@ -1,10 +1,27 @@
 #include "../include/midia.hpp"
 #include "../include/dvd.hpp"
 #include <iostream>
+#include <string>
+
+// Construtores
 
 Dvd::Dvd(){}
 
 Dvd::~Dvd(){}
+
+Dvd::Dvd(
+    std::string titulo, std::string anoLancamento,
+    std::string autor, int classificacao,
+    float duracao
+){
+    this->autor = autor;
+    this->titulo = titulo;
+    this->duracao = duracao;
+    this->classificacao = classificacao;
+    this->anoLancamento = anoLancamento;
+}
+
+// Sobrecargas de operadores iostream
 
 std::istream& operator>> (std::istream &i, Dvd &dvd){
     std::cout << "Insira o titulo do dvd: " << std::endl;
@@ -37,6 +54,8 @@ std::ostream& operator<< (std::ostream &o, Dvd &dvd){
                                                 std::endl;
     return o;
 }
+
+// Métodos
 
 void Dvd::update(){
     std::string titulo, anoLancamento, autor;

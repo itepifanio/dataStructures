@@ -1,7 +1,6 @@
 #include "../include/estoque.hpp"
 #include <iostream>
 #include <string>
-#include <typeinfo>
 
 Estoque::Estoque(){}
 

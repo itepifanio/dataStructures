@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 
+// Construtores
+
 Cd::Cd(){}
 
 Cd::~Cd(){}
@@ -18,6 +20,8 @@ Cd::Cd(
     this->anoLancamento = anoLancamento;
     this->quantidadeFaixas = quantidadeFaixas;
 }
+
+// Sobrecargas de operadores iostream
 
 std::istream& operator>> (std::istream &i, Cd &cd){
     std::cout << "Insira o titulo do cd: " << std::endl;
@@ -51,6 +55,8 @@ std::ostream& operator<< (std::ostream &o, Cd &cd){
 
     return o;
 }
+
+// Métodos
 
 void Cd::update(){
         std::string titulo, anoLancamento, autor;

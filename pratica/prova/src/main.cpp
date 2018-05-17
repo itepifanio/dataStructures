@@ -12,8 +12,13 @@ int main(){
     Cd cd1("Carnaval", "2015", "Ventre", "Balaclava", 11);
     Cd cd2("Gorduratrans", "2015", "Gorduratrans", "Balaclava", 7);
 
+    Dvd dvd1("Clockwork Orange", "1971", "Stanley Kubrick", 16, 2.1);
+    Dvd dvd2("The Godfather", "1972", "Francis Ford Coppola", 16, 2.8);
+
     estoque->inserirMidia(cd1);
     estoque->inserirMidia(cd2);
+    estoque->inserirMidia(dvd1);
+    estoque->inserirMidia(dvd2);
 
     /*
     // Instanciando novo valor
