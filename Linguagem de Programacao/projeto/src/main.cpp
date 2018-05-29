@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "sapos.h"
+#include "../include/sapos.hpp"
 using namespace std;
 
 int main(){

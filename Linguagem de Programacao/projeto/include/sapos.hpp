@@ -2,16 +2,19 @@
 #ifndef SAPOS_H
 #define SAPOS_H
 #include <string>
-using namespace std;
 
 class Sapo{
 	private:
-		string identificador;
+		std::string nome;
+		std::string identificador;
 		int distancia;
 		int quantPulo;
+		int quantProvasDisputadas;
 		int forcaPulo;
 	public:
-	    	Sapo(string id, int distancia);
+	    Sapo(
+	    	std::string identificador, int distancia
+	    );
 		//Gets e sets
 		int getDistancia();
 		void setDistancia(int l);
@@ -19,8 +22,8 @@ class Sapo{
 		int getQuantPulo();
 		void setQuantPulo(int l);
 
-		string getIdentificador();
-		void setIdentificador(string a);
+		std::string getIdentificador();
+		void setIdentificador(std::string a);
 
 		int getForcaPulo();
 		void setForcaPulo(int p);
