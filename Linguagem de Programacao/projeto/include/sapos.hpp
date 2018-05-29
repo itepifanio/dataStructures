@@ -7,28 +7,28 @@ class Sapo{
 	private:
 		std::string nome;
 		std::string identificador;
-		int distancia;
-		int quantPulo;
+		int distanciaPercorrida;
 		int quantProvasDisputadas;
+		int vitorias;
+		int derrotas;
+		int empates;
+		int quantPuloDados;
 		int forcaPulo;
 	public:
+		// Construtores
 	    Sapo(
 	    	std::string identificador, int distancia
 	    );
-		//Gets e sets
-		int getDistancia();
-		void setDistancia(int l);
+		// Atributos publicos e estáticos
+		static int distanciaAPercorrer;
+		// Novo atributo 
+		static int distanciaTotalCorrida;
 
-		int getQuantPulo();
-		void setQuantPulo(int l);
-
-		std::string getIdentificador();
-		void setIdentificador(std::string a);
-
+		// Gets e sets
 		int getForcaPulo();
 		void setForcaPulo(int p);
 
-		static int distanciaAPercorrer;
+		// Função de pular
 		void pular();
 };
 #endif

@@ -3,40 +3,14 @@
 #include <string>
 #include <ctime>
 #include <cstdlib>
-using namespace std;
 
 int Sapo::distanciaAPercorrer;
 
-Sapo::Sapo(string id, int forca){
+Sapo::Sapo(std::string id, int forca){
 	identificador = id;
 	distancia = 0;
 	quantPulo = 0;
 	forcaPulo = forca;
-}
-
-// Gets e sets
-int Sapo::getDistancia(){
-	return distancia;
-}
-
-void Sapo::setDistancia(int d){
-	distancia = d;
-}
-
-int Sapo::getQuantPulo(){
-	return quantPulo;
-}
-
-void Sapo::setQuantPulo(int q){
-	quantPulo = q;
-}
-
-string Sapo::getIdentificador(){
-	return identificador;
-}
-
-void Sapo::setIdentificador(string i){
-	identificador = i;
 }
 
 int Sapo::getForcaPulo(){
