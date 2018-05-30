@@ -1,7 +1,7 @@
-#include <iostream>
 #ifndef SAPOS_H
 #define SAPOS_H
 #include <string>
+#include <iostream>
 
 class Sapo{
 	private:
@@ -16,6 +16,8 @@ class Sapo{
 		int forcaPulo;
 	public:
 		// Construtores
+		Sapo();
+		
 	    Sapo(
 	    	std::string identificador, int distancia
 	    );
@@ -30,5 +32,7 @@ class Sapo{
 
 		// Função de pular
 		void pular();
+		friend std::istream& operator >> (std::istream &i, Sapo &sapo);
+		friend std::ostream& operator << (std::ostream &o, Sapo &sapo);
 };
 #endif
