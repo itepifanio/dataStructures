@@ -1,5 +1,6 @@
 #ifndef SAPOS_H
 #define SAPOS_H
+#include "../include/sapos.hpp"
 #include <string>
 #include <iostream>
 
@@ -17,9 +18,10 @@ class Sapo{
 	public:
 		// Construtores
 		Sapo();
+		~Sapo();
 		
 	    Sapo(
-	    	std::string identificador, int distancia
+	    	std::string nome, std::string identificador, int forcaPulo
 	    );
 		// Atributos publicos e estáticos
 		static int distanciaAPercorrer;

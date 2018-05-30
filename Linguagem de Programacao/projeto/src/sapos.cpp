@@ -6,17 +6,22 @@
 
 int Sapo::distanciaAPercorrer;
 
-// Construtor
-Sapo::Sapo(std::string nome, std::identificador, int forcaPulo){
+// Construtores
+Sapo::Sapo(){}
+Sapo::~Sapo(){}
+
+Sapo::Sapo(std::string nome, std::string identificador, int forcaPulo){
 	this->identificador = identificador;
 	this->nome = nome;
-	this->distancia = distancia;
 	this->forcaPulo = forcaPulo;
-	this->quantPuloDados = 0;
+
+	this->empates = 0;
 	this->vitorias = 0;
 	this->derrotas = 0;
-	this->empates = 0;
+	this->quantPuloDados = 0;
+	this->distanciaPercorrida = 0;
 	this->quantProvasDisputadas = 0;
+
 }
 
 // Métodos
@@ -25,9 +30,9 @@ void Sapo::pular(){
 	std::srand (std::time(NULL));
 	// Gera numero aleatorio entre 1 e a distancia do pulo
 	// que um sapo pode dar
-	distancia += std::rand() % getForcaPulo() + 1;
+	this->distanciaPercorrida += std::rand() % getForcaPulo() + 1;
 
-	quantPulo++;
+	this->quantPuloDados++;
 }
 
 // Sobrecarga de operadores iostream
@@ -39,7 +44,7 @@ std::istream& operator>> (std::istream &i, Sapo &sapo){
     i >> sapo.identificador;
 
     std::cout << "Insira a força do pulo em newtons: " << std::endl;
-    i >> sapo.autor;
+    i >> sapo.forcaPulo;
 
     return i;
 }
