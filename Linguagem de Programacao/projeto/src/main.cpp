@@ -1,11 +1,11 @@
-#include <iostream>
-#include <string>
+#include "../include/corrida.hpp"
 #include "../include/sapos.hpp"
 #include "../include/pista.hpp"
-#include "../include/corrida.hpp"
+#include <iostream>
+#include <string>
 
 int main(){
-	
+	//estatisticas();
 
 	return 0;
 }

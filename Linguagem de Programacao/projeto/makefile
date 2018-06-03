@@ -1,10 +1,10 @@
-PROG = exec
+PROG = bin/exec
 CC = g++
 CPPFLAGS = -O0 -g -W -Wall -pedantic
 OBJS = main.o sapos.o corrida.o pista.o
 
 $(PROG) : $(OBJS)
-	$(CC) $(OBJS) -o $(PROG)
+	$(CC) -L/usr/include/boost $(OBJS) -o $(PROG)
 	mv *.o build/
 
 main.o: include/sapos.hpp include/pista.hpp include/corrida.hpp
@@ -16,7 +16,5 @@ sapos.o: include/sapos.hpp
 pista.o: include/pista.hpp
 	$(CC) $(CPPFLAGS) -c src/pista.cpp
 
-clean: 
+clean:
 	rm -f $(PROG) build/*.o
-
-
