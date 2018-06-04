@@ -5,7 +5,13 @@
 #include <string>
 
 int main(){
-	//estatisticas();
+	// Criando Pista
+	Pista pista("Interlagos", 100);
+
+	Corrida corrida;
+	corrida.inserirPista(pista);
+	corrida.inserirSapos("sapos.csv", ",");
+	//corrida.estatisticas();
 
 	return 0;
 }

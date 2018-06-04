@@ -1,5 +1,5 @@
-#ifndef _PISTA_HPP_
-#define _PISTA_HPP_
+#ifndef PISTA_HPP
+#define PISTA_HPP
 #include <string>
 #include <iostream>
 
@@ -12,7 +12,6 @@ class Pista{
 		~Pista();
 		Pista(std::string nome, int tamanho);
 		friend std::ostream& operator << (std::ostream &o, Pista &pista);
-		
 };
 
 #endif

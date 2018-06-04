@@ -9,7 +9,7 @@ $(PROG) : $(OBJS)
 
 main.o: include/sapos.hpp include/pista.hpp include/corrida.hpp
 	$(CC) $(CPPFLAGS) -c src/main.cpp
-corrida.o: include/corrida.hpp
+corrida.o: include/corrida.hpp include/sapos.hpp include/pista.hpp
 	$(CC) $(CPPFLAGS) -c src/corrida.cpp
 sapos.o: include/sapos.hpp
 	$(CC) $(CPPFLAGS) -c src/sapos.cpp

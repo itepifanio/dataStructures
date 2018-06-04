@@ -1,5 +1,5 @@
-#ifndef _CORRIDA_HPP_
-#define _CORRIDA_HPP_
+#ifndef CORRIDA_HPP
+#define CORRIDA_HPP
 #include "../include/sapos.hpp"
 #include "../include/pista.hpp"
 #include <string>
@@ -14,12 +14,13 @@
 class Corrida{
 	private:
 		std::string nome;
+		std::vector<Sapo*> sapos;
 		Pista *pista;
 	public:
 		Corrida();
 		~Corrida();
 		Corrida(std::string nome, Pista pista);
-		std::vector<Sapo*> sapos;
+
 		// Recupera os sapos do csv e insere no vector
 		void inserirSapos(std::string nomeArquivo, std::string delimitador);
 		void inserirPista(Pista &pista);

@@ -1,10 +1,13 @@
-#include "../include/corrida.hpp"
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <algorithm>
 #include <boost/algorithm/string.hpp>
+#include "../include/corrida.hpp"
+#include "../include/pista.hpp"
+#include "../include/sapos.hpp"
 
+// Construtores
 Corrida::Corrida(){}
 Corrida::~Corrida(){}
 Corrida::Corrida(std::string nome, Pista pista){
@@ -14,18 +17,17 @@ Corrida::Corrida(std::string nome, Pista pista){
 
 void Corrida::inserirPista(Pista &pista){
 	// Se não existir pista, adiciona-se uma nova
-	if(! this->pista){
+	if(this->pista == 0){
 		this->pista = &pista;
 		return;
 	}
 
-	std::cout << "Já existe uma pista nessa corrida"       << std::endl
-			  << "não há tempo para cadastrar outra" 	   << std::endl
-			  << "aos seus postos, vai ser dada a largada" << std::endl;
+	std::cout << "Já existe uma pista nessa corrida"        << std::endl
+			  << "não há tempo para cadastrar outra" 	    << std::endl
+			  << "aos seus postos, vai ser dada a largada!" << std::endl;
 }
 
-void Corrida::inserirSapos(std::string nomeArquivo, std::string delimitador = ","){
-
+void Corrida::inserirSapos(std::string nomeArquivo, std::string delimitador){
 	std::string nome, identificador;
 	int forcaPulo;
 
@@ -47,22 +49,26 @@ void Corrida::inserirSapos(std::string nomeArquivo, std::string delimitador = ",
 
 	for(std::vector<std::string> vec : dataList)
 	{
-		for(int i = 0; i < 3; i++)
-		{
-			nome = vec[0];
-			identificador = vec[1];
-			forcaPulo = std::stoi(vec[2]);
-		}
+		nome = vec[0];
+		identificador = vec[2];
+		forcaPulo = std::stoi(vec[2]);
+
 		Sapo sapo(nome, identificador, forcaPulo);
 
-		this->sapos.push_back(&(sapo));
+		this->sapos.push_back(&sapo);
 	}
 }
 
 void Corrida::estatisticas(){
-	std::cout << "hue" << '\n';
 	// Listar os sapos ordenados por distância percorrida
-	/*for(std::size_t i = 0; i < this->sapos.size(); i++){
-		std::cout << this->sapos[i] << std::endl;
-	}*/
+	if(this->sapos.size() == 0){
+		std::cout << "Nenhuma corrida foi iniciada." <<
+					 " Sem nenhuma estatistica"
+				  << std::endl;
+	}
+
+	for(std::size_t i = 0; i < this->sapos.size(); i++){
+
+		std::cout << *(this->sapos[i]) << std::endl;
+	}
 }
