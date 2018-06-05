@@ -1,3 +1,17 @@
+/**
+* @author Ítalo Epifânio
+* @file corrida.hpp
+* @sa https://github.com/itepifanio/estudosCpp/blob/master/Linguagem%20de%20Programacao/projeto/include/corrida.hpp
+* @since 29/05/18
+* @date 31/05/18
+* @brief Cabeçalho da função que cria a instância de uma corrida
+* 
+* Responsável por inserir os sapos e a pista, utilizando  
+* leitura de csv's para criar esses objetos.
+* Essa classe também é responsável pela corrida e por exibir   
+* as estatísticas dos sapos e o ranking da corrida. 
+*/
+
 #ifndef CORRIDA_HPP
 #define CORRIDA_HPP
 #include "../include/sapos.hpp"
@@ -5,12 +19,6 @@
 #include <string>
 #include <vector>
 
-/**
-* Armazena os dados de uma pista.
-* Armazena os sapos corredores.
-* Exibe as estatísticas da corrida e dos sapos
-* Lê arquivo CSV com os sapos e as corridas
-*/
 class Corrida{
 	private:
 		std::string nome;
@@ -25,7 +33,6 @@ class Corrida{
 		void inserirPista(Pista &pista);
 		void estatisticas();
 //        void exibirRanking(); TODO:: A implementar
-
 };
 
 #endif

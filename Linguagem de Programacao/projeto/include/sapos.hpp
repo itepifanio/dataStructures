@@ -1,3 +1,15 @@
+/**
+* @author Ítalo Epifânio
+* @file corrida.hpp
+* @sa https://github.com/itepifanio/estudosCpp/blob/master/Linguagem%20de%20Programacao/projeto/include/readCsv.hpp
+* @since 29/05/18
+* @date 31/05/18
+* @brief Cabeçalho da função que define a classe sapo
+*
+* Cada sapo tem um nome e identificador, além de pularem de acordo com
+* a sua força máxima de seu pulo (definida pelo atributo forcaPulo)
+*/
+
 #ifndef SAPOS_H
 #define SAPOS_H
 #include "../include/sapos.hpp"
@@ -42,4 +54,5 @@ class Sapo{
 		//friend std::istream& operator >> (std::istream &i, Sapo &sapo);
         friend std::ostream& operator << (std::ostream &o, Sapo &sapo);
 };
+
 #endif
