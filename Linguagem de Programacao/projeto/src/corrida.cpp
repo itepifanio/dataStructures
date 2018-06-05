@@ -1,9 +1,17 @@
+/**
+* @author Ítalo Epifânio
+* @file corrida.cpp
+* @sa https://github.com/itepifanio/estudosCpp/blob/master/Linguagem%20de%20Programacao/projeto/src/corrida.cpp
+* @since 29/05/18
+* @date 31/05/18
+* @brief Implementações dos métodos da classe corrida
+*/
+
 #include "../include/readCsv.hpp"
 #include "../include/corrida.hpp"
 #include "../include/pista.hpp"
 #include "../include/sapos.hpp"
 #include <string>
-
 
 // Construtores
 Corrida::Corrida(){}

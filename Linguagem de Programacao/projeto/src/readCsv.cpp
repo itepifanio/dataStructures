@@ -1,3 +1,12 @@
+/**
+* @author Ítalo Epifânio
+* @file readCsv.cpp
+* @sa https://github.com/itepifanio/estudosCpp/blob/master/Linguagem%20de%20Programacao/projeto/src/readCsv.cpp
+* @since 29/05/18
+* @date 31/05/18
+* @brief Implementações dos métodos da classe readCsv
+*/
+
 #include "../include/readCsv.hpp"
 #include <fstream>
 #include <vector>

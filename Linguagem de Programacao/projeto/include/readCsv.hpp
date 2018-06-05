@@ -1,6 +1,6 @@
 /**
 * @author Ítalo Epifânio
-* @file corrida.hpp
+* @file readCsv.hpp
 * @sa https://github.com/itepifanio/estudosCpp/blob/master/Linguagem%20de%20Programacao/projeto/include/readCsv.hpp
 * @since 29/05/18
 * @date 31/05/18
