@@ -10,6 +10,9 @@ int Sapo::distanciaAPercorrer;
 Sapo::Sapo(){}
 Sapo::~Sapo(){}
 
+/**
+* @brief Construtor responsável por inicializar um sapo com seu nome, identificador e pulo máximo (forcaPulo). Os demais atributos também são inicializados como zero.
+*/
 Sapo::Sapo(std::string nome, std::string identificador, int forcaPulo){
 	this->identificador = identificador;
 	this->nome = nome;
@@ -24,7 +27,9 @@ Sapo::Sapo(std::string nome, std::string identificador, int forcaPulo){
 
 }
 
-// Métodos
+/**
+* @brief Calcula aleatoriamente um valor de 1 até a maior distancia que um sapo pode pular e soma isso a distancia percorrida pelo sapo.
+*/
 void Sapo::pular(){
 	// Usa a hora para gerar um numero aleatorio
 	std::srand (std::time(NULL));
@@ -51,6 +56,9 @@ std::istream& operator>> (std::istream &i, Sapo &sapo){
     return i;
 }*/
 
+/**
+* @brief Sobrecarga de ostream, exibe as informações de um objeto sapo
+*/
 std::ostream& operator<< (std::ostream &o, Sapo &sapo){
     o <<
     "Informações sobre o sapo: "          					   		  << std::endl <<
@@ -68,28 +76,45 @@ std::ostream& operator<< (std::ostream &o, Sapo &sapo){
     return o;
 }
 
-// Gets e sets
+/**
+* @brief Recupera o nome do sapo
+*/
 std::string Sapo::getNome(){
     return nome;
 }
 
+/**
+* @brief Insere o nome do sapo
+*/
 void Sapo::setNome(std::string nome){
     this->nome = nome;
 }
 
+/**
+* @brief Recupera o identificador do sapo
+*/
 std::string Sapo::getIdentificador(){
     return identificador;
 }
 
+
+/**
+* @brief Insere o identificador do sapo
+*/
 void Sapo::setIdentificador(std::string identificador){
     this->identificador = identificador;
 }
 
-
+/**
+* @brief Recupera o pulo máximo do sapo
+*/
 int Sapo::getForcaPulo(){
 	return forcaPulo;
 }
 
+/**
+* @brief Insere o pulo máximo do sapo
+*/
 void Sapo::setForcaPulo(int forca){
 	forcaPulo = forca;
 }

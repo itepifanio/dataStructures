@@ -14,12 +14,17 @@
 Pista::Pista(){}
 Pista::~Pista(){}
 
+/**
+* @brief Construtor que inicializa a pista com seu nome e tamanho 
+*/
 Pista::Pista(std::string nome, int tamanho){
 	this->nome = nome;
 	this->tamanho = tamanho;
 }
 
-// Sobrecarga de ostream
+/**
+* @brief Sobrecarga de ostream, exibe as informações de um objeto pista
+*/
 std::ostream& operator << (std::ostream &o, Pista &pista){
 	o << "Pista: " 			<< std::endl     <<
 							   std::endl     <<

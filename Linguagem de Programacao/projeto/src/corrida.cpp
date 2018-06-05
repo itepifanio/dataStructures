@@ -16,6 +16,8 @@
 // Construtores
 Corrida::Corrida(){}
 Corrida::~Corrida(){}
+
+
 Corrida::Corrida(std::string nome, Pista pista){
 	this->nome = nome;
 	this->pista = &pista;

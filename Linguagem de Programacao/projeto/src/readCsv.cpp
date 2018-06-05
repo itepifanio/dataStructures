@@ -24,6 +24,12 @@ ReadCsv(std::string nomeArquivo, std::string delimitador){
     this->delimitador = delimitador;
 }
 
+
+/**
+* @brief Recupera o pulo máximo do sapo
+*
+* @return std::vector<std::vector<std::string>>
+*/
 std::vector<std::vector<std::string>> ReadCsv::lerCsv()
 {
 	std::ifstream file(fileName);
