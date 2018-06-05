@@ -21,10 +21,10 @@ class Corrida{
 		~Corrida();
 		Corrida(std::string nome, Pista pista);
 
-		// Recupera os sapos do csv e insere no vector
 		void inserirSapos(std::string nomeArquivo, std::string delimitador);
 		void inserirPista(Pista &pista);
 		void estatisticas();
+//        void exibirRanking(); TODO:: A implementar
 
 };
 

@@ -36,6 +36,8 @@ void Sapo::pular(){
 }
 
 // Sobrecarga de operadores iostream
+
+/*
 std::istream& operator>> (std::istream &i, Sapo &sapo){
     std::cout << "Insira o nome do sapo: " << std::endl;
     i >> sapo.nome;
@@ -47,7 +49,7 @@ std::istream& operator>> (std::istream &i, Sapo &sapo){
     i >> sapo.forcaPulo;
 
     return i;
-}
+}*/
 
 std::ostream& operator<< (std::ostream &o, Sapo &sapo){
     o <<
@@ -67,6 +69,23 @@ std::ostream& operator<< (std::ostream &o, Sapo &sapo){
 }
 
 // Gets e sets
+std::string Sapo::getNome(){
+    return nome;
+}
+
+void Sapo::setNome(std::string nome){
+    this->nome = nome;
+}
+
+std::string Sapo::getIdentificador(){
+    return identificador;
+}
+
+void Sapo::setIdentificador(std::string identificador){
+    this->identificador = identificador;
+}
+
+
 int Sapo::getForcaPulo(){
 	return forcaPulo;
 }

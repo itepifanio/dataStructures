@@ -1,11 +1,9 @@
-#include <string>
-#include <iostream>
-#include <fstream>
-#include <algorithm>
-#include <boost/algorithm/string.hpp>
+#include "../include/readCsv.hpp"
 #include "../include/corrida.hpp"
 #include "../include/pista.hpp"
 #include "../include/sapos.hpp"
+#include <string>
+
 
 // Construtores
 Corrida::Corrida(){}
@@ -33,27 +31,16 @@ void Corrida::inserirSapos(std::string nomeArquivo, std::string delimitador){
 
 	std::ifstream file(nomeArquivo);
 
-	std::vector<std::vector<std::string> > dataList;
-
-	std::string line = "";
-
-	while (getline(file, line))
-	{
-		std::vector<std::string> vec;
-		boost::algorithm::split(vec, line, boost::is_any_of(delimitador));
-		dataList.push_back(vec);
-	}
-
-	// Fecha o arquivo
-	file.close();
+    ReadCsv leitor(nomeArquivo, delimitador);
+    
+    std::vector<std::vector<std::string>> dataList = leitor.lerCsv();
 
 	for(std::vector<std::string> vec : dataList)
 	{
-		nome = vec[0];
-		identificador = vec[2];
-		forcaPulo = std::stoi(vec[2]);
-
-		Sapo sapo(nome, identificador, forcaPulo);
+    	Sapo sapo = new Sapo();
+		sapo.setNome(vec[0]);
+		sapo.setIdentificador(vec[1]);
+		sapo.setForcaPulo(std::stoi(vec[2]));
 
 		this->sapos.push_back(&sapo);
 	}
@@ -63,12 +50,15 @@ void Corrida::estatisticas(){
 	// Listar os sapos ordenados por distância percorrida
 	if(this->sapos.size() == 0){
 		std::cout << "Nenhuma corrida foi iniciada." <<
-					 " Sem nenhuma estatistica"
-				  << std::endl;
+					 " Sem nenhuma estatistica"      << std::endl;
 	}
 
 	for(std::size_t i = 0; i < this->sapos.size(); i++){
-
 		std::cout << *(this->sapos[i]) << std::endl;
 	}
 }
+
+/* TODO:: A implementar
+void Corrida::exibirRanking(){
+
+} */
