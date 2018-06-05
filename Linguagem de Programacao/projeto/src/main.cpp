@@ -1,10 +1,10 @@
 /**
 * @author Ítalo Epifânio
-* @file sapos.cpp
+* @file main.cpp
 * @sa https://github.com/itepifanio/estudosCpp/blob/master/Linguagem%20de%20Programacao/projeto/src/sapos.cpp
 * @since 29/05/18
 * @date 31/05/18
-* @brief Implementações dos métodos da classe sapo
+* @brief Esqueleto das implementações das outras classes. Executa a comunicação com o usuário
 */
 
 #include "../include/corrida.hpp"
