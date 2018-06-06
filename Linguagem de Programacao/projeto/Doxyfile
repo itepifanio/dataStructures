@@ -8,7 +8,7 @@ PROJECT_NUMBER         = 1.0
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "Jogo simples que lê CSV's e criam sapos, que disputam uma corrida em uma pista escolhida pelo usuário"
+PROJECT_BRIEF          = "Jogo simples que lê CSV's e cria sapos que disputam uma corrida em uma pista escolhida pelo usuário"
 
 PROJECT_LOGO           = docs/logo/runFrogRun.jpg
 
@@ -2382,4 +2382,3 @@ GENERATE_LEGEND        = YES
 # This tag requires that the tag HAVE_DOT is set to YES.
 
 DOT_CLEANUP            = YES
-

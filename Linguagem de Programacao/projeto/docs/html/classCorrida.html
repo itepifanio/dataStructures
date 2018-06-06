@@ -25,7 +25,7 @@
    <div id="projectname">Corrida de Sapos
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Jogo simples que lê CSV&#39;s e criam sapos, que disputam uma corrida em uma pista escolhida pelo usuário</div>
+   <div id="projectbrief">Jogo simples que lê CSV&#39;s e cria sapos que disputam uma corrida em uma pista escolhida pelo usuário</div>
   </td>
  </tr>
  </tbody>
@@ -71,19 +71,142 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros públicos</h2></td></tr>
-<tr class="memitem:af7f2ee1293264e939c4a308d4b7f758b"><td class="memItemLeft" align="right" valign="top"><a id="af7f2ee1293264e939c4a308d4b7f758b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Corrida</b> (std::string nome, <a class="el" href="classPista.html">Pista</a> pista)</td></tr>
-<tr class="separator:af7f2ee1293264e939c4a308d4b7f758b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee79fcba9ecca389b2e31f517490fc73"><td class="memItemLeft" align="right" valign="top"><a id="aee79fcba9ecca389b2e31f517490fc73"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>inserirSapos</b> (std::string nomeArquivo, std::string delimitador)</td></tr>
+<tr class="memitem:a007ea8b554b61d017f10d02ab1e10428"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorrida.html#a007ea8b554b61d017f10d02ab1e10428">Corrida</a> (std::string nome)</td></tr>
+<tr class="memdesc:a007ea8b554b61d017f10d02ab1e10428"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor que inicializa uma corrida com seu nome.  <a href="#a007ea8b554b61d017f10d02ab1e10428">Mais...</a><br /></td></tr>
+<tr class="separator:a007ea8b554b61d017f10d02ab1e10428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee79fcba9ecca389b2e31f517490fc73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorrida.html#aee79fcba9ecca389b2e31f517490fc73">inserirSapos</a> (std::string nomeArquivo, std::string delimitador)</td></tr>
+<tr class="memdesc:aee79fcba9ecca389b2e31f517490fc73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê arquivo CSV e cadastra sapos na corrida.  <a href="#aee79fcba9ecca389b2e31f517490fc73">Mais...</a><br /></td></tr>
 <tr class="separator:aee79fcba9ecca389b2e31f517490fc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33a43c94ba401279c8ed3774eb735799"><td class="memItemLeft" align="right" valign="top"><a id="a33a43c94ba401279c8ed3774eb735799"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>inserirPista</b> (<a class="el" href="classPista.html">Pista</a> &amp;pista)</td></tr>
-<tr class="separator:a33a43c94ba401279c8ed3774eb735799"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2207244d6ca1dc4e4dd6afe2ef2c9884"><td class="memItemLeft" align="right" valign="top"><a id="a2207244d6ca1dc4e4dd6afe2ef2c9884"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>estatisticas</b> ()</td></tr>
-<tr class="separator:a2207244d6ca1dc4e4dd6afe2ef2c9884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a135667906e66adbe1a38ecdae0c048"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorrida.html#a3a135667906e66adbe1a38ecdae0c048">inserirPista</a> (std::string nomeArquivo, std::string delimitador)</td></tr>
+<tr class="memdesc:a3a135667906e66adbe1a38ecdae0c048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê arquivo CSV e insere uma pista na corrida.  <a href="#a3a135667906e66adbe1a38ecdae0c048">Mais...</a><br /></td></tr>
+<tr class="separator:a3a135667906e66adbe1a38ecdae0c048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bd6f41f4e0c7929c302feb13a01e0d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorrida.html#a8bd6f41f4e0c7929c302feb13a01e0d5">exibirEstatisticas</a> ()</td></tr>
+<tr class="memdesc:a8bd6f41f4e0c7929c302feb13a01e0d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe os dados dos sapos que estão cadastrados na corrida.  <a href="#a8bd6f41f4e0c7929c302feb13a01e0d5">Mais...</a><br /></td></tr>
+<tr class="separator:a8bd6f41f4e0c7929c302feb13a01e0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
+<a id="a007ea8b554b61d017f10d02ab1e10428"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a007ea8b554b61d017f10d02ab1e10428">&#9670;&nbsp;</a></span>Corrida()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Corrida::Corrida </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nome</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor que inicializa uma corrida com seu nome. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>nome </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos métodos</h2>
+<a id="a8bd6f41f4e0c7929c302feb13a01e0d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd6f41f4e0c7929c302feb13a01e0d5">&#9670;&nbsp;</a></span>exibirEstatisticas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Corrida::exibirEstatisticas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exibe os dados dos sapos que estão cadastrados na corrida. </p>
+<p>Caso nenhum sapo tenha sido cadastrado na corrida, esse método retorna uma mensagem avisando que nenhuma corrida foi iniciada e portanto não existe estatisticas a serem exibidas. Caso hajam sapos competidores então seus dados são exibidos. </p>
+
+</div>
+</div>
+<a id="a3a135667906e66adbe1a38ecdae0c048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a135667906e66adbe1a38ecdae0c048">&#9670;&nbsp;</a></span>inserirPista()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Corrida::inserirPista </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nomeArquivo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>delimitador</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lê arquivo CSV e insere uma pista na corrida. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>nomeArquivo </td></tr>
+    <tr><td class="paramname">std::string</td><td>delimitador</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Esse método checa se existe uma pista cadastrada na corrida, se houver ele retorna uma mensagem informando que não é possível inserir outra. Se ainda não tiver sido cadastrada nenhuma pista, cadastra-se através da leitura de CSV's </p>
+
+</div>
+</div>
+<a id="aee79fcba9ecca389b2e31f517490fc73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee79fcba9ecca389b2e31f517490fc73">&#9670;&nbsp;</a></span>inserirSapos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Corrida::inserirSapos </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nomeArquivo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>delimitador</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lê arquivo CSV e cadastra sapos na corrida. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>nomeArquivo </td></tr>
+    <tr><td class="paramname">std::string</td><td>delimitador </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
 <li>include/<a class="el" href="corrida_8hpp_source.html">corrida.hpp</a></li>
 <li>src/<a class="el" href="corrida_8cpp.html">corrida.cpp</a></li>

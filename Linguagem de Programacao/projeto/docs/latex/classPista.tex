@@ -4,7 +4,11 @@
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classPista_a037a3c407c56d95fa98c6e0525de28cc}{Pista} (std\+::string nome, int tamanho)
-\begin{DoxyCompactList}\small\item\em Construtor que inicializa a pista com seu nome e tamanho. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa a pista com seu nome e tamanho. \end{DoxyCompactList}\item 
+void \hyperlink{classPista_ad0c553cfa88f083810eb6259e328df7b}{set\+Nome} (std\+::string nome)
+\begin{DoxyCompactList}\small\item\em Insere o nome da pista. \end{DoxyCompactList}\item 
+void \hyperlink{classPista_a08d26ad19e300462d05208e6e15b56e7}{set\+Tamanho} (int tamanho)
+\begin{DoxyCompactList}\small\item\em Insere o tamanho da pista. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Amigos}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,6 +28,46 @@ std\+::ostream \& \hyperlink{classPista_a22c7e3e6f6a5da426ab7e401e3567185}{opera
 Construtor que inicializa a pista com seu nome e tamanho. 
 
 
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::string} & nome \\
+\hline
+{\em int} & tamanho \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classPista_ad0c553cfa88f083810eb6259e328df7b}\label{classPista_ad0c553cfa88f083810eb6259e328df7b}} 
+\index{Pista@{Pista}!set\+Nome@{set\+Nome}}
+\index{set\+Nome@{set\+Nome}!Pista@{Pista}}
+\subsubsection{\texorpdfstring{set\+Nome()}{setNome()}}
+{\footnotesize\ttfamily void Pista\+::set\+Nome (\begin{DoxyParamCaption}\item[{std\+::string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Insere o nome da pista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::string} & nome \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPista_a08d26ad19e300462d05208e6e15b56e7}\label{classPista_a08d26ad19e300462d05208e6e15b56e7}} 
+\index{Pista@{Pista}!set\+Tamanho@{set\+Tamanho}}
+\index{set\+Tamanho@{set\+Tamanho}!Pista@{Pista}}
+\subsubsection{\texorpdfstring{set\+Tamanho()}{setTamanho()}}
+{\footnotesize\ttfamily void Pista\+::set\+Tamanho (\begin{DoxyParamCaption}\item[{int}]{tamanho }\end{DoxyParamCaption})}
+
+
+
+Insere o tamanho da pista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em int} & tamanho \\
+\hline
+\end{DoxyParams}
+
 
 \subsection{Documentação das classes amigas e funções relacionadas}
 \mbox{\Hypertarget{classPista_a22c7e3e6f6a5da426ab7e401e3567185}\label{classPista_a22c7e3e6f6a5da426ab7e401e3567185}} 
@@ -36,6 +80,16 @@ Construtor que inicializa a pista com seu nome e tamanho.
 
 Sobrecarga de ostream, exibe as informações de um objeto pista. 
 
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::ostream} & \&o \\
+\hline
+{\em \hyperlink{classPista}{Pista}} & \&pista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::ostream \&o 
+\end{DoxyReturn}
 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}

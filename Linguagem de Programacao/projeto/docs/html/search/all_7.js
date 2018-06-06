@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['sapo',['Sapo',['../classSapo.html',1,'Sapo'],['../classSapo.html#a402f1c5435dd13180835b3b847e4bd7c',1,'Sapo::Sapo()']]],
-  ['sapos_2ehpp',['sapos.hpp',['../sapos_8hpp.html',1,'']]],
-  ['setforcapulo',['setForcaPulo',['../classSapo.html#ab43f2991360d34d24f73d4cf0e7e9ea6',1,'Sapo']]],
-  ['setidentificador',['setIdentificador',['../classSapo.html#a617cde091fd409e66caacee5bf079e05',1,'Sapo']]],
-  ['setnome',['setNome',['../classSapo.html#aacafe6399f877e9bda12c146531fe31f',1,'Sapo']]]
+  ['pista',['Pista',['../classPista.html',1,'Pista'],['../classPista.html#a037a3c407c56d95fa98c6e0525de28cc',1,'Pista::Pista()']]],
+  ['pista_2ecpp',['pista.cpp',['../pista_8cpp.html',1,'']]],
+  ['pista_2ehpp',['pista.hpp',['../pista_8hpp.html',1,'']]],
+  ['pular',['pular',['../classSapo.html#a32e61c61677967120ae652099bd56805',1,'Sapo']]]
 ];

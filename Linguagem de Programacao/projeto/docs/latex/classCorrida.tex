@@ -3,18 +3,79 @@
 \subsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCorrida_af7f2ee1293264e939c4a308d4b7f758b}\label{classCorrida_af7f2ee1293264e939c4a308d4b7f758b}} 
-{\bfseries Corrida} (std\+::string nome, \hyperlink{classPista}{Pista} pista)
-\item 
-\mbox{\Hypertarget{classCorrida_aee79fcba9ecca389b2e31f517490fc73}\label{classCorrida_aee79fcba9ecca389b2e31f517490fc73}} 
-void {\bfseries inserir\+Sapos} (std\+::string nome\+Arquivo, std\+::string delimitador)
-\item 
-\mbox{\Hypertarget{classCorrida_a33a43c94ba401279c8ed3774eb735799}\label{classCorrida_a33a43c94ba401279c8ed3774eb735799}} 
-void {\bfseries inserir\+Pista} (\hyperlink{classPista}{Pista} \&pista)
-\item 
-\mbox{\Hypertarget{classCorrida_a2207244d6ca1dc4e4dd6afe2ef2c9884}\label{classCorrida_a2207244d6ca1dc4e4dd6afe2ef2c9884}} 
-void {\bfseries estatisticas} ()
-\end{DoxyCompactItemize}
+\hyperlink{classCorrida_a007ea8b554b61d017f10d02ab1e10428}{Corrida} (std\+::string nome)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa uma corrida com seu nome. \end{DoxyCompactList}\item 
+void \hyperlink{classCorrida_aee79fcba9ecca389b2e31f517490fc73}{inserir\+Sapos} (std\+::string nome\+Arquivo, std\+::string delimitador)
+\begin{DoxyCompactList}\small\item\em Lê arquivo C\+SV e cadastra sapos na corrida. \end{DoxyCompactList}\item 
+void \hyperlink{classCorrida_a3a135667906e66adbe1a38ecdae0c048}{inserir\+Pista} (std\+::string nome\+Arquivo, std\+::string delimitador)
+\begin{DoxyCompactList}\small\item\em Lê arquivo C\+SV e insere uma pista na corrida. \end{DoxyCompactList}\item 
+void \hyperlink{classCorrida_a8bd6f41f4e0c7929c302feb13a01e0d5}{exibir\+Estatisticas} ()
+\begin{DoxyCompactList}\small\item\em Exibe os dados dos sapos que estão cadastrados na corrida. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classCorrida_a007ea8b554b61d017f10d02ab1e10428}\label{classCorrida_a007ea8b554b61d017f10d02ab1e10428}} 
+\index{Corrida@{Corrida}!Corrida@{Corrida}}
+\index{Corrida@{Corrida}!Corrida@{Corrida}}
+\subsubsection{\texorpdfstring{Corrida()}{Corrida()}}
+{\footnotesize\ttfamily Corrida\+::\+Corrida (\begin{DoxyParamCaption}\item[{std\+::string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa uma corrida com seu nome. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::string} & nome \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classCorrida_a8bd6f41f4e0c7929c302feb13a01e0d5}\label{classCorrida_a8bd6f41f4e0c7929c302feb13a01e0d5}} 
+\index{Corrida@{Corrida}!exibir\+Estatisticas@{exibir\+Estatisticas}}
+\index{exibir\+Estatisticas@{exibir\+Estatisticas}!Corrida@{Corrida}}
+\subsubsection{\texorpdfstring{exibir\+Estatisticas()}{exibirEstatisticas()}}
+{\footnotesize\ttfamily void Corrida\+::exibir\+Estatisticas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exibe os dados dos sapos que estão cadastrados na corrida. 
+
+Caso nenhum sapo tenha sido cadastrado na corrida, esse método retorna uma mensagem avisando que nenhuma corrida foi iniciada e portanto não existe estatisticas a serem exibidas. Caso hajam sapos competidores então seus dados são exibidos. \mbox{\Hypertarget{classCorrida_a3a135667906e66adbe1a38ecdae0c048}\label{classCorrida_a3a135667906e66adbe1a38ecdae0c048}} 
+\index{Corrida@{Corrida}!inserir\+Pista@{inserir\+Pista}}
+\index{inserir\+Pista@{inserir\+Pista}!Corrida@{Corrida}}
+\subsubsection{\texorpdfstring{inserir\+Pista()}{inserirPista()}}
+{\footnotesize\ttfamily void Corrida\+::inserir\+Pista (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Arquivo,  }\item[{std\+::string}]{delimitador }\end{DoxyParamCaption})}
+
+
+
+Lê arquivo C\+SV e insere uma pista na corrida. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::string} & nome\+Arquivo \\
+\hline
+{\em std\+::string} & delimitador\\
+\hline
+\end{DoxyParams}
+Esse método checa se existe uma pista cadastrada na corrida, se houver ele retorna uma mensagem informando que não é possível inserir outra. Se ainda não tiver sido cadastrada nenhuma pista, cadastra-\/se através da leitura de C\+SV\textquotesingle{}s \mbox{\Hypertarget{classCorrida_aee79fcba9ecca389b2e31f517490fc73}\label{classCorrida_aee79fcba9ecca389b2e31f517490fc73}} 
+\index{Corrida@{Corrida}!inserir\+Sapos@{inserir\+Sapos}}
+\index{inserir\+Sapos@{inserir\+Sapos}!Corrida@{Corrida}}
+\subsubsection{\texorpdfstring{inserir\+Sapos()}{inserirSapos()}}
+{\footnotesize\ttfamily void Corrida\+::inserir\+Sapos (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Arquivo,  }\item[{std\+::string}]{delimitador }\end{DoxyParamCaption})}
+
+
+
+Lê arquivo C\+SV e cadastra sapos na corrida. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::string} & nome\+Arquivo \\
+\hline
+{\em std\+::string} & delimitador \\
+\hline
+\end{DoxyParams}
 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}

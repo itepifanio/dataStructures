@@ -25,7 +25,7 @@
    <div id="projectname">Corrida de Sapos
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Jogo simples que lê CSV&#39;s e criam sapos, que disputam uma corrida em uma pista escolhida pelo usuário</div>
+   <div id="projectbrief">Jogo simples que lê CSV&#39;s e cria sapos que disputam uma corrida em uma pista escolhida pelo usuário</div>
   </td>
  </tr>
  </tbody>
@@ -75,6 +75,12 @@ Membros públicos</h2></td></tr>
 <tr class="memitem:a037a3c407c56d95fa98c6e0525de28cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPista.html#a037a3c407c56d95fa98c6e0525de28cc">Pista</a> (std::string nome, int tamanho)</td></tr>
 <tr class="memdesc:a037a3c407c56d95fa98c6e0525de28cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor que inicializa a pista com seu nome e tamanho.  <a href="#a037a3c407c56d95fa98c6e0525de28cc">Mais...</a><br /></td></tr>
 <tr class="separator:a037a3c407c56d95fa98c6e0525de28cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0c553cfa88f083810eb6259e328df7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPista.html#ad0c553cfa88f083810eb6259e328df7b">setNome</a> (std::string nome)</td></tr>
+<tr class="memdesc:ad0c553cfa88f083810eb6259e328df7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insere o nome da pista.  <a href="#ad0c553cfa88f083810eb6259e328df7b">Mais...</a><br /></td></tr>
+<tr class="separator:ad0c553cfa88f083810eb6259e328df7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08d26ad19e300462d05208e6e15b56e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPista.html#a08d26ad19e300462d05208e6e15b56e7">setTamanho</a> (int tamanho)</td></tr>
+<tr class="memdesc:a08d26ad19e300462d05208e6e15b56e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insere o tamanho da pista.  <a href="#a08d26ad19e300462d05208e6e15b56e7">Mais...</a><br /></td></tr>
+<tr class="separator:a08d26ad19e300462d05208e6e15b56e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigos</h2></td></tr>
@@ -110,6 +116,66 @@ Amigos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor que inicializa a pista com seu nome e tamanho. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>nome </td></tr>
+    <tr><td class="paramname">int</td><td>tamanho </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos métodos</h2>
+<a id="ad0c553cfa88f083810eb6259e328df7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0c553cfa88f083810eb6259e328df7b">&#9670;&nbsp;</a></span>setNome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pista::setNome </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nome</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insere o nome da pista. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>nome </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a08d26ad19e300462d05208e6e15b56e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08d26ad19e300462d05208e6e15b56e7">&#9670;&nbsp;</a></span>setTamanho()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pista::setTamanho </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tamanho</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insere o tamanho da pista. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>tamanho </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -149,6 +215,14 @@ Amigos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sobrecarga de ostream, exibe as informações de um objeto pista. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::ostream</td><td>&amp;o </td></tr>
+    <tr><td class="paramname"><a class="el" href="classPista.html">Pista</a></td><td>&amp;pista </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>std::ostream &amp;o </dd></dl>
 
 </div>
 </div>
