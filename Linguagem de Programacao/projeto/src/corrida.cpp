@@ -87,8 +87,10 @@ void Corrida::inserirSapos(std::string nomeArquivo, std::string delimitador){
 * @brief Inicia competição entre os sapos
 *
 * Verifica se há sapos e pistas disponíveis para a corrida, caso hajam
-* então começa-se a corrida. Enquanto todos os competidores não tiverem 
-* passado da linha de chegada da pista a corrida continua.
+* então inicializa-se como zero todas as distâncias percorridas anteriormente pelos sapos
+* e começa-se a corrida. Enquanto todos os competidores não tiverem 
+* passado da linha de chegada da pista a corrida continua, atribuindo a medida
+* que concluirem a prova o seu ranking.
 */
 void Corrida::iniciarCorrida(){
 	if(this->sapos.size() <= 0){
@@ -99,6 +101,11 @@ void Corrida::iniciarCorrida(){
 	if(this->pista == 0){
 		std::cout << "Nenhuma pista disponível para corrida" << std::endl;
 		return;
+	}
+	
+	// Inicializa como zero todas as distancias percorridas anterioremente pelos sapos 
+	for(std::size_t i = 0; i < this->sapos.size(); i++){
+	    this->sapos[i]->setDistanciaPercorrida(0);
 	}	
     
     bool todosUltrapassaram = false;
@@ -122,7 +129,7 @@ void Corrida::iniciarCorrida(){
 				    // Caso tenha acabado de concluir, então lhe é atribuido ranking e incrementado as provasDisputadas
 				    if(this->sapos[i]->getQuantidadeProvasDisputadas() == provasDisputadas){
 				        this->sapos[i]->setQuantidadeProvasDisputadas(provasDisputadas+1);
-				        this->sapos[i]->setRanking(ranking++);
+				        this->sapos[i]->setRankingAtual(ranking++);
 				    }
 				    
     			    quantosPassaram++;

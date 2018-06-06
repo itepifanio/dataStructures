@@ -43,6 +43,7 @@ class Sapo{
         void setIdentificador(std::string identificador);
    		void setRankingAtual(int rankingAtual);
         void setQuantProvasDisputadas(int quantProvasDisputadas);
+   		void setDistanciaPercorrida(int distanciaPercorrida);
 		int getForcaPulo();
 		int getQuantProvasDisputadas();
 		int getDistanciaPercorrida();

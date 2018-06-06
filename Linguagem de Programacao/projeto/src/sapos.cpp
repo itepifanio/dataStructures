@@ -135,3 +135,11 @@ void setQuantProvasDisputadas(int quantProvasDisputadas){
 int getQuantProvasDisputadas(){
     return this->quantProvasDisputadas;
 }
+
+/**
+* @brief Insere a distancia percorrida pelo sapo
+* @param int distanciaCorrida
+*/
+void setDistanciaPercorrida(int distanciaPercorrida){
+    this->distanciaPercorrida = distanciaPercorrida;
+}
