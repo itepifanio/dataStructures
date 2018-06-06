@@ -31,27 +31,23 @@ class Sapo{
 		// Construtores
 		Sapo();
 		~Sapo();
-		
+
 	    Sapo(
 	    	std::string nome, std::string identificador, int forcaPulo
 	    );
 		// Atributos publicos e estáticos
 		static int distanciaAPercorrer;
-		// Novo atributo 
-		static int distanciaTotalCorrida;
-
-		// Gets e sets
-		int getForcaPulo();
+		
+		// Gets e Sets
 		void setForcaPulo(int p);
-		std::string getNome();
         void setNome(std::string nome);
-   		std::string getIdentificador();
         void setIdentificador(std::string identificador);
+		int getForcaPulo();
 
 		// Função de pular
 		void pular();
+
 		// Sobrecarga de operadores
-		//friend std::istream& operator >> (std::istream &i, Sapo &sapo);
         friend std::ostream& operator << (std::ostream &o, Sapo &sapo);
 };
 

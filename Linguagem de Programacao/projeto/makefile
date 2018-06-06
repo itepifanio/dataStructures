@@ -1,7 +1,7 @@
 PROG = bin/exec
 CC = g++
 CPPFLAGS = -O0 -g -W -Wall -pedantic
-OBJS = main.o sapos.o corrida.o pista.o
+OBJS = main.o sapos.o corrida.o pista.o readCsv.o
 
 $(PROG) : $(OBJS)
 	$(CC) -L/usr/include/boost $(OBJS) -o $(PROG)
@@ -15,6 +15,8 @@ sapos.o: include/sapos.hpp
 	$(CC) $(CPPFLAGS) -c src/sapos.cpp
 pista.o: include/pista.hpp
 	$(CC) $(CPPFLAGS) -c src/pista.cpp
+readCsv.o: include/readCsv.hpp
+	$(CC) $(CPPFLAGS) -c src/readCsv.cpp
 
 clean:
 	rm -f $(PROG) build/*.o

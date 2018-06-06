@@ -19,7 +19,12 @@
 ReadCsv::ReadCsv(){}
 ReadCsv::~ReadCsv(){}
 
-ReadCsv(std::string nomeArquivo, std::string delimitador){
+/**
+* @brief Construtor responsável por inicializar um leitor de csv
+* @param std::string nomeArquivo
+* @param std::string delimitador
+*/
+ReadCsv::ReadCsv(std::string nomeArquivo, std::string delimitador){
     this->nomeArquivo = nomeArquivo;
     this->delimitador = delimitador;
 }
@@ -27,25 +32,25 @@ ReadCsv(std::string nomeArquivo, std::string delimitador){
 
 /**
 * @brief Recupera o pulo máximo do sapo
-*
 * @return std::vector<std::vector<std::string>>
 */
 std::vector<std::vector<std::string>> ReadCsv::lerCsv()
 {
-	std::ifstream file(fileName);
- 
-	std::vector<std::vector<std::string>> dataList;
- 
-	std::string line = "";
+	std::ifstream file(nomeArquivo);
 
-	while (getline(file, line))
+	std::vector<std::vector<std::string>> dataList;
+
+	std::string linha = "";
+
+	while (getline(file, linha))
 	{
+        std::cout << "hue" << '\n';
 		std::vector<std::string> vec;
-		boost::algorithm::split(vec, line, boost::is_any_of(delimeter));
+		boost::algorithm::split(vec, linha, boost::is_any_of(delimitador));
 		dataList.push_back(vec);
 	}
 
 	file.close();
- 
+
 	return dataList;
 }

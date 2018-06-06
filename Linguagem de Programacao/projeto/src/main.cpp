@@ -18,9 +18,9 @@ int main(){
 	Pista pista("Interlagos", 100);
 
 	Corrida corrida;
-	corrida.inserirPista(pista);
+	corrida.inserirPista("pistas.csv", ",");
 	corrida.inserirSapos("sapos.csv", ",");
-	//corrida.estatisticas();
+	corrida.exibirEstatisticas();
 
 	return 0;
 }

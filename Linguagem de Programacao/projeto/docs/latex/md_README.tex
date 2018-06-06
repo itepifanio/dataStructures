@@ -1,0 +1,64 @@
+Implemente em C++ um programa que simule a uma corrida de sapos. Implemente uma classe chamada \hyperlink{classSapo}{Sapo} contendo\+:
+
+
+\begin{DoxyItemize}
+\item Atributos\+: nome, identificador, distância percorrida, quantidade de pulos dados, quantidade de provas disputadas, vitórias, empates, quantidade total de pulos dados, quantidade.
+\item Atributo estático público\+: distância total da corrida
+\item Métodos públicos\+:
+\begin{DoxyItemize}
+\item Construtor(es).
+\item getters e setters, quando necessários.
+\item pular\+:
+\begin{DoxyItemize}
+\item incrementa distância percorrida de forma randômica entre 1 e o máximo que o sapo pode saltar
+\item Incrementa o número de pulos dados em uma unidade
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item Sinta-\/se a vontade para adicionar algum outro método ou atributos
+\end{DoxyItemize}
+
+\subsubsection*{Especificações do projeto}
+
+O código desenvolvido deve seguir as especificações abaixo\+:
+
+
+\begin{DoxyItemize}
+\item O programa deverá ler um arquivo que conterá as informações dos sapos disponíveis para a corrida.
+\item O programa deverá ler um arquivo que conterá as informações sobre as pistas disponíveis para a corrida.
+\item Ao iniciar o programa, o usuário poderá\+:
+\begin{DoxyItemize}
+\item Ver estatísticas dos sapos.
+\item Ver estatísticas das corridas.
+\item Iniciar uma corrida.
+\item Criar sapos.
+\item Criar corrida.
+\end{DoxyItemize}
+\item Para iniciar uma corrida\+:
+\begin{DoxyItemize}
+\item O usuário deverá escolher uma pista de corrida que os sapos irão disputar.
+\item É mostrado ao usuário a lista dos sapos que iram participar da corrida com seus nomes e números.
+\item O usuário dará o start (pei) da corrida.
+\end{DoxyItemize}
+\item Durante a corrida\+:
+\begin{DoxyItemize}
+\item Cada sapo irá pular individualmente, mostrando ao usuário seu nome, numeração e quanto ele pulou, em cada pulo.
+\item A medida que um sapo chegar na linha de chegada, ele não deverá mais pular nem emitir mais mensagens na tela.
+\item Quando o ultimo sapo terminar a corrida, o programa mostrará o Rank da corrida.
+\end{DoxyItemize}
+\item Lembre que as operações de criação de sapos e corridas devem salvar os mesmo nos arquivos, bem como as estatísticas dos sapos após as corridas realizadas.
+\end{DoxyItemize}
+
+\subsubsection*{Observações}
+
+O código deverá ser devidamente comentado e anotado para dar suporte à geração automática de documentação no formato de páginas Web (H\+T\+ML) utilizando a ferramenta Doxygen. Para maiores informações, você poderá acessar a página do Doxygen na Internet (\href{http://www.doxygen.org/}{\tt http\+://www.\+doxygen.\+org/}).
+
+O código do projeto deve seguir a configuração de pastas e arquivos\+:
+
+
+\begin{DoxyItemize}
+\item /bin – código executável
+\item /src – código fonte
+\item /docs – documentação
+\item makefile
+\item R\+E\+A\+D\+ME – arquivo contendo informações sobre\+: configuração, compilação e execução. Também deve conter uma sessão com as informações sobre quais arquivos e as linhas que contêm os Itens Avaliados da tabela 1. 
+\end{DoxyItemize}

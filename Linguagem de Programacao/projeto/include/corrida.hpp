@@ -5,11 +5,11 @@
 * @since 29/05/18
 * @date 31/05/18
 * @brief Cabeçalho da função que cria a instância de uma corrida
-* 
-* Responsável por inserir os sapos e a pista, utilizando  
+*
+* Responsável por inserir os sapos e a pista, utilizando
 * leitura de csv's para criar esses objetos.
-* Essa classe também é responsável pela corrida e por exibir   
-* as estatísticas dos sapos e o ranking da corrida. 
+* Essa classe também é responsável pela corrida e por exibir
+* as estatísticas dos sapos e o ranking da corrida.
 */
 
 #ifndef CORRIDA_HPP
@@ -27,11 +27,11 @@ class Corrida{
 	public:
 		Corrida();
 		~Corrida();
-		Corrida(std::string nome, Pista pista);
+		Corrida(std::string nome);
 
 		void inserirSapos(std::string nomeArquivo, std::string delimitador);
-		void inserirPista(Pista &pista);
-		void estatisticas();
+		void inserirPista(std::string nomeArquivo, std::string delimitador);
+		void exibirEstatisticas();
 //        void exibirRanking(); TODO:: A implementar
 };
 

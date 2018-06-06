@@ -14,6 +14,7 @@
 #define READCSV_HPP
 #include <string>
 #include <iostream>
+#include <vector>
 
 class ReadCsv{
 	private:
