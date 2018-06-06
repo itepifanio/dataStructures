@@ -35,14 +35,13 @@ class Sapo{
 	    Sapo(
 	    	std::string nome, std::string identificador, int forcaPulo
 	    );
-		// Atributos publicos e estáticos
-		static int distanciaAPercorrer;
-		
+	
 		// Gets e Sets
 		void setForcaPulo(int p);
         void setNome(std::string nome);
         void setIdentificador(std::string identificador);
 		int getForcaPulo();
+		int getDistanciaPercorrida();
 
 		// Função de pular
 		void pular();

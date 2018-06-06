@@ -84,6 +84,35 @@ void Corrida::inserirSapos(std::string nomeArquivo, std::string delimitador){
 }
 
 /**
+* @brief Inicia competição entre os sapos
+*/
+void Corrida::iniciarCorrida(){
+	if(this->sapos.size() <= 0)
+		std::cout << "Nenhum sapo disponível para correr" << std::endl;
+
+	if(this->pista == 0)
+		std::cout << "Nenhuma pista disponível para corrida" << std::endl;
+
+	// Booleano que checa se todos os sapos cruzaram a linha de corrida
+	bool todosUltrapassaram = false;
+	// Verifica se todos passaram
+	int quantosPassaram = 0;
+
+	// Enquanto nem todos tiverem ultrapassado a linha de corrida
+	while (todosUltrapassaram) {
+		for(std::size_t i = 0; i < this->sapos.size(); i++){
+			if(this->sapos[i]->getDistanciaPercorrida() < this->pista->getTamanho()){
+				this->sapos[i]->pular();
+				std::cout << *(this->sapos[i]) << std::endl;
+			}
+			// TODO:: Achar uma maneira de verificar se todos os sapos concluiram a Corrida
+			// Ordenar os sapos em um vetor temporário, de acordo com os ganhadores
+			// Atribuir o vetor ordenado ao original dos sapos e exibir vencedores
+		}
+	}
+}
+
+/**
 * @brief Exibe os dados dos sapos que estão cadastrados na corrida
 *
 * Caso nenhum sapo tenha sido cadastrado na corrida, esse método retorna

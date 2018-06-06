@@ -54,3 +54,11 @@ void Pista::setNome(std::string nome){
 void Pista::setTamanho(int tamanho){
 	this->tamanho = tamanho;
 }
+
+/**
+* @brief Recupera o tamanho da pista
+* @return int tamanho
+*/
+int Pista::getTamanho(){
+	return this->tamanho;
+}

@@ -4,8 +4,6 @@
 #include <ctime>
 #include <cstdlib>
 
-int Sapo::distanciaAPercorrer;
-
 // Construtores
 Sapo::Sapo(){}
 Sapo::~Sapo(){}
@@ -90,11 +88,18 @@ void Sapo::setForcaPulo(int forca){
 	forcaPulo = forca;
 }
 
-
 /**
 * @brief Recupera o pulo máximo do sapo
 * @return int forcaPulo
 */
 int Sapo::getForcaPulo(){
 	return forcaPulo;
+}
+
+/**
+* @brief Recupera a distancia percorrida pelo sapo
+* @return int distanciaPercorrida
+*/
+int Sapo::getDistanciaPercorrida(){
+	return distanciaPercorrida;
 }

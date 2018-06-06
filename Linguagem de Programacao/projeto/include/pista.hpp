@@ -23,6 +23,7 @@ class Pista{
 		friend std::ostream& operator << (std::ostream &o, Pista &pista);
 		void setNome(std::string nome);
 		void setTamanho(int tamanho);
+		int getTamanho();
 };
 
 #endif
