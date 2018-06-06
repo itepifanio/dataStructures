@@ -27,6 +27,7 @@ class Sapo{
 		int empates;
 		int quantPuloDados;
 		int forcaPulo;
+		int rankingAtual;
 	public:
 		// Construtores
 		Sapo();
@@ -40,8 +41,12 @@ class Sapo{
 		void setForcaPulo(int p);
         void setNome(std::string nome);
         void setIdentificador(std::string identificador);
+   		void setRankingAtual(int rankingAtual);
+        void setQuantProvasDisputadas(int quantProvasDisputadas);
 		int getForcaPulo();
+		int getQuantProvasDisputadas();
 		int getDistanciaPercorrida();
+		int getRankingAtual();
 
 		// Função de pular
 		void pular();

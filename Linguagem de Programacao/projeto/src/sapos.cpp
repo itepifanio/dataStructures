@@ -101,5 +101,37 @@ int Sapo::getForcaPulo(){
 * @return int distanciaPercorrida
 */
 int Sapo::getDistanciaPercorrida(){
-	return distanciaPercorrida;
+	return this->distanciaPercorrida;
+}
+
+/**
+* @brief Insere o ranking atual do sapo na corrida
+* @param int rankingAtual
+*/
+void setRankingAtual(int rankingAtual){
+    this->rankingAtual = rankingAtual;
+}
+
+/**
+* @brief Recupera o ranking do sapo na corrida
+* @return int rankingAtual
+*/
+int getRankingAtual(){
+    return this->rankingAtual;
+}
+
+/**
+* @brief Insere a quantidade de provas disputadas pelo sapo
+* @param int provasDisputadas
+*/
+void setQuantProvasDisputadas(int quantProvasDisputadas){
+    this->quantProvasDisputadas = quantProvasDisputadas;
+}
+
+/**
+* @brief Recupera a quantidade de provas disputadas pelo sapo
+* @return int quantProvasDisputadas
+*/
+int getQuantProvasDisputadas(){
+    return this->quantProvasDisputadas;
 }
