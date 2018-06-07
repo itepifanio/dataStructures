@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['operator_3c_3c',['operator&lt;&lt;',['../pista_8cpp.html#a22c7e3e6f6a5da426ab7e401e3567185',1,'pista.cpp']]]
+  ['pista',['Pista',['../classPista.html#a037a3c407c56d95fa98c6e0525de28cc',1,'Pista']]],
+  ['pular',['pular',['../classSapo.html#a32e61c61677967120ae652099bd56805',1,'Sapo']]]
 ];

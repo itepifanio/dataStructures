@@ -8,12 +8,9 @@
 void \hyperlink{classPista_ad0c553cfa88f083810eb6259e328df7b}{set\+Nome} (std\+::string nome)
 \begin{DoxyCompactList}\small\item\em Insere o nome da pista. \end{DoxyCompactList}\item 
 void \hyperlink{classPista_a08d26ad19e300462d05208e6e15b56e7}{set\+Tamanho} (int tamanho)
-\begin{DoxyCompactList}\small\item\em Insere o tamanho da pista. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Amigos}
-\begin{DoxyCompactItemize}
-\item 
-std\+::ostream \& \hyperlink{classPista_a22c7e3e6f6a5da426ab7e401e3567185}{operator$<$$<$} (std\+::ostream \&o, \hyperlink{classPista}{Pista} \&pista)
-\begin{DoxyCompactList}\small\item\em Sobrecarga de ostream, exibe as informações de um objeto pista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Insere o tamanho da pista. \end{DoxyCompactList}\item 
+int \hyperlink{classPista_af77d7913dcf238a5c5a11beafc4e49ce}{get\+Tamanho} ()
+\begin{DoxyCompactList}\small\item\em Recupera o tamanho da pista. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Documentação dos Construtores \& Destrutor}
@@ -37,6 +34,19 @@ Construtor que inicializa a pista com seu nome e tamanho.
 
 
 \subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classPista_af77d7913dcf238a5c5a11beafc4e49ce}\label{classPista_af77d7913dcf238a5c5a11beafc4e49ce}} 
+\index{Pista@{Pista}!get\+Tamanho@{get\+Tamanho}}
+\index{get\+Tamanho@{get\+Tamanho}!Pista@{Pista}}
+\subsubsection{\texorpdfstring{get\+Tamanho()}{getTamanho()}}
+{\footnotesize\ttfamily int Pista\+::get\+Tamanho (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recupera o tamanho da pista. 
+
+\begin{DoxyReturn}{Retorna}
+int tamanho 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classPista_ad0c553cfa88f083810eb6259e328df7b}\label{classPista_ad0c553cfa88f083810eb6259e328df7b}} 
 \index{Pista@{Pista}!set\+Nome@{set\+Nome}}
 \index{set\+Nome@{set\+Nome}!Pista@{Pista}}
@@ -67,29 +77,6 @@ Insere o tamanho da pista.
 {\em int} & tamanho \\
 \hline
 \end{DoxyParams}
-
-
-\subsection{Documentação das classes amigas e funções relacionadas}
-\mbox{\Hypertarget{classPista_a22c7e3e6f6a5da426ab7e401e3567185}\label{classPista_a22c7e3e6f6a5da426ab7e401e3567185}} 
-\index{Pista@{Pista}!operator$<$$<$@{operator$<$$<$}}
-\index{operator$<$$<$@{operator$<$$<$}!Pista@{Pista}}
-\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
-{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{\hyperlink{classPista}{Pista} \&}]{pista }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
-
-
-
-Sobrecarga de ostream, exibe as informações de um objeto pista. 
-
-
-\begin{DoxyParams}{Parâmetros}
-{\em std\+::ostream} & \&o \\
-\hline
-{\em \hyperlink{classPista}{Pista}} & \&pista \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Retorna}
-std\+::ostream \&o 
-\end{DoxyReturn}
 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}

@@ -7,6 +7,8 @@ Para compilar basta rodar: ` make `
 
 Para executar basta rodar: ` bin/exec `
 
+Para gerar a documentação basta digitar na raiz do projeto: ` doxygen `
+
 ## Corrida de Sapos
 
 Implemente em C++ um programa que simule a uma corrida de sapos. Implemente uma classe chamada Sapo contendo:

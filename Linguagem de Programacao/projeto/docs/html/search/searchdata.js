@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "cegilmoprs",
   1: "cprs",
   2: "cmprs",
-  3: "cegiloprs",
+  3: "cegilprs",
   4: "o",
   5: "c"
 };

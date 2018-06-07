@@ -63,7 +63,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Membros públicos</a> &#124;
-<a href="#friends">Amigos</a> &#124;
 <a href="classPista-members.html">Mostrar lista completa dos membros</a>  </div>
   <div class="headertitle">
 <div class="title">Referência à classe Pista</div>  </div>
@@ -81,12 +80,9 @@ Membros públicos</h2></td></tr>
 <tr class="memitem:a08d26ad19e300462d05208e6e15b56e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPista.html#a08d26ad19e300462d05208e6e15b56e7">setTamanho</a> (int tamanho)</td></tr>
 <tr class="memdesc:a08d26ad19e300462d05208e6e15b56e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insere o tamanho da pista.  <a href="#a08d26ad19e300462d05208e6e15b56e7">Mais...</a><br /></td></tr>
 <tr class="separator:a08d26ad19e300462d05208e6e15b56e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Amigos</h2></td></tr>
-<tr class="memitem:a22c7e3e6f6a5da426ab7e401e3567185"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPista.html#a22c7e3e6f6a5da426ab7e401e3567185">operator&lt;&lt;</a> (std::ostream &amp;o, <a class="el" href="classPista.html">Pista</a> &amp;pista)</td></tr>
-<tr class="memdesc:a22c7e3e6f6a5da426ab7e401e3567185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga de ostream, exibe as informações de um objeto pista.  <a href="#a22c7e3e6f6a5da426ab7e401e3567185">Mais...</a><br /></td></tr>
-<tr class="separator:a22c7e3e6f6a5da426ab7e401e3567185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77d7913dcf238a5c5a11beafc4e49ce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPista.html#af77d7913dcf238a5c5a11beafc4e49ce">getTamanho</a> ()</td></tr>
+<tr class="memdesc:af77d7913dcf238a5c5a11beafc4e49ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recupera o tamanho da pista.  <a href="#af77d7913dcf238a5c5a11beafc4e49ce">Mais...</a><br /></td></tr>
+<tr class="separator:af77d7913dcf238a5c5a11beafc4e49ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
 <a id="a037a3c407c56d95fa98c6e0525de28cc"></a>
@@ -127,6 +123,26 @@ Amigos</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentação dos métodos</h2>
+<a id="af77d7913dcf238a5c5a11beafc4e49ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af77d7913dcf238a5c5a11beafc4e49ce">&#9670;&nbsp;</a></span>getTamanho()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pista::getTamanho </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recupera o tamanho da pista. </p>
+<dl class="section return"><dt>Retorna</dt><dd>int tamanho </dd></dl>
+
+</div>
+</div>
 <a id="ad0c553cfa88f083810eb6259e328df7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0c553cfa88f083810eb6259e328df7b">&#9670;&nbsp;</a></span>setNome()</h2>
 
@@ -176,53 +192,6 @@ Amigos</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<h2 class="groupheader">Documentação das classes amigas e funções relacionadas</h2>
-<a id="a22c7e3e6f6a5da426ab7e401e3567185"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22c7e3e6f6a5da426ab7e401e3567185">&#9670;&nbsp;</a></span>operator<<</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>o</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classPista.html">Pista</a> &amp;&#160;</td>
-          <td class="paramname"><em>pista</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sobrecarga de ostream, exibe as informações de um objeto pista. </p>
-<dl class="params"><dt>Parâmetros</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">std::ostream</td><td>&amp;o </td></tr>
-    <tr><td class="paramname"><a class="el" href="classPista.html">Pista</a></td><td>&amp;pista </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Retorna</dt><dd>std::ostream &amp;o </dd></dl>
 
 </div>
 </div>
