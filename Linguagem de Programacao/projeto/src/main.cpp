@@ -14,8 +14,6 @@
 #include <string>
 
 int main(){
-	// Criando Pista
-	Pista pista("Interlagos", 100);
 
 	Corrida corrida;
 	corrida.inserirPista("pistas.csv", ",");

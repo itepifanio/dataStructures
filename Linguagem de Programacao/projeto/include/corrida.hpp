@@ -34,6 +34,7 @@ class Corrida{
 		void iniciarCorrida();
 		void exibirEstatisticas();
 		void exibirRanking();
+		void inserirPista();
 };
 
 #endif

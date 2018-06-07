@@ -25,21 +25,6 @@ Pista::Pista(std::string nome, int tamanho){
 }
 
 /**
-* @brief Sobrecarga de ostream, exibe as informações de um objeto pista
-* @param std::ostream &o
-* @param Pista &pista
-* @return std::ostream &o
-*/
-std::ostream& operator << (std::ostream &o, Pista &pista){
-	o << "Pista: " 			<< std::endl     <<
-							   std::endl     <<
-		 "Nome:  "			<< pista.nome    <<
-		 "Tamanho: "        << pista.tamanho;
-
-	return o;
-}
-
-/**
 * @brief Insere o nome da pista
 * @param std::string nome
 */

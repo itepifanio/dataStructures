@@ -32,25 +32,40 @@ Corrida::Corrida(std::string nome){
 *
 * Esse método checa se existe uma pista cadastrada na corrida, se houver
 * ele retorna uma mensagem informando que não é possível inserir outra.
-* Se ainda não tiver sido cadastrada nenhuma pista, cadastra-se através
-* da leitura de CSV's.
-* Após terem sido armazenadas todas as pistas no vector de pistas o método permite
-* ao usuário escolher uma pista
+* Se ainda não tiver sido cadastrada nenhuma pista, dá-se a opção do usuário
+* escolher e inserir a pista
 */
 void Corrida::inserirPista(std::string nomeArquivo, std::string delimitador){
-	// Se não existir pista, adiciona-se uma nova
 	if(this->pista == 0){
+		int opcao;
+		unsigned i = 0,j = 0;
+		Pista *pista = new Pista();
+
 		ReadCsv leitor(nomeArquivo, delimitador);
 
 	    std::vector<std::vector<std::string>> dataList = leitor.lerCsv();
 
+		std::cout << "Escolha um numero de pista: " << std::endl;
 		for(std::vector<std::string> vec : dataList)
 		{
-	    	Pista *pista = new Pista();
-			pista->setNome(vec[0]);
-			pista->setTamanho(std::stoi(vec[1]));
+			std::cout << "Pista: " << (i+1) << std::endl;
+			std::cout << "Nome: " << vec[0] << std::endl;
+			std::cout << "Tamanho: " << vec[1] << std::endl;
+			std::cout << std::endl;
+			i++;
+		}
+		std::cin >> opcao;
 
-			this->pista = pista;
+		// Inserindo opção selecionada
+		for(std::vector<std::string> vec : dataList)
+		{
+			if(j == (unsigned)(opcao-1)){
+				pista->setNome(vec[0]);
+				pista->setTamanho(std::stoi(vec[1]));
+
+				this->pista = pista;
+			}
+			j++;
 		}
 
 		return;
@@ -93,6 +108,7 @@ void Corrida::inserirSapos(std::string nomeArquivo, std::string delimitador){
 * e começa-se a corrida. Enquanto todos os competidores não tiverem
 * passado da linha de chegada da pista a corrida continua, atribuindo a medida
 * que concluirem a prova o seu ranking.
+* Ao final da corrida é exibido o ranking dos competidores
 */
 void Corrida::iniciarCorrida(){
 	if(this->sapos.size() <= 0){
@@ -151,6 +167,7 @@ void Corrida::iniciarCorrida(){
 		}
 	}
 	// Exibe estatísticas dos sapos
+	std::cout << "///////////// RANKING ///////////" << std::endl;
 	exibirRanking();
 }
 
@@ -172,7 +189,6 @@ void Corrida::exibirEstatisticas(){
 		std::cout << *(this->sapos[i]) << std::endl;
 	}
 }
-
 
 /**
 * @brief Exibe o ranking dos sapos após a corrida
