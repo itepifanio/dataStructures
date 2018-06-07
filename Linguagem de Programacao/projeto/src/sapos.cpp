@@ -55,10 +55,6 @@ std::ostream& operator<< (std::ostream &o, Sapo &sapo){
     "Identificador: " 				 	<< sapo.identificador 		  << std::endl <<
     "Força do Pulo: " 				 	<< sapo.forcaPulo         	  << std::endl <<
     "Quantidade de pulos dados: "    	<< sapo.quantPuloDados        << std::endl <<
-    "Quantidade de provas disputadas: " << sapo.quantProvasDisputadas << std::endl <<
-    "Vitorias: " 					    << sapo.vitorias	          << std::endl <<
-    "Derrotas: "       					<< sapo.derrotas    	      << std::endl <<
-    "Empates: "       					<< sapo.empates     	      << std::endl <<
                                         							     std::endl;
 
     return o;
@@ -108,7 +104,7 @@ int Sapo::getDistanciaPercorrida(){
 * @brief Insere o ranking atual do sapo na corrida
 * @param int rankingAtual
 */
-void setRankingAtual(int rankingAtual){
+void Sapo::setRankingAtual(int rankingAtual){
     this->rankingAtual = rankingAtual;
 }
 
@@ -116,7 +112,7 @@ void setRankingAtual(int rankingAtual){
 * @brief Recupera o ranking do sapo na corrida
 * @return int rankingAtual
 */
-int getRankingAtual(){
+int Sapo::getRankingAtual(){
     return this->rankingAtual;
 }
 
@@ -124,7 +120,7 @@ int getRankingAtual(){
 * @brief Insere a quantidade de provas disputadas pelo sapo
 * @param int provasDisputadas
 */
-void setQuantProvasDisputadas(int quantProvasDisputadas){
+void Sapo::setQuantProvasDisputadas(int quantProvasDisputadas){
     this->quantProvasDisputadas = quantProvasDisputadas;
 }
 
@@ -132,7 +128,7 @@ void setQuantProvasDisputadas(int quantProvasDisputadas){
 * @brief Recupera a quantidade de provas disputadas pelo sapo
 * @return int quantProvasDisputadas
 */
-int getQuantProvasDisputadas(){
+int Sapo::getQuantProvasDisputadas(){
     return this->quantProvasDisputadas;
 }
 
@@ -140,6 +136,54 @@ int getQuantProvasDisputadas(){
 * @brief Insere a distancia percorrida pelo sapo
 * @param int distanciaCorrida
 */
-void setDistanciaPercorrida(int distanciaPercorrida){
+void Sapo::setDistanciaPercorrida(int distanciaPercorrida){
     this->distanciaPercorrida = distanciaPercorrida;
+}
+
+/**
+* @brief Insere a quantidade de vitorias do sapo
+* @param int vitorias
+*/
+void Sapo::setVitorias(int vitorias){
+	this->vitorias = vitorias;
+}
+
+/**
+* @brief Recupera a quantidade de vitorias do sapo
+* @return int vitorias
+*/
+int Sapo::getVitorias(){
+	return this->vitorias;
+}
+
+/**
+* @brief Insere a quantidade de derrotas do sapo
+* @param int derrotas
+*/
+void Sapo::setDerrotas(int derrotas){
+	this->derrotas = derrotas;
+}
+
+/**
+* @brief Recupera a quantidade de derrotas do sapo
+* @return int derrotas
+*/
+int Sapo::getDerrotas(){
+	return this->derrotas;
+}
+
+/**
+* @brief Recupera o nome do sapo
+* @return std::string nome
+*/
+std::string Sapo::getNome(){
+	return this->nome;
+}
+
+/**
+* @brief Recupera o nome do sapo
+* @return std::string nome
+*/
+std::string Sapo::getIdentificador(){
+	return this->identificador;
 }

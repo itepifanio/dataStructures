@@ -20,7 +20,7 @@ int main(){
 	Corrida corrida;
 	corrida.inserirPista("pistas.csv", ",");
 	corrida.inserirSapos("sapos.csv", ",");
-	corrida.exibirEstatisticas();
+	corrida.iniciarCorrida();
 
 	return 0;
 }

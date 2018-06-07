@@ -36,7 +36,7 @@ class Sapo{
 	    Sapo(
 	    	std::string nome, std::string identificador, int forcaPulo
 	    );
-	
+
 		// Gets e Sets
 		void setForcaPulo(int p);
         void setNome(std::string nome);
@@ -44,12 +44,18 @@ class Sapo{
    		void setRankingAtual(int rankingAtual);
         void setQuantProvasDisputadas(int quantProvasDisputadas);
    		void setDistanciaPercorrida(int distanciaPercorrida);
+		void setVitorias(int vitorias);
+		void setDerrotas(int vitorias);
 		int getForcaPulo();
+		std::string getNome();
+		std::string getIdentificador();
 		int getQuantProvasDisputadas();
 		int getDistanciaPercorrida();
 		int getRankingAtual();
+		int getVitorias();
+		int getDerrotas();
 
-		// Função de pular
+		// Funções
 		void pular();
 
 		// Sobrecarga de operadores

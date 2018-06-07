@@ -33,7 +33,7 @@ class Corrida{
 		void inserirPista(std::string nomeArquivo, std::string delimitador);
 		void iniciarCorrida();
 		void exibirEstatisticas();
-//        void exibirRanking(); TODO:: A implementar
+		void exibirRanking();
 };
 
 #endif

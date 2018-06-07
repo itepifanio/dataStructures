@@ -33,7 +33,9 @@ Corrida::Corrida(std::string nome){
 * Esse método checa se existe uma pista cadastrada na corrida, se houver
 * ele retorna uma mensagem informando que não é possível inserir outra.
 * Se ainda não tiver sido cadastrada nenhuma pista, cadastra-se através
-* da leitura de CSV's
+* da leitura de CSV's.
+* Após terem sido armazenadas todas as pistas no vector de pistas o método permite
+* ao usuário escolher uma pista
 */
 void Corrida::inserirPista(std::string nomeArquivo, std::string delimitador){
 	// Se não existir pista, adiciona-se uma nova
@@ -88,7 +90,7 @@ void Corrida::inserirSapos(std::string nomeArquivo, std::string delimitador){
 *
 * Verifica se há sapos e pistas disponíveis para a corrida, caso hajam
 * então inicializa-se como zero todas as distâncias percorridas anteriormente pelos sapos
-* e começa-se a corrida. Enquanto todos os competidores não tiverem 
+* e começa-se a corrida. Enquanto todos os competidores não tiverem
 * passado da linha de chegada da pista a corrida continua, atribuindo a medida
 * que concluirem a prova o seu ranking.
 */
@@ -96,52 +98,60 @@ void Corrida::iniciarCorrida(){
 	if(this->sapos.size() <= 0){
 		std::cout << "Nenhum sapo disponível para correr" << std::endl;
 		return;
-	}	
+	}
 
 	if(this->pista == 0){
 		std::cout << "Nenhuma pista disponível para corrida" << std::endl;
 		return;
 	}
-	
-	// Inicializa como zero todas as distancias percorridas anterioremente pelos sapos 
+
+	// Inicializa como zero todas as distancias percorridas anterioremente pelos sapos
 	for(std::size_t i = 0; i < this->sapos.size(); i++){
 	    this->sapos[i]->setDistanciaPercorrida(0);
-	}	
-    
-    bool todosUltrapassaram = false;
-    int quantosPassaram = 0;
+	}
+
+    bool todosUltrapassaram = true;
+	// Atualiza o ranking dos competidores a medida que ultrapassam a linha de chegada
     int ranking = 0;
     // Vê quantas provas os sapos já disputaram
-    int provasDisputadas = this->sapos[0]->getQuantidadeProvasDisputadas();
-    
-	// Enquanto nem todos tiverem ultrapassado a linha de corrida
+    int provasDisputadas = this->sapos[0]->getQuantProvasDisputadas();
+
+	// Enquanto nem todos tiverem ultrapassado a linha de corrida repete o evento
 	while (todosUltrapassaram) {
 		for(std::size_t i = 0; i < this->sapos.size(); i++){
-			if(this->sapos[i]->getDistanciaPercorrida() =< this->pista->getTamanho()){
+			// Só é exibido os dados dos sapos enquanto eles não passaram a linha de chegada
+			if(this->sapos[i]->getDistanciaPercorrida() <= this->pista->getTamanho()){
 				this->sapos[i]->pular();
 				std::cout << *(this->sapos[i]) << std::endl;
 			}
-			
+
 			// Conta quantos sapos já concluiram a corrida na pista
 			for(std::size_t i = 0; i < this->sapos.size(); i++){
 				if(this->sapos[i]->getDistanciaPercorrida() > this->pista->getTamanho()){
-				    // Verifica se o sapo concluiu a prova em andamento
-				    // Caso tenha acabado de concluir, então lhe é atribuido ranking e incrementado as provasDisputadas
-				    if(this->sapos[i]->getQuantidadeProvasDisputadas() == provasDisputadas){
-				        this->sapos[i]->setQuantidadeProvasDisputadas(provasDisputadas+1);
-				        this->sapos[i]->setRankingAtual(ranking++);
-				    }
-				    
-    			    quantosPassaram++;
-    			}
-    		}
-    		
-    		// Se todos já tiverem passado, encerra-se a corrida
-    		if(quantosPassaram == this->sapos.size()){
-    		    todosUltrapassaram = true;
-    		}	
+					// Verifica se o sapo concluiu a prova em andamento
+					// Caso tenha acabado de concluir, então lhe é atribuido ranking e incrementado as provasDisputadas
+					if(this->sapos[i]->getQuantProvasDisputadas() == provasDisputadas){
+						ranking++;
+
+						if(ranking == 1){
+							this->sapos[i]->setVitorias(this->sapos[i]->getVitorias()+1);
+						}else{
+							this->sapos[i]->setDerrotas(this->sapos[i]->getDerrotas()+1);
+						}
+
+						this->sapos[i]->setQuantProvasDisputadas(provasDisputadas+1);
+						this->sapos[i]->setRankingAtual(ranking);
+					}
+				}
+			}
+		}
+		// Se todos já tiverem passado, encerra-se a corrida
+		if((unsigned) ranking == this->sapos.size()){
+			todosUltrapassaram = false;
 		}
 	}
+	// Exibe estatísticas dos sapos
+	exibirRanking();
 }
 
 /**
@@ -163,7 +173,23 @@ void Corrida::exibirEstatisticas(){
 	}
 }
 
-/* TODO:: A implementar
-void Corrida::exibirRanking(){
 
-} */
+/**
+* @brief Exibe o ranking dos sapos após a corrida
+*/
+void Corrida::exibirRanking(){
+	for(std::size_t i = 0; i < this->sapos.size(); i++){
+		for(std::size_t j = 0; j <= this->sapos.size(); j++){
+			if(j == (unsigned) this->sapos[i]->getRankingAtual()){
+				std::cout <<
+				"Nome: "					     	<< this->sapos[i]->getNome()        		  << std::endl <<
+			    "Identificador: " 				 	<< this->sapos[i]->getIdentificador() 		  << std::endl <<
+				"Quantidade de provas disputadas: " << this->sapos[i]->getQuantProvasDisputadas() << std::endl <<
+			    "Vitorias: " 					    << this->sapos[i]->getVitorias()	          << std::endl <<
+			    "Derrotas: "       					<< this->sapos[i]->getDerrotas()    	      << std::endl <<
+				"Ranking: "       					<< this->sapos[i]->getRankingAtual()  	      << std::endl <<
+																				  			 	     std::endl;
+            }
+		}
+	}
+}

@@ -44,7 +44,6 @@ std::vector<std::vector<std::string>> ReadCsv::lerCsv()
 
 	while (getline(file, linha))
 	{
-        std::cout << "hue" << '\n';
 		std::vector<std::string> vec;
 		boost::algorithm::split(vec, linha, boost::is_any_of(delimitador));
 		dataList.push_back(vec);
