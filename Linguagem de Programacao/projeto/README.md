@@ -1,3 +1,12 @@
+# Como rodar
+
+Observações: Esse programa utiliza o pacote boost em sua utilização, certifique-se
+de te-lo instalado em sua máquina. Caso o caminho do pacote seja diferente de ` -L/usr/include/boost ` então modifique a importação feita no makefile.
+
+Para compilar basta rodar: ` make `
+
+Para executar basta rodar: ` bin/exec `
+
 ## Corrida de Sapos
 
 Implemente em C++ um programa que simule a uma corrida de sapos. Implemente uma classe chamada Sapo contendo:
@@ -57,4 +66,3 @@ O código do projeto deve seguir a configuração de pastas e arquivos:
 * makefile
 * README – arquivo contendo informações sobre: configuração, compilação e execução. Também deve conter uma sessão com as informações sobre quais
 arquivos e as linhas que contêm os Itens Avaliados da tabela 1.
-
