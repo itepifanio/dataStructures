@@ -138,7 +138,6 @@ void Corrida::iniciarCorrida(){
 			// Só é exibido os dados dos sapos enquanto eles não passaram a linha de chegada
 			if(this->sapos[i]->getDistanciaPercorrida() <= this->pista->getTamanho()){
 				this->sapos[i]->pular();
-				std::cout << *(this->sapos[i]) << std::endl;
 			}
 
 			// Conta quantos sapos já concluiram a corrida na pista
@@ -207,5 +206,38 @@ void Corrida::exibirRanking(){
 																				  			 	     std::endl;
             }
 		}
+	}
+}
+
+/**
+* @brief Exibe as estatísticas das pistas
+*/
+void Corrida::exibirEstatisticasPistas(std::string nomeArquivo, std::string delimitador){
+	unsigned i = 0;
+
+	ReadCsv leitor(nomeArquivo, delimitador);
+
+	std::vector<std::vector<std::string>> dataList = leitor.lerCsv();
+
+	for(std::vector<std::string> vec : dataList)
+	{
+		std::cout << "Pista: " << (i+1) << std::endl;
+		std::cout << "Nome: " << vec[0] << std::endl;
+		std::cout << "Tamanho: " << vec[1] << std::endl;
+		std::cout << std::endl;
+	}
+}
+
+/**
+* @brief Lista os sapos cadastrados
+*/
+void Corrida::listarCompetidores(){
+	if(this->sapos.size() <= 0){
+		std::cout << "Nenhum sapo disponível para correr" << std::endl;
+		return;
+	}
+
+	for(std::size_t i = 0; i < this->sapos.size(); i++){
+		std::cout << *(this->sapos[i]) << std::endl;
 	}
 }

@@ -1,7 +1,6 @@
 #include "../include/sapos.hpp"
 #include <iostream>
 #include <string>
-#include <ctime>
 #include <cstdlib>
 
 // Construtores
@@ -32,11 +31,16 @@ Sapo::Sapo(std::string nome, std::string identificador, int forcaPulo){
 * @brief Calcula aleatoriamente um valor de 1 até a maior distancia que um sapo pode pular e soma isso a distancia percorrida pelo sapo.
 */
 void Sapo::pular(){
-	// Usa a hora para gerar um numero aleatorio
-	std::srand (std::time(NULL));
 	// Gera numero aleatorio entre 1 e a distancia do pulo
 	// que um sapo pode dar
-	this->distanciaPercorrida += std::rand() % getForcaPulo() + 1;
+	int pulo = (std::rand() % getForcaPulo()) + 1;
+
+	this->distanciaPercorrida += pulo;
+
+	std::cout << "Nome: " 		   	   << this->nome 		  << std::endl
+		      << "Identificador: " 	   << this->identificador << std::endl
+			  << "Pulou: " 			   << pulo  			  << std::endl
+			  												  << std::endl;
 
 	this->quantPuloDados++;
 }
@@ -49,7 +53,6 @@ void Sapo::pular(){
 */
 std::ostream& operator<< (std::ostream &o, Sapo &sapo){
     o <<
-    "Informações sobre o sapo: "          					   		  << std::endl <<
                                 		      	                  		 std::endl <<
     "Nome: "					     	<< sapo.nome        		  << std::endl <<
     "Identificador: " 				 	<< sapo.identificador 		  << std::endl <<

@@ -35,6 +35,8 @@ class Corrida{
 		void exibirEstatisticas();
 		void exibirRanking();
 		void inserirPista();
+		void exibirEstatisticasPistas(std::string nomeArquivo, std::string delimitador);
+		void listarCompetidores();
 };
 
 #endif
