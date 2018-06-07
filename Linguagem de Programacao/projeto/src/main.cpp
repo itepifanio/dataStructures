@@ -39,6 +39,7 @@ int main(){
 		}else if(opcao == 5){
 			corrida.inserirPista("pistas.csv", ",");
 		}else if(opcao == 6){
+			corrida.escreverCsv();
 			break;
 		}
 	}

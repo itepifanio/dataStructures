@@ -12,6 +12,8 @@
 #include "../include/pista.hpp"
 #include "../include/sapos.hpp"
 #include <string>
+#include <iostream>
+#include <fstream>
 
 // Construtores
 Corrida::Corrida(){}
@@ -240,4 +242,25 @@ void Corrida::listarCompetidores(){
 	for(std::size_t i = 0; i < this->sapos.size(); i++){
 		std::cout << *(this->sapos[i]) << std::endl;
 	}
+}
+
+/*
+* @brief Escreve ranking dos sapos em csv
+*/
+void Corrida::escreverCsv(){
+	std::ofstream file;
+	file.open("ranking.csv");
+
+	file << "Nome,Identificador,Quantidade de provas disputadas,Vitorias,Derrotas\n";
+
+	for(std::size_t i = 0; i < this->sapos.size(); i++){
+		file  << this->sapos[i]->getNome() 					<< "," <<
+				 this->sapos[i]->getIdentificador() 		<< "," <<
+				 this->sapos[i]->getQuantProvasDisputadas() << "," <<
+				 this->sapos[i]->getVitorias()	          	<< "," <<
+		       	 this->sapos[i]->getDerrotas()    	      	<< "," <<
+					 										  "\n";
+	}
+
+	file.close();
 }

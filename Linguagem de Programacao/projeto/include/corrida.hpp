@@ -18,6 +18,8 @@
 #include "../include/pista.hpp"
 #include <string>
 #include <vector>
+#include <iostream>
+#include <fstream>
 
 class Corrida{
 	private:
@@ -37,6 +39,7 @@ class Corrida{
 		void inserirPista();
 		void exibirEstatisticasPistas(std::string nomeArquivo, std::string delimitador);
 		void listarCompetidores();
+		void escreverCsv();
 };
 
 #endif
