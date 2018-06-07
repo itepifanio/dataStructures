@@ -18,8 +18,6 @@
 #include "../include/pista.hpp"
 #include <string>
 #include <vector>
-#include <iostream>
-#include <fstream>
 
 class Corrida{
 	private:

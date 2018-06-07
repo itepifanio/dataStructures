@@ -1,6 +1,6 @@
 PROG = bin/exec
 CC = g++
-CPPFLAGS = -O0 -g -W -Wall -pedantic
+CPPFLAGS = -O0 -g -W -Wall -pedantic -std=c++11
 OBJS = main.o sapos.o corrida.o pista.o readCsv.o
 
 $(PROG) : $(OBJS)

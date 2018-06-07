@@ -16,7 +16,7 @@ Implemente em C++ um programa que simule a uma corrida de sapos. Implemente uma 
 * Atributos: nome, identificador, distância percorrida, quantidade de pulos dados,
 quantidade de provas disputadas, vitórias, empates, quantidade total de pulos
 dados, quantidade.
-
+	
 * Atributo estático público: distância total da corrida
 
 * Métodos públicos:
