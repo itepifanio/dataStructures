@@ -22,12 +22,9 @@ class ListaLigada {
 
         ~ListaLigada(){
             No<T> *i = inicio;
-            No<T> *j = new No<T>;
-
-            while(i){
-                j = i;
+            while(i->proximo){
                 i = i->proximo;
-                delete j;
+                delete i;
             }
 
             tamanho = 0;
@@ -57,8 +54,57 @@ class ListaLigada {
             tamanho += 1;
         }
 
+        void push_front(T valor){
+            // No que será inserido
+            No<T> *temp = new No<T>;
+            temp->valor = valor;
+            temp->proximo = NULL;
+
+            if(inicio == NULL){
+                inicio = temp;
+            }else{
+                temp->proximo = inicio;
+                inicio = temp;
+            }
+
+            tamanho += 1;
+        }
+
+        void remove_back(){
+            if(inicio == NULL) return;
+
+            No<T> *i = inicio;
+
+            for(int j = 1; j < tamanho-1; j++){
+                i = i->proximo;
+            }
+
+            delete i->proximo;
+            i->proximo = NULL;
+
+            tamanho -= 1;
+        }
+
+        void remove_front(){
+            if(inicio == NULL) return;
+
+            No<T> *i = inicio;
+            inicio = i->proximo;
+
+
+            delete i;
+            i = NULL;
+
+            tamanho -= 1;
+        }
+
         void print(){
             No<T> *i = inicio;
+
+            if(inicio == NULL){
+                std::cout << "Nenhum elemento na lista" << std::endl;
+            }
+
             while(i){
                 std::cout << i->valor << " ";
                 i = i->proximo;
