@@ -47,11 +47,43 @@ class ListaDuplamenteLigada {
                 temp->anterior = i->anterior;
                 i->proximo = temp;
             }else{
-                temp->anterior = inicio;
+                temp->anterior = NULL;
+                inicio = temp;
+            }
+
+            fim = temp;
+
+            tamanho += 1;
+        }
+
+        void push_front(T valor){
+            // No que será inserido
+            No<T> *temp = new No<T>;
+            temp->valor = valor;
+            temp->proximo = inicio;
+            temp->anterior = NULL;
+
+            if(inicio != NULL){
+                inicio->anterior = temp;
                 inicio = temp;
             }
 
             tamanho += 1;
+        }
+
+        void remove_back(){
+            if(inicio == NULL && fim == NULL) return;
+
+            No<T> *i = inicio;
+
+            for(int j = 1; j < tamanho-1; j++){
+                i = i->proximo;
+            }
+
+            delete i->proximo;
+            i->proximo = NULL;
+
+            tamanho -= 1;
         }
 
         void print(){
@@ -59,13 +91,14 @@ class ListaDuplamenteLigada {
 
             if(inicio == NULL && fim == NULL){
                 std::cout << "Nenhum elemento na lista" << std::endl;
+                return;
             }
 
             while(i != fim){
                 std::cout << i->valor << " ";
                 i = i->proximo;
             }
-            std::cout << std::endl;
+            std::cout << fim->valor << std::endl;
         }
 };
 
