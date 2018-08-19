@@ -7,7 +7,7 @@ $(PROG) : $(OBJS)
 	$(CC) $(OBJS) -o $(PROG)
 	mv *.o build/
 
-main.o : include/listaLigadaSimples.hpp
+main.o : include/listaLigadaSimples.hpp include/listaDuplamenteLigada.hpp
 	$(CC) $(CPPFLAGS) -c src/main.cpp
 
 clean:

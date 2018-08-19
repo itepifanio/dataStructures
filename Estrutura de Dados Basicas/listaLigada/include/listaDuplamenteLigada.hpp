@@ -1,26 +1,29 @@
-#ifndef _LISTA_LIGADA_HPP_
-#define _LISTA_LIGADA_HPP_
+#ifndef _LISTA_DUPLAMENTE_LIGADA_HPP_
+#define _LISTA_DUPLAMENTE_LIGADA_HPP_
 #include "no.hpp"
 #include <iostream>
 
-
 template <typename T>
-class ListaLigada {
+class ListaDuplamenteLigada {
     public:
         No<T> *inicio;
+        No<T> *fim;
         int tamanho;
 
-        ListaLigada(){
+        ListaDuplamenteLigada(){
             inicio = NULL;
+            fim = NULL;
             tamanho = 0;
         }
 
-        ~ListaLigada(){
+        ~ListaDuplamenteLigada(){
             No<T> *i = inicio;
-            while(i->proximo){
+            while(i != fim){
                 i = i->proximo;
-                delete i;
+                delete i->anterior;
             }
+            delete inicio;
+            delete fim;
 
             tamanho = 0;
         }
@@ -41,66 +44,24 @@ class ListaLigada {
                     i = i->proximo;
                 }
 
+                temp->anterior = i->anterior;
                 i->proximo = temp;
             }else{
+                temp->anterior = inicio;
                 inicio = temp;
             }
 
             tamanho += 1;
-        }
-
-        void push_front(T valor){
-            // No que será inserido
-            No<T> *temp = new No<T>;
-            temp->valor = valor;
-            temp->proximo = NULL;
-
-            if(inicio == NULL){
-                inicio = temp;
-            }else{
-                temp->proximo = inicio;
-                inicio = temp;
-            }
-
-            tamanho += 1;
-        }
-
-        void remove_back(){
-            if(inicio == NULL) return;
-
-            No<T> *i = inicio;
-
-            for(int j = 1; j < tamanho-1; j++){
-                i = i->proximo;
-            }
-
-            delete i->proximo;
-            i->proximo = NULL;
-
-            tamanho -= 1;
-        }
-
-        void remove_front(){
-            if(inicio == NULL) return;
-
-            No<T> *i = inicio;
-            inicio = i->proximo;
-
-
-            delete i;
-            i = NULL;
-
-            tamanho -= 1;
         }
 
         void print(){
             No<T> *i = inicio;
 
-            if(inicio == NULL){
+            if(inicio == NULL && fim == NULL){
                 std::cout << "Nenhum elemento na lista" << std::endl;
             }
 
-            while(i){
+            while(i != fim){
                 std::cout << i->valor << " ";
                 i = i->proximo;
             }
