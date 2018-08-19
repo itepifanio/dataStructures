@@ -11,13 +11,15 @@ class ListaDuplamenteLigada {
         int tamanho;
 
         ListaDuplamenteLigada(){
-            inicio = NULL;
-            fim = NULL;
+            inicio = new No<T>;
+            fim = new No<T>;
+            inicio->proximo = fim;
+            fim->anterior = inicio;
             tamanho = 0;
         }
 
         ~ListaDuplamenteLigada(){
-            No<T> *i = inicio;
+            No<T> *i = inicio->proximo;
             while(i != fim){
                 i = i->proximo;
                 delete i->anterior;
@@ -29,76 +31,51 @@ class ListaDuplamenteLigada {
         }
 
         void push_back(T valor){
-            // No que será inserido
             No<T> *temp = new No<T>;
             temp->valor = valor;
-            temp->proximo = NULL;
 
-            // No inicial da lista ligada
-            No<T> *i = inicio;
-
-            // Se for não for o primeiro, itera
-            // Se for o primeiro adiciona o nó ao valor inicial
-            if(inicio != NULL){
-                while(i->proximo != NULL){
-                    i = i->proximo;
-                }
-
-                temp->anterior = i->anterior;
-                i->proximo = temp;
-            }else{
-                temp->anterior = NULL;
-                inicio = temp;
-            }
-
-            fim = temp;
+            fim->anterior->proximo = temp;
+            fim->anterior = temp;
+            temp->proximo = fim;
 
             tamanho += 1;
         }
 
         void push_front(T valor){
-            // No que será inserido
             No<T> *temp = new No<T>;
             temp->valor = valor;
-            temp->proximo = inicio;
-            temp->anterior = NULL;
 
-            if(inicio != NULL){
-                inicio->anterior = temp;
-                inicio = temp;
-            }
-
+            temp->proximo = inicio->proximo;
+            temp->anterior = inicio;
+            inicio->proximo = temp;
+        
             tamanho += 1;
         }
 
         void remove_back(){
-            if(inicio == NULL && fim == NULL) return;
-
-            No<T> *i = inicio;
-
-            for(int j = 1; j < tamanho-1; j++){
-                i = i->proximo;
+            if(inicio == NULL && fim == NULL){
+                std::cout << "Lista não tem dado a ser removido" << std::endl;
+                return;
             }
 
-            delete i->proximo;
-            i->proximo = NULL;
+            No<T> *tmp = new No<T>;
+            tmp = fim->anterior;
+
+            delete fim;
+
+            fim = tmp;
 
             tamanho -= 1;
         }
 
         void print(){
-            No<T> *i = inicio;
-
-            if(inicio == NULL && fim == NULL){
-                std::cout << "Nenhum elemento na lista" << std::endl;
-                return;
-            }
+            No<T> *i = inicio->proximo;
 
             while(i != fim){
                 std::cout << i->valor << " ";
                 i = i->proximo;
             }
-            std::cout << fim->valor << std::endl;
+            std::cout << std::endl;
         }
 };
 
