@@ -31,12 +31,14 @@ class ListaDuplamenteLigada {
         }
 
         void push_back(T valor){
-            No<T> *temp = new No<T>;
-            temp->valor = valor;
+            No<T> *tmp = new No<T>;
+            tmp->valor = valor;
+            No<T> *anterior = fim->anterior;
 
-            fim->anterior->proximo = temp;
-            fim->anterior = temp;
-            temp->proximo = fim;
+            anterior->proximo = tmp;
+            fim->anterior = tmp;
+            tmp->proximo = fim;
+            tmp->anterior = anterior;
 
             tamanho += 1;
         }
@@ -45,37 +47,54 @@ class ListaDuplamenteLigada {
             No<T> *temp = new No<T>;
             temp->valor = valor;
 
-            temp->proximo = inicio->proximo;
-            temp->anterior = inicio;
-            inicio->proximo = temp;
-        
+            if(inicio->proximo == fim || fim->anterior == inicio){
+                inicio->proximo = temp;
+                temp->anterior = inicio;
+                temp->proximo = fim;
+                fim->anterior = temp;
+            }else{
+                temp->proximo = inicio->proximo;
+                temp->anterior = inicio;
+                inicio->proximo = temp;
+            }
+
             tamanho += 1;
         }
 
         void remove_back(){
-            if(inicio == NULL && fim == NULL){
-                std::cout << "Lista não tem dado a ser removido" << std::endl;
-                return;
+            if((inicio == NULL && fim == NULL) || (inicio == fim)){ return; }
+
+            if(inicio != fim && fim->anterior != inicio){
+                No<T> *anterior = fim->anterior->anterior;
+
+                delete fim->anterior;
+                anterior->proximo = fim;
+                fim->anterior = anterior;
+
+                tamanho -= 1;
+            }else if(tamanho == 1){
+                delete fim->anterior;
+                fim->anterior = inicio;
+
+                tamanho -= 1;
+            }else{
+                std::cout << "Nenhum elemento a ser removido" << '\n';
             }
-
-            No<T> *tmp = new No<T>;
-            tmp = fim->anterior;
-
-            delete fim;
-
-            fim = tmp;
-
-            tamanho -= 1;
         }
 
         void print(){
             No<T> *i = inicio->proximo;
 
-            while(i != fim){
+            for(int j = 0; j < tamanho; j++){
                 std::cout << i->valor << " ";
                 i = i->proximo;
             }
-            std::cout << std::endl;
+
+            if (tamanho < 0) {
+                std::cout << "Nenhum elemento na lista" << '\n';
+            }else{
+                std::cout << std::endl;
+            }
         }
 };
 
