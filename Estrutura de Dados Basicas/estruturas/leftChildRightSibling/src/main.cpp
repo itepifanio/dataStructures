@@ -20,6 +20,15 @@ int main() {
     tree->pushChild(9, n5);
 
     tree->print();
+    std::cout << '\n';
+    int value;
+    std::cin >> value;
+
+    if(tree->search(value)) {
+        std::cout << "Número existe\n";
+    } else {
+        std::cout << "Número não existe\n";
+    }
 
     return 0;
 }
