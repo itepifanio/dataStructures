@@ -17,17 +17,13 @@ class LeftChildRightSibling{
 
         Node<T> *pushSibling(Node<T> *n, T value){
             if(n == NULL) return NULL;
-            while(n->sibling)
+            
+			while(n->sibling)
                 n = n->sibling;
+
             return (n->sibling = new Node<T>(value));
         }
 
-        /*
-        Queria colocar o Node<T> *n = root, mas ando tendo problemas
-        Comparo se o n é nulo, se for ele assume o valor do root, se
-        o root for nulo também, então retornamos nulo mesmo.
-        Esse código ficaria mais elegante de aceitasse o parâmetro default
-        */
         Node<T> *pushChild(T value, Node<T> *n = NULL){
             if(n == NULL){
                 if(this->root == NULL) return NULL;
@@ -42,7 +38,6 @@ class LeftChildRightSibling{
             return (n->child = new Node<T>(value));
         }
 
-        // Aqui também gostaria de um parâmetro default
         void print(Node<T> *n = NULL){
             if(n == NULL){
                 if(this->root == NULL) return;
@@ -52,12 +47,7 @@ class LeftChildRightSibling{
 
             while(n){
                 std::cout << " " << n->value;
-                /*
-                Todo nó só tem um filho ou um irmão, então caso
-                exista filho fazemos uma chamada recursiva
-                para imprimir os valores do nó filho, percorrendo
-                assim nossa "árvore"
-                */
+                
                 if(n->child)
                     print(n->child);
 
@@ -65,18 +55,28 @@ class LeftChildRightSibling{
             }
 
         }
-        int heightt(Node<T> *n) { 
+
+        int height(Node<T> *n = NULL) { 
+			if(n == NULL){
+                if(this->root == NULL){ return 0; }
+
+                n = root;
+            }
+ 
             int h, t;
-            if (n == NULL) 
-                return -1; 
+
+            if (n == NULL) return -1; 
+
             h = 0; //height
             n = n->child; 
+
             while (n!= NULL) {
-                t = heightt(n); 
+                t = height(n); 
                 if (t > h)  
                     h = t; 
                 n = n->sibling; 
             } 
+
             return h+1; 
         }
 

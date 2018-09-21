@@ -22,8 +22,11 @@ int main() {
     tree->pushChild(8, n5);
     tree->pushChild(9, n5);
 
+	// Imprime
     tree->print();
-    std::cout << '\n';
+
+	// Realiza pesquisa		    
+	std::cout << '\n';
     int value;
     std::cin >> value;
 
@@ -32,7 +35,9 @@ int main() {
     } else {
         std::cout << "Numero nao existe\n";
     }
-    std::cout<<tree->heightt(tree->root)<<std::endl;
+
+	// Retorna altura da árvore
+    std::cout<< tree->height() << std::endl;
 
     return 0;
 }
