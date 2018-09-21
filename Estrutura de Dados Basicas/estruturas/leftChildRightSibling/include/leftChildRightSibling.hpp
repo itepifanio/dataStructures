@@ -17,10 +17,8 @@ class LeftChildRightSibling{
 
         Node<T> *pushSibling(Node<T> *n, T value){
             if(n == NULL) return NULL;
-
             while(n->sibling)
                 n = n->sibling;
-
             return (n->sibling = new Node<T>(value));
         }
 
@@ -66,6 +64,20 @@ class LeftChildRightSibling{
                 n = n->sibling;
             }
 
+        }
+        int heightt(Node<T> *n) { 
+            int h, t;
+            if (n == NULL) 
+                return -1; 
+            h = 0; //height
+            n = n->child; 
+            while (n!= NULL) {
+                t = heightt(n); 
+                if (t > h)  
+                    h = t; 
+                n = n->sibling; 
+            } 
+            return h+1; 
         }
 
         bool searchChild(Node<T> *child, T value) {
