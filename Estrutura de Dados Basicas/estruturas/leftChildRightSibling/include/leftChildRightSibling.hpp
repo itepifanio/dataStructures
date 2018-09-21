@@ -10,7 +10,7 @@ class LeftChildRightSibling{
         Node<T> *root;
 
         LeftChildRightSibling(T value){
-            this->root = new Node<int>(value);
+            this->root = new Node<T>(value);
             this->root->sibling = this->root->child = NULL;
             this->root->value = value;
         }
@@ -21,7 +21,7 @@ class LeftChildRightSibling{
             while(n->sibling)
                 n = n->sibling;
 
-            return (n->sibling = new Node<int>(value));
+            return (n->sibling = new Node<T>(value));
         }
 
         /*
@@ -41,7 +41,7 @@ class LeftChildRightSibling{
             if(n->child)
                 return pushSibling(n->child, value);
 
-            return (n->child = new Node<int>(value));
+            return (n->child = new Node<T>(value));
         }
 
         // Aqui também gostaria de um parâmetro default
