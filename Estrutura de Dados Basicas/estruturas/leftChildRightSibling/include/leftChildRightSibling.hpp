@@ -67,6 +67,30 @@ class LeftChildRightSibling{
             }
 
         }
+
+        bool searchChild(Node<T> *child, T value) {
+            if(child == NULL) {
+                return false;
+            } else if(child->value == value || searchSibling(child->sibling, value)) {
+                return true;
+            }
+
+            return searchChild(child->child, value);
+        }
+
+        bool searchSibling(Node<T> *sibling, T value) {
+            if(sibling == NULL) {
+                return false;
+            } else if(sibling->value == value || searchChild(sibling->child, value)) {
+                return true;
+            }
+            
+            return searchSibling(sibling->sibling, value);
+        }
+
+        bool search(T value) {
+            return this->searchChild(this->root, value);
+        }
 };
 
 #endif
