@@ -140,7 +140,7 @@ class LeftChildRightSibling{
         	return NULL;   // não encontrou
 		}
 
-		Node<T> * search_node(T value) {
+		Node<T> *search_node(T value) {
 		    return this->searchChildNode(this->root, value);
 		}
 
@@ -149,18 +149,7 @@ class LeftChildRightSibling{
 
 			if(node == NULL){
 				std::cout << std::endl << "Valor nao esta na Arvore" << std::endl;
-			} else if(node == this->root) {
-				this->root = NULL;
-			} else {
-				if(node->sibling == NULL && node->child == NULL) {
-					//node = NULL; // Supostamente deveria funcionar mas ainda é impresso
-					*node = NULL; // Funciona, porém atribui "0" a node->value
-				} else if(node->sibling == NULL && node->child != NULL){
-                    *node = *node->child;
-                } else {
-					*node = *node->sibling;
-				}
-			}
+			} else
 		}
 };
 

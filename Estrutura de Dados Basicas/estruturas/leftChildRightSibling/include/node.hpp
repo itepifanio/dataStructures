@@ -16,6 +16,10 @@ class Node{
         }
 
         Node<T>(){}
+        ~Node<T>(){
+            delete(this->child);
+            delete(this->sibling);
+        }
 };
 
 #endif
