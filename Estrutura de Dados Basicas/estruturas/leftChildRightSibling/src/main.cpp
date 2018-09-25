@@ -21,12 +21,33 @@ int main() {
     tree->pushChild(7, n5);
     tree->pushChild(8, n5);
     tree->pushChild(9, n5);
+	
+	tree->print();
+/*
+	// Search
+	for (int i = 0; i < 11; ++i){
+    std::cout << '\n';
+    int value;
+    std::cin >> value;
+    auto node = tree->search_node(value);
+    
+    if (node != NULL)
+        std::cout << node->value << std::endl;
+    else
+        std::cout << "valor nao encontrado\n";
+    
+    }
+*/
+	// Remove
+	tree->remove(5);
 
 	// Imprime
+	std::cout << "\n";
     tree->print();
+	std::cout << "\n";
 
 	// Realiza pesquisa		    
-	std::cout << '\n';
+/*	std::cout << '\n';
     int value;
     std::cin >> value;
 
@@ -38,6 +59,6 @@ int main() {
 
 	// Retorna altura da árvore
     std::cout<< tree->height() << std::endl;
-
+*/
     return 0;
 }
