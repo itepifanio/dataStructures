@@ -17,9 +17,10 @@ class LeftChildRightSibling{
 
         Node<T> *pushSibling(Node<T> *n, T value){
             if(n == NULL) return NULL;
-            
-			while(n->sibling)
+
+			while(n->sibling != NULL){
                 n = n->sibling;
+            }
 
             return (n->sibling = new Node<T>(value));
         }
@@ -47,64 +48,41 @@ class LeftChildRightSibling{
 
             while(n){
                 std::cout << " " << n->value;
-                
-                if(n->child)
+
+                if(n->child){
                     print(n->child);
+                }
 
                 n = n->sibling;
             }
 
         }
 
-        int height(Node<T> *n = NULL) { 
+        int height(Node<T> *n = NULL) {
 			if(n == NULL){
                 if(this->root == NULL){ return 0; }
 
                 n = root;
             }
- 
+
             int h, t;
 
-            if (n == NULL) return -1; 
+            if (n == NULL) return -1;
 
             h = 0; //height
-            n = n->child; 
+            n = n->child;
 
             while (n!= NULL) {
-                t = height(n); 
-                if (t > h)  
-                    h = t; 
-                n = n->sibling; 
-            } 
-
-            return h+1; 
-        }
-
-        bool searchChild(Node<T> *child, T value) {
-            if(child == NULL) {
-                return false;
-            } else if(child->value == value || searchSibling(child->sibling, value)) {
-                return true;
+                t = height(n);
+                if (t > h)
+                    h = t;
+                n = n->sibling;
             }
 
-            return searchChild(child->child, value);
+            return h+1;
         }
 
-        bool searchSibling(Node<T> *sibling, T value) {
-            if(sibling == NULL) {
-                return false;
-            } else if(sibling->value == value || searchChild(sibling->child, value)) {
-                return true;
-            }
-            
-            return searchSibling(sibling->sibling, value);
-        }
-
-        bool search(T value) {
-            return this->searchChild(this->root, value);
-        }
-
-				Node<T> * searchChild_node(Node<T> *child, T value) {
+		Node<T> * searchChildNode(Node<T> *child, T value) {
 
 			if (child->value == value)
 			{
@@ -112,16 +90,16 @@ class LeftChildRightSibling{
 			}
 			else if (child->child != NULL and child->sibling == NULL) //child:1 sibling:0
 			{
-				return searchChild_node(child->child, value);
+				return searchChildNode(child->child, value);
 			}
 			else if (child->child == NULL and child->sibling != NULL) //child:0 sibling:1
 			{
-				return searchSibling_node(child->sibling, value);
+				return searchSiblingNode(child->sibling, value);
 			}
 			else if (child->child != NULL and child->sibling != NULL) //child:1 sibling:1
 			{
 				//1 procure pelo child
-				auto childs = searchChild_node(child->child, value);
+				auto childs = searchChildNode(child->child, value);
 
 				if (childs != NULL)
 				{
@@ -129,7 +107,7 @@ class LeftChildRightSibling{
 				}
 
 				// nao encontrou child, procure sibling
-				return searchSibling_node(child->sibling, value);
+				return searchSiblingNode(child->sibling, value);
 			}
 
 
@@ -137,7 +115,7 @@ class LeftChildRightSibling{
 
         }
 
-		Node<T> * searchSibling_node(Node<T> *sibling, T value) {
+		Node<T> * searchSiblingNode(Node<T> *sibling, T value) {
 
 			if (sibling->value == value)
 			{
@@ -145,16 +123,16 @@ class LeftChildRightSibling{
 			}
 			else if (sibling->child != NULL and sibling->sibling == NULL) //child:1 sibling:0
 			{
-				return searchChild_node(sibling->child, value);
+				return searchChildNode(sibling->child, value);
 			}
 			else if (sibling->child == NULL and sibling->sibling != NULL) //child:0 sibling:1
 			{
-				return searchSibling_node(sibling->sibling, value);
+				return searchSiblingNode(sibling->sibling, value);
 			}
 			else if (sibling->child != NULL and sibling->sibling != NULL) //child:1 sibling:1
 			{
 				// 1 procure pelo siblings
-				auto siblings = searchSibling_node(sibling->sibling, value);
+				auto siblings = searchSiblingNode(sibling->sibling, value);
 
 				if (siblings != NULL)
 				{
@@ -162,7 +140,7 @@ class LeftChildRightSibling{
 				}
 
 				// nao encontrou siblind, procure child
-				return searchChild_node(sibling->child, value);
+				return searchChildNode(sibling->child, value);
 			}
 
 
@@ -171,7 +149,7 @@ class LeftChildRightSibling{
 		}
 
 		Node<T> * search_node(T value) {
-		    return this->searchChild_node(this->root, value);
+		    return this->searchChildNode(this->root, value);
 		}
 
 		void remove(T value){
@@ -182,10 +160,12 @@ class LeftChildRightSibling{
 			} else if(node == this->root) {
 				this->root = NULL;
 			} else {
-				if(node->sibling == NULL) {
+				if(node->sibling == NULL && node->child == NULL) {
 					//node = NULL; // Supostamente deveria funcionar mas ainda é impresso
 					*node = NULL; // Funciona, porém atribui "0" a node->value
-				} else {
+				} else if(node->sibling == NULL && node->child != NULL){
+                    *node = *node->child;
+                } else {
 					*node = *node->sibling;
 				}
 			}

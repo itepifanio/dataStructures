@@ -21,7 +21,7 @@ int main() {
     tree->pushChild(7, n5);
     tree->pushChild(8, n5);
     tree->pushChild(9, n5);
-	
+
 	tree->print();
 /*
 	// Search
@@ -30,23 +30,23 @@ int main() {
     int value;
     std::cin >> value;
     auto node = tree->search_node(value);
-    
+
     if (node != NULL)
         std::cout << node->value << std::endl;
     else
         std::cout << "valor nao encontrado\n";
-    
+
     }
 */
 	// Remove
-	tree->remove(5);
+	tree->remove(22);
 
 	// Imprime
 	std::cout << "\n";
     tree->print();
 	std::cout << "\n";
 
-	// Realiza pesquisa		    
+	// Realiza pesquisa
 /*	std::cout << '\n';
     int value;
     std::cin >> value;
