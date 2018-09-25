@@ -103,6 +103,93 @@ class LeftChildRightSibling{
         bool search(T value) {
             return this->searchChild(this->root, value);
         }
+
+				Node<T> * searchChild_node(Node<T> *child, T value) {
+
+			if (child->value == value)
+			{
+				return child;
+			}
+			else if (child->child != NULL and child->sibling == NULL) //child:1 sibling:0
+			{
+				return searchChild_node(child->child, value);
+			}
+			else if (child->child == NULL and child->sibling != NULL) //child:0 sibling:1
+			{
+				return searchSibling_node(child->sibling, value);
+			}
+			else if (child->child != NULL and child->sibling != NULL) //child:1 sibling:1
+			{
+				//1 procure pelo child
+				auto childs = searchChild_node(child->child, value);
+
+				if (childs != NULL)
+				{
+					return childs;
+				}
+
+				// nao encontrou child, procure sibling
+				return searchSibling_node(child->sibling, value);
+			}
+
+
+        	return NULL;   // não encontrou
+
+        }
+
+		Node<T> * searchSibling_node(Node<T> *sibling, T value) {
+
+			if (sibling->value == value)
+			{
+				return sibling;
+			}
+			else if (sibling->child != NULL and sibling->sibling == NULL) //child:1 sibling:0
+			{
+				return searchChild_node(sibling->child, value);
+			}
+			else if (sibling->child == NULL and sibling->sibling != NULL) //child:0 sibling:1
+			{
+				return searchSibling_node(sibling->sibling, value);
+			}
+			else if (sibling->child != NULL and sibling->sibling != NULL) //child:1 sibling:1
+			{
+				// 1 procure pelo siblings
+				auto siblings = searchSibling_node(sibling->sibling, value);
+
+				if (siblings != NULL)
+				{
+					return siblings;
+				}
+
+				// nao encontrou siblind, procure child
+				return searchChild_node(sibling->child, value);
+			}
+
+
+        	return NULL;   // não encontrou
+
+		}
+
+		Node<T> * search_node(T value) {
+		    return this->searchChild_node(this->root, value);
+		}
+
+		void remove(T value){
+			auto *node = this->search_node(value);
+
+			if(node == NULL){
+				std::cout << "\nValor nao esta na Arvore\n";
+			} else if(node == this->root) {
+				this->root = NULL;
+			} else {
+				if(node->sibling == NULL) {
+					//node = NULL; // Supostamente deveria funcionar mas ainda é impresso
+					*node = NULL; // Funciona, porém atribui "0" a node->value
+				} else {
+					*node = *node->sibling;
+				}
+			}
+		}
 };
 
 #endif
