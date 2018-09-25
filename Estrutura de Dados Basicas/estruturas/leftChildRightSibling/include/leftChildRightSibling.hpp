@@ -60,7 +60,7 @@ class LeftChildRightSibling{
 
         int height(Node<T> *n = NULL) {
 			if(n == NULL){
-                if(this->root == NULL){ return 0; }
+                if(this->root == NULL) return 0;
 
                 n = root;
             }
@@ -74,8 +74,8 @@ class LeftChildRightSibling{
 
             while (n!= NULL) {
                 t = height(n);
-                if (t > h)
-                    h = t;
+                if (t > h) h = t;
+
                 n = n->sibling;
             }
 
@@ -101,22 +101,16 @@ class LeftChildRightSibling{
 				//1 procure pelo child
 				auto childs = searchChildNode(child->child, value);
 
-				if (childs != NULL)
-				{
-					return childs;
-				}
+				if (childs != NULL)	return childs;
 
 				// nao encontrou child, procure sibling
 				return searchSiblingNode(child->sibling, value);
 			}
 
-
         	return NULL;   // não encontrou
-
         }
 
 		Node<T> * searchSiblingNode(Node<T> *sibling, T value) {
-
 			if (sibling->value == value)
 			{
 				return sibling;
@@ -143,9 +137,7 @@ class LeftChildRightSibling{
 				return searchChildNode(sibling->child, value);
 			}
 
-
         	return NULL;   // não encontrou
-
 		}
 
 		Node<T> * search_node(T value) {
@@ -156,7 +148,7 @@ class LeftChildRightSibling{
 			auto *node = this->search_node(value);
 
 			if(node == NULL){
-				std::cout << "\nValor nao esta na Arvore\n";
+				std::cout << std::endl << "Valor nao esta na Arvore" << std::endl;
 			} else if(node == this->root) {
 				this->root = NULL;
 			} else {
