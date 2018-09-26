@@ -82,70 +82,70 @@ class LeftChildRightSibling{
             return h+1;
         }
 
-		Node<T> * searchChildNode(Node<T> *child, T value) {
+        Node<T> * searchChildNode(Node<T> *child, T value) {
 
-			if (child->value == value)
-			{
-				return child;
-			}
-			else if (child->child != NULL and child->sibling == NULL) //child:1 sibling:0
-			{
-				return searchChildNode(child->child, value);
-			}
-			else if (child->child == NULL and child->sibling != NULL) //child:0 sibling:1
-			{
-				return searchSiblingNode(child->sibling, value);
-			}
-			else if (child->child != NULL and child->sibling != NULL) //child:1 sibling:1
-			{
-				//1 procure pelo child
-				auto childs = searchChildNode(child->child, value);
+        	if (child->value == value)
+        	{
+        		return child;
+        	}
+        	else if (child->child != NULL and child->sibling == NULL) //child:1 sibling:0
+        	{
+        		return searchChildNode(child->child, value);
+        	}
+        	else if (child->child == NULL and child->sibling != NULL) //child:0 sibling:1
+        	{
+        		return searchSiblingNode(child->sibling, value);
+        	}
+        	else if (child->child != NULL and child->sibling != NULL) //child:1 sibling:1
+        	{
+        		// procura os 2 lados simultaneamente
+        		auto child_side = searchChildNode(child->child, value);
+        		auto sibling_side = searchSiblingNode(child->sibling, value);
 
-				if (childs != NULL)	return childs;
+        		if(child_side != NULL)
+        			return child_side;
 
-				// nao encontrou child, procure sibling
-				return searchSiblingNode(child->sibling, value);
-			}
+        		return sibling_side;
+        	}
 
         	return NULL;   // não encontrou
         }
 
-		Node<T> * searchSiblingNode(Node<T> *sibling, T value) {
-			if (sibling->value == value)
-			{
-				return sibling;
-			}
-			else if (sibling->child != NULL and sibling->sibling == NULL) //child:1 sibling:0
-			{
-				return searchChildNode(sibling->child, value);
-			}
-			else if (sibling->child == NULL and sibling->sibling != NULL) //child:0 sibling:1
-			{
-				return searchSiblingNode(sibling->sibling, value);
-			}
-			else if (sibling->child != NULL and sibling->sibling != NULL) //child:1 sibling:1
-			{
-				// 1 procure pelo siblings
-				auto siblings = searchSiblingNode(sibling->sibling, value);
+        Node<T> * searchSiblingNode(Node<T> *sibling, T value) {
 
-				if (siblings != NULL)
-				{
-					return siblings;
-				}
+        	if (sibling->value == value)
+        	{
+        		return sibling;
+        	}
+        	else if (sibling->child != NULL and sibling->sibling == NULL) //child:1 sibling:0
+        	{
+        		return searchChildNode(sibling->child, value);
+        	}
+        	else if (sibling->child == NULL and sibling->sibling != NULL) //child:0 sibling:1
+        	{
+        		return searchSiblingNode(sibling->sibling, value);
+        	}
+        	else if (sibling->child != NULL and sibling->sibling != NULL) //child:1 sibling:1
+        	{
+        		// procura os 2 lados simultaneamente
+        		auto sibling_side = searchSiblingNode(sibling->sibling, value);
+        		auto child_side = searchChildNode(sibling->child, value);
 
-				// nao encontrou siblind, procure child
-				return searchChildNode(sibling->child, value);
-			}
+        		if (sibling_side != NULL)
+        			return sibling_side;
+
+        		return child_side;
+        	}
 
         	return NULL;   // não encontrou
-		}
+        }
 
-		Node<T> * search_node(T value) {
-		    return this->searchChildNode(this->root, value);
-		}
+        Node<T> *searchNode(T value) {
+            return this->searchChildNode(this->root, value);
+        }
 
 		void remove(T value){
-			auto *node = this->search_node(value);
+			auto *node = this->searchNode(value);
 
 			if(node == NULL){
 				std::cout << std::endl << "Valor nao esta na Arvore" << std::endl;
