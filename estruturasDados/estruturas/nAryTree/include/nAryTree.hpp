@@ -8,45 +8,33 @@ template <typename T>
 class NAryTree{
     public:
         Node<T> *root;
+        int n;
 
-        NAryTree(T data){
+        NAryTree(T data, int n){
+            this->n = n;
             this->root = new Node<T>(data);
         }
 
         ~NAryTree(){
             delete this->root;
         }
-
-        int getN(){
-            return (sizeof(this->root->children)/sizeof(*this->root->children));
-        }
-
+        
         void addChild(T data){
-            Node<T> *newNode = new Node<T>(data);
-
-            for(int i = 0; i < this->getN(); i++){
-                if(this->root->children[i] == NULL){
-                    this->root->children[i] = newNode;
-                    return;
-                }
-            }
+            this->root->addChild(data, this->n);
         }
 
-        void printTree(Node<T> *newNode, std::string &s){
-            if(! this->root){ return; }
+        void printTree(Node<T> *newNode){
+            if(! newNode){ return; }
 
             std::cout << newNode->data << " ";
 
-            for(int i = 0; i < this->getN() && newNode->children[i]; i++){
-                printTree(newNode->children[i], s);
+            for(int i = 0; i < (int)newNode->children.size() && newNode->children[i]; i++){
+                printTree(newNode->children[i]);
             }
         }
 
         void print(){
-            std::string s;
-            printTree(this->root, s);
-
-            std::cout << s << '\n';
+            printTree(this->root);
         }
 };
 
