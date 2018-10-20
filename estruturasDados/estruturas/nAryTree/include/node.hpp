@@ -1,26 +1,32 @@
 #ifndef _NO_HPP_
 #define _NO_HPP_
-#define N 10
-#include <cstddef>
+#include <vector>
+#include <ostream>
 
 template <typename T>
 class Node{
     public:
         T data;
-        Node<T> *children[N];
+        std::vector<Node*> children;
 
         Node(T data){
             this->data = data;
-
-            for (int i = 0; i < N; i++){
-                children[i] = NULL;
-            }
         }
+        
         ~Node(){
-            for (int i = 0; i < N && children[i]; i++){
-                delete children[i];
+            children.clear();
+        }
+        
+        void addChild(T data, int n){
+            Node<T> *newNode = new Node<T>(data);
+                            
+            if((int)this->children.size() < n){
+                this->children.push_back(newNode);
+            }else{
+                std::cout << "Nó lotado" << std::endl;
             }
         }
+
 };
 
 #endif
