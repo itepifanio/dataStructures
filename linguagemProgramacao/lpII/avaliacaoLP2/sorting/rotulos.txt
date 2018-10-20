@@ -1,0 +1,334 @@
+Administração
+Administração pública
+Aeroespacial
+Agrimensura
+Agroecologia
+Agroindústria
+Agronegócio
+Agronomia
+Agropecuária
+Alimentos
+Animação
+Antropologia
+Aquicultura
+Arqueologia
+Arquitetura e urbanismo
+Arquivologia
+Artes
+Artes cênicas
+Artes formação de professor
+Artes plásticas
+Artes visuais
+Artes visuais formação de professor
+Assistência a idosos e a deficientes
+Astronomia
+Audiovisual
+Automação industrial
+Banco de dados
+Biblioteconomia
+Biocombustíveis
+Biologia
+Biologia formação de professor
+Biomedicina
+Bioquímica
+Biotecnologia
+Cafeicultura
+Cenografia
+Cerâmica
+Cinema e audiovisual
+Cinema e audiovisual formação de professor
+Ciência da computação
+Ciência da educação
+Ciência política
+Ciências aeronáuticas
+Ciências agrárias formação de professor
+Ciências ambientais
+Ciências atuariais
+Ciências da religião
+Ciências dos materiais
+Ciências militares
+Ciências naturais formação de professor
+Ciências sociais
+Ciências sociais formação de professor
+Computação formação de professor
+Comunicação assistiva
+Comunicação social
+Comércio exterior
+Conservação e restauro
+Construção de edifícios
+Construção naval
+Contabilidade
+Controle de obras
+Dança
+Dança formação de professor
+Defesa cibernética
+Desenho industrial
+Design
+Design de interiores
+Design de produto
+Design gráfico
+Direito
+Ecologia
+Economia
+Economia doméstica
+Economia doméstica formação de professor
+Educação do campo em áreas de conhecimento da educação básica formação de professor
+Educação do campo formação de professor
+Educação em espaços não escolares
+Educação especial formação de professor
+Educação física
+Educação física formação de professor
+Educação indígena em áreas de conhecimento da educação básica formação de professor
+Educação indígena formação de professor
+Educação infantil formação de professor
+Eletrotécnica industrial
+Eletrônica industrial
+Empreendedorismo
+Energias renováveis
+Enfermagem
+Enfermagem formação de professor
+Engenharia
+Engenharia acústica
+Engenharia aeroespacial
+Engenharia aeronáutica
+Engenharia agrícola
+Engenharia ambiental e sanitária
+Engenharia automotiva
+Engenharia bioenergética
+Engenharia biomédica
+Engenharia bioquímica
+Engenharia cartográfica
+Engenharia cerâmica
+Engenharia civil
+Engenharia de agrimensura
+Engenharia de alimentos
+Engenharia de bioprocessos
+Engenharia de biossistemas
+Engenharia de biotecnologia
+Engenharia de computação (DCN Computação)
+Engenharia de computação (DCN Engenharia)
+Engenharia de controle e automação
+Engenharia de energia
+Engenharia de infraestrutura
+Engenharia de manufatura
+Engenharia de materiais
+Engenharia de minas
+Engenharia de nanotecnologia
+Engenharia de pesca
+Engenharia de petróleo
+Engenharia de produção
+Engenharia de recursos hídricos
+Engenharia de software
+Engenharia de telecomunicações
+Engenharia de transportes
+Engenharia eletrônica
+Engenharia elétrica
+Engenharia ferroviária e metroviária
+Engenharia florestal
+Engenharia física
+Engenharia geológica
+Engenharia industrial
+Engenharia mecatrônica
+Engenharia mecânica
+Engenharia metalúrgica
+Engenharia naval
+Engenharia nuclear
+Engenharia portuária
+Engenharia química
+Engenharia têxtil
+Ensino profissionalizante em área específica formação de professor
+Ensino religioso formação de professor
+Escultura
+Estatística
+Estatística formação de professor
+Estradas
+Estética e cosmética
+Eventos
+Fabricação de instrumentos musicais não industrial
+Fabricação mecânica
+Farmácia
+Filosofia
+Filosofia formação de professor
+Fisioterapia
+Fonoaudiologia
+Formação de técnicos e treinadores esportivos
+Formação pedagógica de professor para a educação básica
+Fotografia
+Fruticultura
+Física
+Física aplicada
+Física formação de professor
+Física médica
+Gastronomia
+Geofísica
+Geografia
+Geografia formação de professor
+Geologia
+Geoprocessamento
+Gestão ambiental
+Gestão comercial
+Gestão da informação
+Gestão da produção
+Gestão da qualidade
+Gestão da saúde
+Gestão da tecnologia da informação
+Gestão de cooperativas
+Gestão de negócios
+Gestão de negócios internacionais
+Gestão de pessoas
+Gestão de recursos hídricos
+Gestão de resíduos sólidos
+Gestão de serviços
+Gestão de telecomunicações
+Gestão desportiva e de lazer
+Gestão estratégica
+Gestão financeira
+Gestão hospitalar
+Gestão portuária
+Gravura artística
+História
+História da arte
+História formação de professor
+Horticultura
+Hotelaria
+Investigação e perícia
+Irrigação e drenagem
+Jogos digitais
+Jornalismo
+Laticínios
+Letras escrita criativa
+Letras espanhol
+Letras espanhol formação de professor
+Letras francês
+Letras francês formação de professor
+Letras inglês
+Letras inglês formação de professor
+Letras língua brasileira de sinais
+Letras língua brasileira de sinais formação de professor
+Letras línguas estrangeiras clássicas
+Letras línguas estrangeiras clássicas formação de professor
+Letras outras línguas estrangeiras modernas
+Letras outras línguas estrangeiras modernas formação de professor
+Letras português
+Letras português espanhol
+Letras português espanhol formação de professor
+Letras português formação de professor
+Letras português francês
+Letras português francês formação de professor
+Letras português inglês
+Letras português inglês formação de professor
+Letras português língua brasileira de sinais
+Letras português língua brasileira de sinais formação de professor
+Letras português línguas estrangeiras clássicas
+Letras português línguas estrangeiras clássicas formação de professor
+Letras português outras línguas estrangeiras modernas
+Letras português outras línguas estrangeiras modernas formação de professor
+Letras tradutor e intérprete
+Letras tradutor e intérprete formação de professor
+Logística
+Manejo da produção agrícola
+Manutenção de aeronaves
+Manutenção industrial
+Marketing
+Matemática
+Matemática aplicada e computacional
+Matemática formação de professor
+Material de construção
+Mecatrônica industrial
+Mecânica de precisão
+Medicina
+Medicina veterinária
+Meteorologia
+Mineração
+Moda
+Museologia
+Música
+Música formação de professor
+Negócios imobiliários
+Nutrição
+Oceanografia
+Odontologia
+Oftálmica
+Optometria
+Papel e celulose
+Pedagogia
+Petróleo e gás
+Polímeros
+Processamento de carnes
+Processos escolares
+Processos metalúrgicos
+Produção cultural
+Produção cênica
+Produção de cachaça
+Produção de vestuário
+Produção editorial
+Produção fonográfica
+Produção gráfica
+Produção industrial
+Produção joalheira
+Produção moveleira
+Produção multimídia
+Produção pesqueira
+Produção sucroalcooleira
+Produção têxtil
+Programas interdisciplinares abrangendo Tecnologias da Informação e Comunicação (TIC)
+Programas interdisciplinares abrangendo agricultura, silvicultura, pesca e veterinária
+Programas interdisciplinares abrangendo artes e humanidades
+Programas interdisciplinares abrangendo ciências naturais, matemática e estatística
+Programas interdisciplinares abrangendo ciências sociais, jornalismo e informação
+Programas interdisciplinares abrangendo educação
+Programas interdisciplinares abrangendo engenharia, produção e construção
+Programas interdisciplinares abrangendo negócios, administração e direito
+Programas interdisciplinares abrangendo saúde e bem-estar
+Programas interdisciplinares abrangendo serviços
+Práticas integrativas
+Prótese e órtese
+Psicologia
+Psicologia formação de professor
+Psicopedagogia
+Publicidade e propaganda
+Química
+Química formação de professor
+Química industrial e tecnológica
+Radialismo
+Radiologia
+Redes de computadores
+Redes de telecomunicações
+Refrigeração e climatização
+Relações internacionais
+Relações públicas
+Rochas ornamentais
+Saneamento ambiental
+Saúde coletiva
+Saúde pública
+Secretariado
+Segurança da informação
+Segurança no trabalho
+Segurança no trânsito
+Segurança privada
+Segurança pública
+Seguros
+Serviço social
+Serviços penais
+Silvicultura
+Sistemas automotivos
+Sistemas biomédicos
+Sistemas de informação
+Sistemas de navegação fluvial
+Sistemas de telecomunicações
+Sistemas elétricos
+Sistemas embarcados
+Sistemas para internet
+Sociologia
+Soldagem
+Teatro
+Teatro formação de professor
+Telemática
+Teologia
+Terapia ocupacional
+Toxicologia
+Transporte aéreo
+Transporte terrestre
+Turismo
+Viticultura e enologia
+Zootecnia
