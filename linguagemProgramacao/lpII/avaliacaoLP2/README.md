@@ -14,7 +14,7 @@ O diretório ```sorting``` contém vários arquivos de um módulo de ordenação
 * ```randomize.py```: aleatoriza a ordem do conteúdo de ```rotulos.txt```, produzindo o arquivo ```rotulos.in```
 * ```sort.py```: ordena o conteúdo de ```rotulos.in```, produzindo o arquivo ```rotulos.out``` 
 
-No entanto, o arquivo ```rotulos.out``` não está sendo ordenado corretamente. 
+No entanto, o arquivo ```rotulos.out``` não está sendo ordenado corretamente.
 
 O script ```sort.py``` deverá ser corrigido para produzir o arquivo ```rotulos.out``` de forma correta.
 
@@ -28,7 +28,7 @@ O diretório ```tweets``` contém vários arquivos de um módulo de processament
 
 **Para resolver este issue você não precisa mexer (nem entender) o script ```consume.py```. Ele foi adicionado para que os interessados possam aprender sobre a API do Twitter ;)**
 
-O script ```process.py``` precisa ser expandido para filtrar apenas as mensagens com potencial de serem *fake news*. 
+O script ```process.py``` precisa ser expandido para filtrar apenas as mensagens com potencial de serem *fake news*.
 
 Para isto, o script deverá capturar apenas os usuários originadores de tweets que contenham URLs que tenham sido retweetados, persistidos no arquivo ```tweets.out``` usando sseparação por tabulação.
 
@@ -39,9 +39,9 @@ Para isto, o script deverá capturar apenas os usuários originadores de tweets 
 O diretório ```tree``` contém vários arquivos de um módulo de classificação hierárquica:
 * ```print.py```: imprime o conteúdo de ```dataset.csv```, produzindo o arquivo ```tree.out```
 
-O conteúdo do arquivo ```dataset.csv``` é uma listagem de rótulos da classificação brasileira de cursos superiores. 
+O conteúdo do arquivo ```dataset.csv``` é uma listagem de rótulos da classificação brasileira de cursos superiores.
 
-Nesta classificação, há 4 níveis hierárquicos: área geral, específica, detalhada e rótulo. 
+Nesta classificação, há 4 níveis hierárquicos: área geral, específica, detalhada e rótulo.
 
 Um elemento presente em determinado nível é composto por um código e um nome:
 1. Área geral: código com 2 dígitos
