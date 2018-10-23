@@ -4,6 +4,7 @@ from collections import namedtuple
 
 from anytree import Node, RenderTree # pip install anytree
 from anytree.exporter import DotExporter # sudo apt install graphviz
+import pydotplus
 
 Entrada = namedtuple("Entrada", "cod_geral area_geral cod_especifica area_especifica cod_detalhada area_detalhada codigo rotulo")
 
@@ -48,9 +49,11 @@ with open("tree.out", encoding="utf-8") as f:
             #     print("what???")
             #     area_espec = Node(line, parent=area_geral)
 
-
-
 for pre, fill, node in RenderTree(raiz):
      print("%s%s" % (pre, node.name))
 
-DotExporter(raiz).to_picture("tree.png")
+DotExporter(raiz).to_dotfile("tree.dot")
+# DotExporter(raiz).to_picture("tree.png")
+
+graph = pydotplus.graph_from_dot_file("tree.dot")
+graph.write_pdf("tree.pdf")

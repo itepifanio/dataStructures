@@ -1,0 +1,672 @@
+digraph tree {
+    "disciplinas";
+    " 00 Programas básicos
+";
+    " 001 Programas básicos
+";
+    " 0011 Programas básicos
+";
+    " 01 Educação
+";
+    " 011 Educação
+";
+    " 0111 Ciência da educação
+";
+    " 0112 Formação de professores de educação infantil
+";
+    " 0113 Formação de professores sem áreas específicas
+";
+    " 0114 Formação de professores em áreas específicas (exceto Letras)
+";
+    " 0115 Formação de professores de letras
+";
+    " 018 Programas interdisciplinares abrangendo educação
+";
+    " 0188 Programas interdisciplinares abrangendo educação
+";
+    " 02 Artes e humanidades
+";
+    " 021 Artes
+";
+    " 0211 Técnicas audiovisuais, produção de mídia e produção cultural
+";
+    " 0212 Moda, design de interiores e desenho industrial
+";
+    " 0213 Belas artes
+";
+    " 0214 Artesanato
+";
+    " 0215 Música e artes cênicas
+";
+    " 022 Humanidades (exceto línguas)
+";
+    " 0221 Religião e teologia
+";
+    " 0222 História e arqueologia
+";
+    " 0223 Filosofia e ética
+";
+    " 023 Línguas 
+";
+    " 0231 Letras
+";
+    " 028 Programas interdisciplinares abrangendo artes e humanidades
+";
+    " 0288 Programas interdisciplinares abrangendo artes e humanidades
+";
+    " 03 Ciências sociais, jornalismo e informação
+";
+    " 031 Ciências sociais e comportamentais
+";
+    " 0311 Economia
+";
+    " 0312 Ciências sociais e políticas
+";
+    " 0313 Psicologia
+";
+    " 032 Jornalismo e informação 
+";
+    " 0321 Jornalismo e reportagem
+";
+    " 0322 Biblioteconomia, informação e estudos arquivísticos
+";
+    " 038 Programas interdisciplinares abrangendo ciências sociais, jornalismo e informação
+";
+    " 0388 Programas interdisciplinares abrangendo ciências sociais, jornalismo e informação
+";
+    " 04 Negócios, administração e direito
+";
+    " 041 Negócios e administração
+";
+    " 0411 Contabilidade e tributação
+";
+    " 0412 Finanças, bancos e seguros
+";
+    " 0413 Gestão e administração
+";
+    " 0414 Marketing e propaganda
+";
+    " 0415 Secretariado e trabalhos de escritório
+";
+    " 0416 Gestão comercial
+";
+    " 042 Direito
+";
+    " 0421 Direito
+";
+    " 048 Programas interdisciplinares abrangendo negócios, administração e direito
+";
+    " 0488 Programas interdisciplinares abrangendo negócios, administração e direito
+";
+    " 05 Ciências naturais, matemática e estatística
+";
+    " 051 Ciências biológicas e correlatas
+";
+    " 0511 Biologia
+";
+    " 0512 Bioquímica
+";
+    " 052 Meio ambiente
+";
+    " 0521 Ciências ambientais
+";
+    " 053 Ciências físicas
+";
+    " 0531 Química
+";
+    " 0532 Ciências da terra
+";
+    " 0533 Física
+";
+    " 054 Matemática e estatística
+";
+    " 0541 Matemática
+";
+    " 0542 Estatística
+";
+    " 058 Programas interdisciplinares abrangendo ciências naturais, matemática e estatística
+";
+    " 0588 Programas interdisciplinares abrangendo ciências naturais, matemática e estatística
+";
+    " 06 Tecnologias da Informação e Comunicação (TIC)
+";
+    " 061 Tecnologias da Informação e Comunicação (TIC)
+";
+    " 0612 Infraestrutura e gestão de TIC
+";
+    " 0613 Produção de software
+";
+    " 0614 Ciência da computação
+";
+    " 0615 Sistemas de informação
+";
+    " 0616 Engenharia de computação
+";
+    " 068 Programas interdisciplinares abrangendo Tecnologias da Informação e Comunicação (TIC)
+";
+    " 0688 Programas interdisciplinares abrangendo Tecnologias da Informação e Comunicação (TIC)
+";
+    " 07 Engenharia, produção e construção
+";
+    " 071 Engenharia e profissões correlatas
+";
+    " 0710 Engenharia e profissões correlatas sem definição precisa
+";
+    " 0711 Engenharia química e de processos
+";
+    " 0712 Tecnologia de proteção ambiental
+";
+    " 0713 Eletricidade e energia
+";
+    " 0714 Eletrônica e automação
+";
+    " 0715 Engenharia mecânica e metalurgia
+";
+    " 0716 Veículos a motor, construção naval, aeronáutica, ferroviária e metroviária
+";
+    " 072 Produção e processamento
+";
+    " 0721 Processamento de alimentos
+";
+    " 0722 Materiais
+";
+    " 0723 Têxteis (vestuário, calçados e couro)
+";
+    " 0724 Mineração e extração
+";
+    " 0725 Produção e processos de fabricação
+";
+    " 073 Arquitetura e construção
+";
+    " 0731 Arquitetura e urbanismo
+";
+    " 0732 Engenharia civil e construção
+";
+    " 078 Programas interdisciplinares abrangendo engenharia, produção e construção
+";
+    " 0788 Programas interdisciplinares abrangendo engenharia, produção e construção
+";
+    " 08 Agricultura, silvicultura, pesca e veterinária
+";
+    " 081 Agricultura
+";
+    " 0811 Produção agrícola e pecuária
+";
+    " 0812 Horticultura
+";
+    " 082 Silvicultura
+";
+    " 0821 Silvicultura
+";
+    " 083 Pesca
+";
+    " 0831 Pesca
+";
+    " 084 Veterinária
+";
+    " 0841 Veterinária
+";
+    " 088 Programas interdisciplinares abrangendo agricultura, silvicultura, pesca e veterinária
+";
+    " 0888 Programas interdisciplinares abrangendo agricultura, silvicultura, pesca e veterinária
+";
+    " 09 Saúde e bem-estar
+";
+    " 091 Saúde
+";
+    " 0911 Odontologia
+";
+    " 0912 Medicina
+";
+    " 0913 Enfermagem e obstetrícia
+";
+    " 0914 Tecnologia de diagnóstico e tratamento médico
+";
+    " 0915 Prevenção, terapia e reabilitação
+";
+    " 0916 Farmácia
+";
+    " 0917 Medicina e terapia tradicional e complementar
+";
+    " 0918 Saúde pública e saúde coletiva
+";
+    " 092 Bem-estar
+";
+    " 0921 Assistência a idosos e a deficientes
+";
+    " 0923 Serviço social
+";
+    " 098 Programas interdisciplinares abrangendo saúde e bem-estar
+";
+    " 0988 Programas interdisciplinares abrangendo saúde e bem-estar
+";
+    " 10 Serviços
+";
+    " 101 Serviços pessoais
+";
+    " 1011 Serviços domésticos
+";
+    " 1012 Serviços de beleza
+";
+    " 1013 Serviços de alimentação
+";
+    " 1014 Esportes e lazer
+";
+    " 1015 Turismo e hotelaria
+";
+    " 102 Higiene e serviços de saúde ocupacional
+";
+    " 1022 Saúde e segurança no trabalho
+";
+    " 103 Serviços de segurança
+";
+    " 1031 Setor militar e de defesa
+";
+    " 1032 Proteção de pessoas e de propriedades
+";
+    " 104 Serviços de transporte
+";
+    " 1041 Serviços de transporte
+";
+    " 108 Programas interdisciplinares abrangendo serviços
+";
+    " 1088 Programas interdisciplinares abrangendo serviços
+";
+    "disciplinas" -> " 00 Programas básicos
+";
+    "disciplinas" -> " 01 Educação
+";
+    "disciplinas" -> " 02 Artes e humanidades
+";
+    "disciplinas" -> " 03 Ciências sociais, jornalismo e informação
+";
+    "disciplinas" -> " 04 Negócios, administração e direito
+";
+    "disciplinas" -> " 05 Ciências naturais, matemática e estatística
+";
+    "disciplinas" -> " 06 Tecnologias da Informação e Comunicação (TIC)
+";
+    "disciplinas" -> " 07 Engenharia, produção e construção
+";
+    "disciplinas" -> " 08 Agricultura, silvicultura, pesca e veterinária
+";
+    "disciplinas" -> " 09 Saúde e bem-estar
+";
+    "disciplinas" -> " 10 Serviços
+";
+    " 00 Programas básicos
+" -> " 001 Programas básicos
+";
+    " 001 Programas básicos
+" -> " 0011 Programas básicos
+";
+    " 01 Educação
+" -> " 011 Educação
+";
+    " 01 Educação
+" -> " 018 Programas interdisciplinares abrangendo educação
+";
+    " 011 Educação
+" -> " 0111 Ciência da educação
+";
+    " 011 Educação
+" -> " 0112 Formação de professores de educação infantil
+";
+    " 011 Educação
+" -> " 0113 Formação de professores sem áreas específicas
+";
+    " 011 Educação
+" -> " 0114 Formação de professores em áreas específicas (exceto Letras)
+";
+    " 011 Educação
+" -> " 0115 Formação de professores de letras
+";
+    " 018 Programas interdisciplinares abrangendo educação
+" -> " 0188 Programas interdisciplinares abrangendo educação
+";
+    " 02 Artes e humanidades
+" -> " 021 Artes
+";
+    " 02 Artes e humanidades
+" -> " 022 Humanidades (exceto línguas)
+";
+    " 02 Artes e humanidades
+" -> " 023 Línguas 
+";
+    " 02 Artes e humanidades
+" -> " 028 Programas interdisciplinares abrangendo artes e humanidades
+";
+    " 021 Artes
+" -> " 0211 Técnicas audiovisuais, produção de mídia e produção cultural
+";
+    " 021 Artes
+" -> " 0212 Moda, design de interiores e desenho industrial
+";
+    " 021 Artes
+" -> " 0213 Belas artes
+";
+    " 021 Artes
+" -> " 0214 Artesanato
+";
+    " 021 Artes
+" -> " 0215 Música e artes cênicas
+";
+    " 022 Humanidades (exceto línguas)
+" -> " 0221 Religião e teologia
+";
+    " 022 Humanidades (exceto línguas)
+" -> " 0222 História e arqueologia
+";
+    " 022 Humanidades (exceto línguas)
+" -> " 0223 Filosofia e ética
+";
+    " 023 Línguas 
+" -> " 0231 Letras
+";
+    " 028 Programas interdisciplinares abrangendo artes e humanidades
+" -> " 0288 Programas interdisciplinares abrangendo artes e humanidades
+";
+    " 03 Ciências sociais, jornalismo e informação
+" -> " 031 Ciências sociais e comportamentais
+";
+    " 03 Ciências sociais, jornalismo e informação
+" -> " 032 Jornalismo e informação 
+";
+    " 03 Ciências sociais, jornalismo e informação
+" -> " 038 Programas interdisciplinares abrangendo ciências sociais, jornalismo e informação
+";
+    " 031 Ciências sociais e comportamentais
+" -> " 0311 Economia
+";
+    " 031 Ciências sociais e comportamentais
+" -> " 0312 Ciências sociais e políticas
+";
+    " 031 Ciências sociais e comportamentais
+" -> " 0313 Psicologia
+";
+    " 032 Jornalismo e informação 
+" -> " 0321 Jornalismo e reportagem
+";
+    " 032 Jornalismo e informação 
+" -> " 0322 Biblioteconomia, informação e estudos arquivísticos
+";
+    " 038 Programas interdisciplinares abrangendo ciências sociais, jornalismo e informação
+" -> " 0388 Programas interdisciplinares abrangendo ciências sociais, jornalismo e informação
+";
+    " 04 Negócios, administração e direito
+" -> " 041 Negócios e administração
+";
+    " 04 Negócios, administração e direito
+" -> " 042 Direito
+";
+    " 04 Negócios, administração e direito
+" -> " 048 Programas interdisciplinares abrangendo negócios, administração e direito
+";
+    " 041 Negócios e administração
+" -> " 0411 Contabilidade e tributação
+";
+    " 041 Negócios e administração
+" -> " 0412 Finanças, bancos e seguros
+";
+    " 041 Negócios e administração
+" -> " 0413 Gestão e administração
+";
+    " 041 Negócios e administração
+" -> " 0414 Marketing e propaganda
+";
+    " 041 Negócios e administração
+" -> " 0415 Secretariado e trabalhos de escritório
+";
+    " 041 Negócios e administração
+" -> " 0416 Gestão comercial
+";
+    " 042 Direito
+" -> " 0421 Direito
+";
+    " 048 Programas interdisciplinares abrangendo negócios, administração e direito
+" -> " 0488 Programas interdisciplinares abrangendo negócios, administração e direito
+";
+    " 05 Ciências naturais, matemática e estatística
+" -> " 051 Ciências biológicas e correlatas
+";
+    " 05 Ciências naturais, matemática e estatística
+" -> " 052 Meio ambiente
+";
+    " 05 Ciências naturais, matemática e estatística
+" -> " 053 Ciências físicas
+";
+    " 05 Ciências naturais, matemática e estatística
+" -> " 054 Matemática e estatística
+";
+    " 05 Ciências naturais, matemática e estatística
+" -> " 058 Programas interdisciplinares abrangendo ciências naturais, matemática e estatística
+";
+    " 051 Ciências biológicas e correlatas
+" -> " 0511 Biologia
+";
+    " 051 Ciências biológicas e correlatas
+" -> " 0512 Bioquímica
+";
+    " 052 Meio ambiente
+" -> " 0521 Ciências ambientais
+";
+    " 053 Ciências físicas
+" -> " 0531 Química
+";
+    " 053 Ciências físicas
+" -> " 0532 Ciências da terra
+";
+    " 053 Ciências físicas
+" -> " 0533 Física
+";
+    " 054 Matemática e estatística
+" -> " 0541 Matemática
+";
+    " 054 Matemática e estatística
+" -> " 0542 Estatística
+";
+    " 058 Programas interdisciplinares abrangendo ciências naturais, matemática e estatística
+" -> " 0588 Programas interdisciplinares abrangendo ciências naturais, matemática e estatística
+";
+    " 06 Tecnologias da Informação e Comunicação (TIC)
+" -> " 061 Tecnologias da Informação e Comunicação (TIC)
+";
+    " 06 Tecnologias da Informação e Comunicação (TIC)
+" -> " 068 Programas interdisciplinares abrangendo Tecnologias da Informação e Comunicação (TIC)
+";
+    " 061 Tecnologias da Informação e Comunicação (TIC)
+" -> " 0612 Infraestrutura e gestão de TIC
+";
+    " 061 Tecnologias da Informação e Comunicação (TIC)
+" -> " 0613 Produção de software
+";
+    " 061 Tecnologias da Informação e Comunicação (TIC)
+" -> " 0614 Ciência da computação
+";
+    " 061 Tecnologias da Informação e Comunicação (TIC)
+" -> " 0615 Sistemas de informação
+";
+    " 061 Tecnologias da Informação e Comunicação (TIC)
+" -> " 0616 Engenharia de computação
+";
+    " 068 Programas interdisciplinares abrangendo Tecnologias da Informação e Comunicação (TIC)
+" -> " 0688 Programas interdisciplinares abrangendo Tecnologias da Informação e Comunicação (TIC)
+";
+    " 07 Engenharia, produção e construção
+" -> " 071 Engenharia e profissões correlatas
+";
+    " 07 Engenharia, produção e construção
+" -> " 072 Produção e processamento
+";
+    " 07 Engenharia, produção e construção
+" -> " 073 Arquitetura e construção
+";
+    " 07 Engenharia, produção e construção
+" -> " 078 Programas interdisciplinares abrangendo engenharia, produção e construção
+";
+    " 071 Engenharia e profissões correlatas
+" -> " 0710 Engenharia e profissões correlatas sem definição precisa
+";
+    " 071 Engenharia e profissões correlatas
+" -> " 0711 Engenharia química e de processos
+";
+    " 071 Engenharia e profissões correlatas
+" -> " 0712 Tecnologia de proteção ambiental
+";
+    " 071 Engenharia e profissões correlatas
+" -> " 0713 Eletricidade e energia
+";
+    " 071 Engenharia e profissões correlatas
+" -> " 0714 Eletrônica e automação
+";
+    " 071 Engenharia e profissões correlatas
+" -> " 0715 Engenharia mecânica e metalurgia
+";
+    " 071 Engenharia e profissões correlatas
+" -> " 0716 Veículos a motor, construção naval, aeronáutica, ferroviária e metroviária
+";
+    " 072 Produção e processamento
+" -> " 0721 Processamento de alimentos
+";
+    " 072 Produção e processamento
+" -> " 0722 Materiais
+";
+    " 072 Produção e processamento
+" -> " 0723 Têxteis (vestuário, calçados e couro)
+";
+    " 072 Produção e processamento
+" -> " 0724 Mineração e extração
+";
+    " 072 Produção e processamento
+" -> " 0725 Produção e processos de fabricação
+";
+    " 073 Arquitetura e construção
+" -> " 0731 Arquitetura e urbanismo
+";
+    " 073 Arquitetura e construção
+" -> " 0732 Engenharia civil e construção
+";
+    " 078 Programas interdisciplinares abrangendo engenharia, produção e construção
+" -> " 0788 Programas interdisciplinares abrangendo engenharia, produção e construção
+";
+    " 08 Agricultura, silvicultura, pesca e veterinária
+" -> " 081 Agricultura
+";
+    " 08 Agricultura, silvicultura, pesca e veterinária
+" -> " 082 Silvicultura
+";
+    " 08 Agricultura, silvicultura, pesca e veterinária
+" -> " 083 Pesca
+";
+    " 08 Agricultura, silvicultura, pesca e veterinária
+" -> " 084 Veterinária
+";
+    " 08 Agricultura, silvicultura, pesca e veterinária
+" -> " 088 Programas interdisciplinares abrangendo agricultura, silvicultura, pesca e veterinária
+";
+    " 081 Agricultura
+" -> " 0811 Produção agrícola e pecuária
+";
+    " 081 Agricultura
+" -> " 0812 Horticultura
+";
+    " 082 Silvicultura
+" -> " 0821 Silvicultura
+";
+    " 083 Pesca
+" -> " 0831 Pesca
+";
+    " 084 Veterinária
+" -> " 0841 Veterinária
+";
+    " 088 Programas interdisciplinares abrangendo agricultura, silvicultura, pesca e veterinária
+" -> " 0888 Programas interdisciplinares abrangendo agricultura, silvicultura, pesca e veterinária
+";
+    " 09 Saúde e bem-estar
+" -> " 091 Saúde
+";
+    " 09 Saúde e bem-estar
+" -> " 092 Bem-estar
+";
+    " 09 Saúde e bem-estar
+" -> " 098 Programas interdisciplinares abrangendo saúde e bem-estar
+";
+    " 091 Saúde
+" -> " 0911 Odontologia
+";
+    " 091 Saúde
+" -> " 0912 Medicina
+";
+    " 091 Saúde
+" -> " 0913 Enfermagem e obstetrícia
+";
+    " 091 Saúde
+" -> " 0914 Tecnologia de diagnóstico e tratamento médico
+";
+    " 091 Saúde
+" -> " 0915 Prevenção, terapia e reabilitação
+";
+    " 091 Saúde
+" -> " 0916 Farmácia
+";
+    " 091 Saúde
+" -> " 0917 Medicina e terapia tradicional e complementar
+";
+    " 091 Saúde
+" -> " 0918 Saúde pública e saúde coletiva
+";
+    " 092 Bem-estar
+" -> " 0921 Assistência a idosos e a deficientes
+";
+    " 092 Bem-estar
+" -> " 0923 Serviço social
+";
+    " 098 Programas interdisciplinares abrangendo saúde e bem-estar
+" -> " 0988 Programas interdisciplinares abrangendo saúde e bem-estar
+";
+    " 10 Serviços
+" -> " 101 Serviços pessoais
+";
+    " 10 Serviços
+" -> " 102 Higiene e serviços de saúde ocupacional
+";
+    " 10 Serviços
+" -> " 103 Serviços de segurança
+";
+    " 10 Serviços
+" -> " 104 Serviços de transporte
+";
+    " 10 Serviços
+" -> " 108 Programas interdisciplinares abrangendo serviços
+";
+    " 101 Serviços pessoais
+" -> " 1011 Serviços domésticos
+";
+    " 101 Serviços pessoais
+" -> " 1012 Serviços de beleza
+";
+    " 101 Serviços pessoais
+" -> " 1013 Serviços de alimentação
+";
+    " 101 Serviços pessoais
+" -> " 1014 Esportes e lazer
+";
+    " 101 Serviços pessoais
+" -> " 1015 Turismo e hotelaria
+";
+    " 102 Higiene e serviços de saúde ocupacional
+" -> " 1022 Saúde e segurança no trabalho
+";
+    " 103 Serviços de segurança
+" -> " 1031 Setor militar e de defesa
+";
+    " 103 Serviços de segurança
+" -> " 1032 Proteção de pessoas e de propriedades
+";
+    " 104 Serviços de transporte
+" -> " 1041 Serviços de transporte
+";
+    " 108 Programas interdisciplinares abrangendo serviços
+" -> " 1088 Programas interdisciplinares abrangendo serviços
+";
+}
