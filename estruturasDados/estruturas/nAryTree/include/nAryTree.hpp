@@ -19,9 +19,21 @@ class NAryTree{
             delete this->root;
         }
 
-        /* void addChild(T data){
-            this->root->addChild(data, this->n);
-        } */
+        // Inicializo o contador de 2 para contar a raiz e o último nível
+        // (o último nível não tem filhos, mas tem de ser contado)
+        int depth(Node<T> *newNode, int d = 2){
+            if(! newNode){ return -1; }
+
+            if(! newNode->children.empty()){
+                d += 1;
+            }
+
+            for(int i = 0; i < (int)newNode->children.size() && newNode->children[i]; i++){
+                depth(newNode->children[i]);
+            }
+
+            return d;
+        }
 
         void printTree(Node<T> *newNode){
             if(! newNode){ return; }
