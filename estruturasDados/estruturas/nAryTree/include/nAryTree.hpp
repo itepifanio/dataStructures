@@ -54,7 +54,7 @@ class NAryTree{
 
             for(int i = 0; i < (int)newNode->children.size() && newNode->children[i]; i++){
                 if(newNode->children[i]->data == data){
-                    return *newNode->children[i];
+                    return *(newNode->children[i]);
                 }
 
                 searchTree(data, newNode->children[i]);
@@ -69,6 +69,14 @@ class NAryTree{
 
         void print(){
             printTree(this->root);
+        }
+
+        void remove(Node<T> &oldNode){
+            Node<T> *parent = oldNode.parent;
+            parent->children.clear();
+
+            // node = NULL;
+            //delete &node;
         }
 };
 

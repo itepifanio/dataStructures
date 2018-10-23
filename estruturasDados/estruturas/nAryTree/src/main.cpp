@@ -35,5 +35,13 @@ int main() {
 
     std::cout << tree.depth(tree.root) << std::endl;
 
+    // Deletando
+    tree.remove(node);
+
+    std::cout << std::endl;
+    std::cout << "Imprimindo a árvore após remover nó:" << std::endl;
+    tree.print();
+    std::cout << std::endl;
+
     return 0;
 }

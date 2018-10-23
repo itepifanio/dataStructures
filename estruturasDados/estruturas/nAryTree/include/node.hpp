@@ -7,6 +7,7 @@ template <typename T>
 class Node{
     public:
         T data;
+        Node *parent;
         std::vector<Node*> children;
 
         Node(T data){
@@ -19,6 +20,7 @@ class Node{
 
         void addChild(T data, int n){
             Node<T> *newNode = new Node<T>(data);
+            newNode->parent = this;
 
             if((int)this->children.size() < n){
                 this->children.push_back(newNode);
