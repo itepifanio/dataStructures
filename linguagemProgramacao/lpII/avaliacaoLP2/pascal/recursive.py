@@ -1,8 +1,15 @@
 from sys import argv
 from contextlib import redirect_stdout
 
-def bin_coeff(n , k): 
-	return 1 if k == 0 or k == n else bin_coeff(n-1 , k-1) + bin_coeff(n-1 , k) 
+def bin_coeff(n , k):
+	result = 1
+	if(k > (n - k)):
+		k = n - k
+	for i in range(k):
+		result *= (n - i)
+		result = result // (i+1)
+
+	return result
 
 if __name__ == "__main__":
     n = int(argv[1])
