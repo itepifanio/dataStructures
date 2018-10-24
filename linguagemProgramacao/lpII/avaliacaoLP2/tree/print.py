@@ -35,9 +35,7 @@ raiz = Node("disciplinas")
 
 with open("tree.out", encoding="utf-8") as f:
     lines = f.readlines()
-    # area_geral = None
-    # area_espec = None
-    # area_detal = None
+
     for line in lines:
         if "Área geral" in line:
             area_geral = Node(line.split(":")[1], parent=raiz)
@@ -45,9 +43,6 @@ with open("tree.out", encoding="utf-8") as f:
             area_espec = Node(line.split(":")[1], parent=area_geral)
         if "Área detalhada" in line:
             area_detal = Node(line.split(":")[1], parent=area_espec)
-            # if area_geral != None and ''.join(area_geral.name.split(" ")[1:3]) in line:
-            #     print("what???")
-            #     area_espec = Node(line, parent=area_geral)
 
 for pre, fill, node in RenderTree(raiz):
      print("%s%s" % (pre, node.name))
