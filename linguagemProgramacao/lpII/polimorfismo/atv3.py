@@ -25,15 +25,16 @@ class ContaBancaria(ABC):
         else:
             print(self.saldoInsuficiente)
 
+class ContaBancariaInterface(ABC):
     @abstractmethod
     def calcularSaldo(self):
         pass
 
-class ContaCorrente(ContaBancaria):
+class ContaCorrente(ContaBancaria, ContaBancariaInterface):
     def calcularSaldo(self):
         return self.saldo - (self.saldo*0.1)
 
-class ContaInvestimento(ContaBancaria):
+class ContaInvestimento(ContaBancaria, ContaBancariaInterface):
     def calcularSaldo(self):
         return self.saldo + (self.saldo*0.05)
 
