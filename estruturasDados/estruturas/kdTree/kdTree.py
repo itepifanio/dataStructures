@@ -13,15 +13,18 @@ class Tree:
     def isEmpty(self):
         return self.root == None
 
-    def insert(self, arr, node=None, cd=None):
-        if self.root == None:
-            self.root = Node(arr)
-        elif node == None:
+    def insert(self, data):
+        self.root = self._insert(data, self.root, self.cd)
+
+    def _insert(self, arr, node=None, cd=None):
+        if node == None:
             node = Node(arr)
         elif arr[cd] < node.data[cd]:
-            node.left  = insert(arr, node.left, (cd+1)% self.DIM)
+            node.left  = self._insert(arr, node.left, (cd+1)% self.DIM)
         else:
-            node.right = insert(arr, node.right, (cd+1)% self.DIM)
+            node.right = self._insert(arr, node.right, (cd+1)% self.DIM)
+
+        return node
 
     def search(self, data):
         return self._search(data, self.root, 0)
@@ -55,4 +58,6 @@ arr = [1,2]
 knt.insert(arr)
 arr = [3,4]
 knt.insert(arr)
+knt.show()
+print()
 print(knt.search([1,2]))
