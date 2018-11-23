@@ -31,12 +31,12 @@ class Tree:
         if node == None:
             return False
         else:
-            if arr[cd] == node.data[cd]:
-                if arr[0] == node.data[0] and arr[1] == node.data[1]:
+            if data[cd] == node.data[cd]:
+                if data[0] == node.data[0] and data[1] == node.data[1]:
                     return True
-            elif arr[cd] < node.data[cd]:
+            elif data[cd] < node.data[cd]:
                 found = self._search(arr, node.left, (cd+1)%self.DIM)
-            elif arr[cd] > node.data[cd]:
+            elif data[cd] > node.data[cd]:
                 found = self._search(arr, node.right, (cd+1)%self.DIM)
             return found
 
@@ -55,4 +55,4 @@ arr = [1,2]
 knt.insert(arr)
 arr = [3,4]
 knt.insert(arr)
-knt.show()
+print(knt.search([1,2]))
