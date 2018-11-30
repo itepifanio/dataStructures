@@ -21,18 +21,13 @@ class Tree:
         if node == None:
             node = Node(arr)
         elif arr[cd] < node.data[cd]:
-            node.left  = self._insert(arr, node.left, (cd+1)% self.DIM)
+            node.left  = self._insert(arr, node.left, (cd+1) % self.DIM)
         else:
             node.right = self._insert(arr, node.right, (cd+1)% self.DIM)
 
         return node
 
     def search(self, data):
-        """
-        Pesquisa nó recursivamente. Se encontrar
-        o valor na árvore retorna o node, caso
-        contrário retorna None
-        """
         return self._search(data, self.root, 0)
 
     def _search(self, data, node=None, cd=None):
@@ -77,7 +72,7 @@ class Tree:
         if cd == d:
             if node.left == None:
                 return node
-            return findMinRec(node.left, d, depth+1)
+            return self._findMinRec(node.left, d, depth+1)
 
         return minNode(
             node,
@@ -147,8 +142,14 @@ knt.insert(arr)
 arr = [3,4]
 knt.insert(arr)
 knt.insert([5,6])
+knt.insert([8,7])
+knt.insert([7,8])
+knt.insert([2,1])
+
 knt.show()
 print()
+
 print(knt.search([1,2]).data)
+
 knt.deleteNode([3,4])
 knt.show()
