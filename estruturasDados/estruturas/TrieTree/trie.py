@@ -70,9 +70,6 @@ class Trie( object ):
 				
 		else: 
 			return False
-			
-
-
 
 	def _caminhar( self, root, prefix ):
 		caminho = []
