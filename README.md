@@ -16,6 +16,20 @@ Nessa pasta estão contidas as provas da primeira e segunda unidade, assim como 
 
 Diretório que contém a implementação dos algoritmos estudados nas disciplinas de Estrutura de Dados Básicas I e II.
 
-Aqui estão contidos os algoritmos de busca (busca binária), ordenação (bubbleSort, quickSort, insertSort, mergeSort, selectionSort) e algumas estruturas de dados (lista ligada simples e lista duplamente ligada).
+#### Estruturas
+- [x] Trie (python)
+- [x] AVL  (python)
+- [x] KDTree (python)
+- [x] left child right sibling (c++)
+- [x] double linked list (c++)
+- [x] nAryTree (c++)
+- [x] priority queue (python)
 
+#### Algoritmos
 
+- [x] busca binária (c++)
+- [x] bubble sort (c++)
+- [x] insert sort (c++)
+- [x] selection sort (c++)
+- [x] merge sort (c++)
+- [x] quick sort (c++)
